@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Stax Dashboard</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Load FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Load Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stax: {
+                            sidebarStart: '#1e1b4b', // Deep indigo
+                            sidebarEnd: '#3b0764',   // Deep purple
+                            sidebarHover: 'rgba(255, 255, 255, 0.1)',
+                            bg: '#f8fafc',
+                            textPrimary: '#1f2937',
+                            textSecondary: '#6b7280',
+                            accent: '#4f46e5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles for specific fine-tuning -->
+    <style data-purpose="layout">
+        body {
+            background-color: #110e2d;
+            /* Fallback dark background */
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Gradient */
+        .sidebar-gradient {
+            background: linear-gradient(to bottom, #110e30, #2a2275);
+        }
+
+        /* Main Content "Card" effect */
+        .main-panel {
+            background-color: white;
+            border-top-left-radius: 24px;
+            border-bottom-left-radius: 24px;
+            height: calc(100vh - 20px);
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            overflow-y: auto;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Scrollbar styling for main panel */
+        .main-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .main-panel::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .main-panel::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+        .main-panel::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+</head>
+
+<body class="flex h-[100dvh] font-sans text-slate-800 sidebar-gradient">
+    <!-- BEGIN: Sidebar -->
+    <aside class="w-[260px] flex-shrink-0 flex flex-col justify-between p-5 text-white">
+        <!-- Top Section: Logo & Nav -->
+        <div>
+            <!-- Brand -->
+            <div class="flex items-center gap-3 mb-8 px-2">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <!-- Placeholder for Stax Logo -->
+                    <img alt="Stax Logo"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtbO0w7a-vpO9kvAjHE-P2PeduH_BSbTqJPtsv_NQzwX-J6vu0cQTxFE29W21gsC58nmVmWMaovFGG-5qxHjKFYzLdupLBwE2f5gHHAAVwaAHqvmo2gsCG8VVyVxgh8mOlMNhdM80AxbgmrFFsS-o9Ca0oGcSiHovOXwdChlNHcO1UrdU-q5pnGH-UPgUIQwzvrMgJ1oJynflIdQNtyrajAJ1rjf8DZTvBiR_Y9Z4miYFAS1ciriH4KZVnt2wGSUaAO5jVa1Q0O1O3"
+                        style="height: 24px;" />
+                </div>
+                <span class="text-xl font-semibold tracking-wide">Stax</span>
+                <span
+                    class="text-[10px] uppercase border border-white/30 px-2 py-0.5 rounded-full text-white/80 tracking-wider border-white/40 px-[6px] py-[2px] rounded-[12px]">Experiment</span>
+            </div>
+            <!-- Navigation -->
+            <nav class="space-y-1">
+                <!-- Item 1 -->
+                <a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-stax-sidebarHover rounded-md transition-colors bg-white/10 rounded-[8px]"
+                    href="#">
+                    <i class="fa-solid fa-list-check w-5 text-center"></i>
+                    Evaluation Projects
+                </a>
+                <!-- Active Item (Indented) -->
+                <a class="flex items-center gap-3 px-3 py-2 ml-4 text-sm font-medium bg-black/20 text-white rounded-md bg-white/10 rounded-[8px]"
+                    href="#">
+                    Sample Project
+                </a>
+                <!-- Item 2 -->
+                <a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-stax-sidebarHover rounded-md transition-colors bg-white/10 rounded-[8px]"
+                    href="#">
+                    <i class="fa-solid fa-database w-5 text-center"></i>
+                    Datasets
+                </a>
+                <!-- Item 3 -->
+                <a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-stax-sidebarHover rounded-md transition-colors bg-white/10 rounded-[8px]"
+                    href="#">
+                    <i class="fa-solid fa-chart-line w-5 text-center"></i>
+                    Evaluator Gallery
+                </a>
+                <!-- Item 4 -->
+                <a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-stax-sidebarHover rounded-md transition-colors bg-white/10 rounded-[8px]"
+                    href="#">
+                    <i class="fa-solid fa-arrow-trend-up w-5 text-center"></i>
+                    Analytics
+                </a>
+            </nav>
+        </div>
+        <!-- Bottom Section: Footer Links & User -->
+        <div>
+            <div class="mb-6 px-3">
+                <p class="text-xs text-white/40 leading-relaxed">
+                    AI can make mistakes. Google is not responsible for third-party model output.
+                </p>
+            </div>
+            <nav class="space-y-1 mb-6">
+                <a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-stax-sidebarHover rounded-md transition-colors bg-white/10 rounded-[8px]"
+                    href="#">
+                    <i class="fa-solid fa-arrow-up-right-from-square w-5 text-center"></i>
+                    Documentation
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-white/70 hover:text-white hover:bg-stax-sidebarHover rounded-md transition-colors bg-white/10 rounded-[8px]"
+                    href="#">
+                    <i class="fa-solid fa-gear w-5 text-center"></i>
+                    Settings
+                </a>
+            </nav>
+            <!-- User Profile -->
+            <div class="flex items-center gap-3 px-2 py-2 mt-2">
+                <div
+                    class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-xs font-bold border-2 border-indigo-400">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <!-- Activity graph dots simulation -->
+                <div class="flex gap-1">
+                    <div class="w-2 h-2 rounded bg-indigo-500/40"></div>
+                    <div class="w-2 h-2 rounded bg-indigo-500/60"></div>
+                    <div class="w-2 h-2 rounded bg-indigo-400"></div>
+                    <div class="w-2 h-2 rounded bg-white"></div>
+                    <div class="w-2 h-2 rounded bg-indigo-500/60"></div>
+                </div>
+            </div>
+            <!-- Collapse Arrow -->
+            <div class="px-3 mt-4">
+                <button class="text-white/50 hover:text-white">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </aside>
+    <!-- END: Sidebar -->
+    <!-- BEGIN: Main Content Area -->
+    <main class="flex-1 bg-white main-panel shadow-2xl relative flex flex-col">
+        <!-- BEGIN: Header -->
+        <header class="py-6 border-b border-transparent px-10">
+            <div class="flex justify-between items-center">
+                <!-- Breadcrumbs -->
+                <div class="flex items-center gap-2 text-lg text-slate-500">
+                    <span>Evaluation Projects</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span class="text-slate-900 font-medium flex items-center gap-2">
+                        Sample Project
+                        <button class="text-slate-400 hover:text-slate-600">
+                            <i class="fa-solid fa-pen text-sm"></i>
+                        </button>
+                    </span>
+                </div>
+                <!-- Top Right Actions -->
+                <div>
+                    <button
+                        class="text-slate-500 hover:bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- END: Header -->
+        <!-- Content Scrollable Area -->
+        <div class="flex-1 overflow-auto px-8 pb-8 px-10 pb-10">
+            <!-- BEGIN: Section 1 - Project Metrics -->
+            <section class="mb-10">
+                <h2 class="text-base font-semibold text-slate-900 mb-4 flex items-center gap-2">
+                    Project metrics
+                    <i class="fa-regular fa-circle-question text-slate-400 text-sm cursor-help"></i>
+                </h2>
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+                        <div class="mb-3">
+                            <img alt="Google Logo" class="w-5 h-5"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                        </div>
+                        <div class="text-sm text-slate-600 font-medium mb-1">Human Evaluation Pass Rate</div>
+                        <div class="text-4xl font-semibold text-slate-900 mb-3">60 %</div>
+                        <div class="flex justify-between items-center text-sm text-slate-500">
+                            <div class="flex gap-3">
+                                <span class="flex items-center gap-1"><i class="fa-regular fa-thumbs-up"></i> 3</span>
+                                <span class="flex items-center gap-1"><i class="fa-regular fa-thumbs-down"></i> 2</span>
+                            </div>
+                            <span>Total: 5</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+                        <div class="mb-3">
+                            <img alt="Google Logo" class="w-5 h-5"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                        </div>
+                        <div class="text-sm text-slate-600 font-medium mb-1">Average Latency</div>
+                        <div class="text-4xl font-semibold text-slate-900 mb-3">12.13s</div>
+                        <div class="text-xs text-slate-400 mt-auto">
+                            May differ from production performance
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+                        <div class="mb-3">
+                            <img alt="Google Logo" class="w-5 h-5"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                        </div>
+                        <div class="text-sm text-slate-600 font-medium mb-3">Total Input &amp; Output Tokens</div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-center text-sm border-b border-slate-100 pb-2">
+                                <span class="text-slate-500">Input</span>
+                                <span class="font-semibold text-slate-900">833</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-500">Output</span>
+                                <span class="font-semibold text-slate-900">9878</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+                        <div class="mb-3">
+                            <img alt="Google Logo" class="w-5 h-5"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                        </div>
+                        <div class="text-sm text-slate-600 font-medium mb-1">Text Quality</div>
+                        <div class="text-4xl font-semibold text-slate-900 mb-3">1.00</div>
+                        <div class="text-xs text-slate-400 mt-auto">
+                            Average score
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: Section 1 -->
+            <!-- BEGIN: Section 2 - Project Benchmark -->
+            <section>
+                <h2 class="text-base font-semibold text-slate-900 mb-4 flex items-center gap-2">
+                    Project benchmark
+                    <i class="fa-regular fa-circle-question text-slate-400 text-sm cursor-help"></i>
+                </h2>
+                <!-- Toolbar -->
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-md transition-colors">
+                            <i class="fa-solid fa-plus text-xs"></i> Add data
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-md transition-colors">
+                            <i class="fa-solid fa-table-columns text-xs"></i> View columns
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-100 rounded-md transition-colors">
+                            <i class="fa-solid fa-ellipsis-vertical text-xs"></i> More
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-md hover:bg-slate-900 transition-colors shadow-sm"
+                            style="background-color: #1F2937;">
+                            Generate all outputs
+                        </button>
+                        <button
+                            class="px-4 py-2 bg-slate-800 text-white text-sm font-medium rounded-md hover:bg-slate-900 transition-colors shadow-sm"
+                            style="background-color: #1F2937;">
+                            Evaluate all
+                        </button>
+                    </div>
+                </div>
+                <!-- Data Table Container -->
+                <div class="border border-slate-200 rounded-lg overflow-hidden bg-white shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-slate-50 border-b border-slate-200 text-xs uppercase font-semibold tracking-wide text-gray-500">
+                                    <th class="p-4 w-10">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </th>
+                                    <th class="p-4 min-w-[200px]">
+                                        <div class="flex items-center gap-1 cursor-pointer">Input <i
+                                                class="fa-solid fa-caret-down opacity-50"></i></div>
+                                    </th>
+                                    <th class="p-4 min-w-[200px]">
+                                        <div class="flex items-center gap-1 cursor-pointer">System Instructions <i
+                                                class="fa-solid fa-caret-down opacity-50"></i></div>
+                                    </th>
+                                    <th class="p-4 min-w-[250px]">
+                                        <div class="flex items-center gap-1 cursor-pointer">Output <i
+                                                class="fa-solid fa-caret-down opacity-50"></i></div>
+                                    </th>
+                                    <th class="p-4 min-w-[150px]">
+                                        <div class="flex items-center gap-1 cursor-pointer">Model Nickname <i
+                                                class="fa-solid fa-caret-down opacity-50"></i></div>
+                                    </th>
+                                    <th class="p-4 min-w-[140px]">
+                                        <div class="flex items-center gap-1 cursor-pointer">Human Evaluation <i
+                                                class="fa-solid fa-caret-down opacity-50"></i></div>
+                                    </th>
+                                    <th class="p-4 w-10"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm text-slate-700 divide-y divide-slate-100">
+                                <!-- Row 1 -->
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs">Handmade souvenirs in Marrakech?</td>
+                                    <td class="p-4 truncate max-w-xs text-slate-500">You are Wanderlust AI, an
+                                        inspiring...</td>
+                                    <td class="p-4 truncate max-w-xs">Oh, Marrakech is an absolute treasure...</td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-2">
+                                            <img alt="Google" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                                            <span class="font-medium">Gemini 2.5 Flash</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-up"></i>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-center">
+                                        <button class="text-slate-400 hover:text-slate-600"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs">Cooking in Chiang Mai.</td>
+                                    <td class="p-4 truncate max-w-xs text-slate-500">You are Wanderlust AI, an
+                                        inspiring...</td>
+                                    <td class="p-4 truncate max-w-xs">What a delicious idea! Chiang Mai...</td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-2">
+                                            <img alt="Google" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                                            <span class="font-medium">Gemini 2.5 Flash</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-up"></i>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-center">
+                                        <button class="text-slate-400 hover:text-slate-600"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs">I'm a photographer looking for colorful str...
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs text-slate-500">You are Wanderlust AI, an
+                                        inspiring...</td>
+                                    <td class="p-4 truncate max-w-xs">Oh, Lisbon's kaleidoscope of colors...</td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-2">
+                                            <img alt="Google" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                                            <span class="font-medium">Gemini 2.5 Flash</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-up"></i>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-center">
+                                        <button class="text-slate-400 hover:text-slate-600"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs">Art experience in Paris</td>
+                                    <td class="p-4 truncate max-w-xs text-slate-500">You are Wanderlust AI, an
+                                        inspiring...</td>
+                                    <td class="p-4 truncate max-w-xs">Ah, Paris, a city that breathes art...</td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-2">
+                                            <img alt="Google" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                                            <span class="font-medium">Gemini 2.5 Flash</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-up"></i>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-center">
+                                        <button class="text-slate-400 hover:text-slate-600"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs">I want to hear live, traditional music in Dub</td>
+                                    <td class="p-4 truncate max-w-xs text-slate-500">You are Wanderlust AI, an
+                                        inspiring...</td>
+                                    <td class="p-4 truncate max-w-xs">Oh, what a fantastic quest! To tru...</td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-2">
+                                            <img alt="Google" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                                            <span class="font-medium">Gemini 2.5 Flash</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-up"></i>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-center">
+                                        <button class="text-slate-400 hover:text-slate-600"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 6 -->
+                                <tr class="hover:bg-slate-50 transition-colors">
+                                    <td class="p-4">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs">Quirky market in London</td>
+                                    <td class="p-4 truncate max-w-xs text-slate-500">You are Wanderlust AI, an
+                                        inspiring...</td>
+                                    <td class="p-4 truncate max-w-xs">Oh, London's markets are a turc...</td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-2">
+                                            <img alt="Google" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                                            <span class="font-medium">Gemini 2.5 Flash</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-up"></i>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-center">
+                                        <button class="text-slate-400 hover:text-slate-600"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                    </td>
+                                </tr>
+                                <!-- Row 7 (Active State Example) -->
+                                <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                                    <td class="p-4">
+                                        <input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                                            type="checkbox" />
+                                    </td>
+                                    <td class="p-4 truncate max-w-xs">How can I feel like a local in Tokyo?</td>
+                                    <td class="p-4 truncate max-w-xs text-slate-500">You are Wanderlust AI, an
+                                        inspiring...</td>
+                                    <td class="p-4 truncate max-w-xs">Ah, Tokyo! It's a city of endless...</td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-2">
+                                            <img alt="Google" class="w-4 h-4"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEn6DoNufU8KSWo-NUCCK3kqEtwA-9Vpf3He90YQfF1g_WGhUM0ON_Rc03EtOv2FduJGS9DKWmUaqqCbi9ojLbaiiUChvi3GH9f_lMYNzR0GNQUUzqJEHmRE05W2EJbXn1bklY3t393CIt0ZVrW-moCE2GT6c7GwTzgN8AZRN33220LnikD8v_NreA0TCC9kHtGcznSNRfXFRy42BNSP_iQxnj9BmyR88GK5meTDoz1S9kxfEJjiqRfq-qWP2D8XF8bYHQu5wfPEe" />
+                                            <span class="font-medium">Gemini 2.5 Flash</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="w-8 h-8 rounded border border-emerald-300 bg-emerald-100 flex items-center justify-center text-emerald-700 hover:bg-emerald-200">
+                                                <i class="fa-regular fa-thumbs-up"></i>
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 rounded border border-slate-200 flex items-center justify-center text-slate-400 hover:border-slate-300 hover:text-slate-600">
+                                                <i class="fa-regular fa-thumbs-down"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="p-4 text-center">
+                                        <button class="text-slate-400 hover:text-slate-600"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Pagination -->
+                    <div
+                        class="flex justify-end items-center px-4 py-3 bg-white border-t border-slate-200 gap-4 text-sm text-slate-600">
+                        <span>Page 1 of 1</span>
+                        <div class="flex items-center gap-1">
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded hover:bg-slate-100 disabled:opacity-50 text-slate-400"
+                                disabled="">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded bg-slate-100 text-slate-800 font-medium">1</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded hover:bg-slate-100 text-slate-500">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded hover:bg-slate-100 text-slate-500">
+                                <i class="fa-solid fa-angles-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END: Section 2 -->
+        </div>
+    </main>
+    <!-- END: Main Content Area -->
+</body>
+
+</html>

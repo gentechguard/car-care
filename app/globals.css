@@ -1,0 +1,663 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --color-primary-blue: #00aaff;
+  --color-dark-bg: #050505;
+  --color-elevated-bg: #111111;
+  --color-text-white: #ffffff;
+  --color-text-grey: #b3b3b3;
+  --color-action-red: #d32f2f;
+
+  --font-montserrat: "var(--font-montserrat)";
+  --font-roboto: "var(--font-roboto)";
+}
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --primary-blue: #00aaff;
+  --elevated-bg: #111111;
+  --text-grey: #b3b3b3;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-left: env(safe-area-inset-left);
+  --safe-right: env(safe-area-inset-right);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto), sans-serif;
+  overflow-x: hidden;
+  /* Prevent pull-to-refresh on mobile */
+  overscroll-behavior-y: contain;
+}
+
+/* ===== SAFE AREA UTILITIES ===== */
+.safe-top {
+  padding-top: var(--safe-top);
+}
+
+.safe-bottom {
+  padding-bottom: var(--safe-bottom);
+}
+
+.safe-area-view {
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-montserrat), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===== SECTION SCROLL OFFSET ===== */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+/* ===== GLASS MORPHISM ===== */
+.glass {
+  background: rgba(17, 17, 17, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== NEON EFFECTS ===== */
+.neon-glow {
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+}
+
+.blue-text {
+  color: var(--primary-blue);
+}
+
+/* ===== KEYFRAME ANIMATIONS ===== */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes neon-pulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    box-shadow: 0 0 15px var(--primary-blue), 0 0 30px var(--primary-blue);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 25px var(--primary-blue), 0 0 50px var(--primary-blue);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes ping-slow {
+
+  75%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes accordion-expand {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+@keyframes accordion-collapse {
+  from {
+    opacity: 1;
+    max-height: 200px;
+  }
+
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+/* ===== ANIMATION CLASSES ===== */
+.animate-rotate {
+  animation: rotate 4s linear infinite;
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+/* ===== TAILWIND UTILITIES LAYER ===== */
+@layer utilities {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl;
+  }
+
+  .text-gradient-cyan {
+    @apply bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  /* Touch-specific utilities */
+  .touch-none {
+    touch-action: none;
+  }
+
+  .touch-pan-y {
+    touch-action: pan-y;
+  }
+
+  .touch-pan-x {
+    touch-action: pan-x;
+  }
+}
+
+/* ===== MOBILE-SPECIFIC OPTIMIZATIONS ===== */
+@media (max-width: 767px) {
+
+  /* Disable tap highlight on mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Improve touch scrolling */
+  .overflow-y-auto,
+  .overflow-y-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent text selection during touch interactions */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Accordion card styles for mobile */
+  .accordion-card {
+    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+      min-height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .accordion-card.expanded {
+    flex: 2;
+    min-height: 180px;
+  }
+
+  .accordion-card.collapsed {
+    flex: 1;
+    min-height: 65px;
+  }
+
+  /* Smoother modal animations on mobile */
+  .modal-enter {
+    animation: fade-in-up 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+}
+
+/* ===== DESKTOP HOVER OPTIMIZATIONS ===== */
+@media (min-width: 768px) {
+  /* Enable hover effects only on devices that support it */
+  @media (hover: hover) and (pointer: fine) {
+    .hover-card:hover {
+      flex: 2;
+    }
+  }
+}
+
+/* ===== REDUCED MOTION SUPPORT ===== */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ===== PRODUCT SHOWCASE SPECIFIC STYLES ===== */
+#product-showcase {
+  /* Ensure proper stacking context */
+  isolation: isolate;
+}
+
+#product-showcase .card-container {
+  /* GPU acceleration for smooth animations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Mobile accordion expansion animation */
+#product-showcase .mobile-card-expanded {
+  animation: accordion-expand 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+#product-showcase .mobile-card-collapsed {
+  animation: accordion-collapse 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Desktop hover expansion */
+@media (min-width: 768px) {
+  #product-showcase .product-card {
+    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  #product-showcase .product-card:hover {
+    flex: 2;
+  }
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom styled scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== MODAL OVERLAY STYLES ===== */
+.modal-overlay {
+  /* Prevent body scroll when modal is open */
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: hidden;
+}
+
+/* Bottom sheet specific */
+.bottom-sheet {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -4px 30px rgba(0, 170, 255, 0.1);
+}
+
+/* ===== FOCUS STATES FOR ACCESSIBILITY ===== */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+/* Remove default focus ring */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ===== MOBILE ANIMATION FALLBACKS ===== */
+
+/* Mobile-friendly shimmer effect for MetallicPaintMobile */
+@keyframes mobile-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.shimmer-effect {
+  background: linear-gradient(105deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.1) 35%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0.1) 65%,
+      transparent 80%);
+  background-size: 200% 100%;
+  animation: mobile-shimmer 3s ease-in-out infinite;
+}
+
+/* Mobile beam background effect */
+@keyframes mobile-beam-move {
+  0% {
+    transform: rotate(-25deg) translateY(-100%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.15;
+  }
+
+  80% {
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: rotate(-25deg) translateY(100%);
+    opacity: 0;
+  }
+}
+
+.mobile-beam {
+  animation: mobile-beam-move 5s linear infinite;
+}
+
+/* ===== GPU ACCELERATION UTILITIES ===== */
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* ===== TOUCH INTERACTION OPTIMIZATIONS ===== */
+
+/* Ensure touch targets are at least 44x44px on mobile */
+@media (max-width: 767px) {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve button/link touch feedback */
+  button,
+  a,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Touch manipulation for better scrolling */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}
+
+/* ===== MOBILE ENTRY PAGE SPECIFIC ===== */
+
+@media (max-width: 767px) {
+
+  /* Reduce animation durations on mobile for snappier feel */
+  .mobile-fast-animation {
+    --animation-duration: 0.3s;
+    transition-duration: 0.3s !important;
+    animation-duration: 0.3s !important;
+  }
+
+  /* Ensure proper text sizing on mobile */
+  .mobile-text-responsive {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
+
+/* ===== ENHANCED REDUCED MOTION SUPPORT ===== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable WebGL-like effects */
+  .shimmer-effect,
+  .mobile-beam,
+  .metallic-shimmer {
+    animation: none !important;
+  }
+}
+
+/* ===== IMPROVED SCROLL CONTAINERS ===== */
+
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 767px) {
+  .scroll-container {
+    scroll-behavior: auto;
+    /* Disable smooth scroll on mobile for performance */
+  }
+}
+
+/* ===== MOBILE MODAL/SHEET OPTIMIZATIONS ===== */
+
+.mobile-sheet {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 -4px 30px rgba(0, 170, 255, 0.1);
+  transform: translateZ(0);
+}
+
+/* Safe bottom area for mobile modals */
+.safe-bottom-modal {
+  padding-bottom: max(env(safe-area-inset-bottom), 20px);
+}
+
+/* Add to globals.css */
+.map-pin-pulse {
+  animation: pinPulse 2s ease-in-out infinite;
+}
+
+@keyframes pinPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+.map-state-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.map-state-hover:hover {
+  filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 168, 255, 0.5));
+}
+
+/* Add these styles to your existing globals.css */
+
+/* ===== HYDRATION FIX ===== */
+/* Ensure consistent CSS custom property types */
+:root {
+  --glass-frost: 0;
+  --glass-saturation: 1;
+  --glass-opacity: 0.25;
+}
+
+/* Force string values to prevent hydration mismatch */
+[data-hydrated="true"] {
+  --glass-frost: 0;
+  --glass-saturation: 1;
+}
+
+/* ===== PRODUCT SHOWCASE FIXES ===== */
+#product-showcase {
+  isolation: isolate;
+  contain: layout style paint;
+}
+
+/* Ensure consistent background rendering */
+.product-card-bg {
+  background-image: url('/assets/solutions_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Prevent hydration issues with background */
+  transform: translateZ(0);
+}
+
+/* Mobile accordion fixes */
+.mobile-accordion-item {
+  transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    min-height 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: flex, min-height;
+}
+
+/* Loading state animation */
+@keyframes loading-pulse {
+
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading-pulse {
+  animation: loading-pulse 1.5s ease-in-out infinite;
+}
+
+/* ===== ERROR STATE STYLES ===== */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-message {
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.retry-button {
+  padding: 0.5rem 1rem;
+  background: #00aaff;
+  color: black;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.retry-button:hover {
+  background: #0099ee;
+}
+
+/* ===== MODAL SCROLL FIX ===== */
+.modal-scroll-container {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.modal-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
