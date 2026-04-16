@@ -7,6 +7,7 @@ import { ArrowRight, Shield, Zap, Droplets } from "lucide-react";
 import { useRef } from "react";
 import { EtherealFade } from "./EtherealFade";
 import { useDeviceCapability } from "@/lib/hooks/useDeviceCapability";
+import { siteConfig } from "@/lib/site-config";
 
 const carouselImages = [
     {
@@ -103,7 +104,9 @@ export default function Hero() {
                             <span className="blue-text tracking-wider">
                                 SURFACE <br className="sm:hidden" />
                                 <span className="hidden sm:inline"> </span>
-                                PROTECTION
+                                PROTECTION <br className="sm:hidden" />
+                                <span className="hidden sm:inline"> </span>
+                                SERVICE
                             </span>
                         </h1>
 
@@ -119,18 +122,18 @@ export default function Hero() {
 
                         {/* CTA Buttons - Stack on mobile, row on larger screens */}
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 w-full sm:w-auto">
-                            <button
-                                onClick={() => document.getElementById('contact-cards')?.scrollIntoView({ behavior: 'smooth' })}
+                            <a
+                                href={`tel:${siteConfig.contact.phone.value}`}
                                 className="bg-primary-blue hover:bg-white hover:text-dark-bg text-white px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center gap-2 group touch-manipulation active:scale-95"
                             >
                                 CALL
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                             <a
                                 href="https://maps.app.goo.gl/kEQprRRWBQSNBd9k9"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="border border-white/20 hover:border-primary-blue text-white px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 backdrop-blur-sm flex items-center justify-center touch-manipulation active:scale-95"
+                                className="bg-primary-blue hover:bg-white hover:text-dark-bg text-white px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center touch-manipulation active:scale-95"
                             >
                                 MAP
                             </a>

@@ -10,7 +10,7 @@ export const siteConfig = {
             display: "+91 99893 67878",
             value: "+919989367878", // For tel: links
         },
-        email: "info@gentechguard.com",
+        email: "support@gentechcarcare.com",
         address: {
             line1: "Gentech Headquarters",
             line2: "Hyderabad, Telangana",
@@ -29,7 +29,7 @@ export const siteConfig = {
     },
     navigation: [
         { name: "Home", href: "/home" },
-        { name: "Products", href: "/home#product-showcase" },
+        { name: "Services", href: "/home#product-showcase" },
         { name: "Process", href: "/home#process" },
     ],
     // Fallback products if DB fails or for static generation references

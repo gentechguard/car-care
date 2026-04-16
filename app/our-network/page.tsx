@@ -132,7 +132,7 @@ export default function OurNetworkPage() {
                 <BenefitItem text="Exclusive Territory Rights" />
                 <BenefitItem text="Comprehensive Marketing Support" />
                 <BenefitItem text="Technical Training & Certification" />
-                <BenefitItem text="Priority Access to Premium Products" />
+                <BenefitItem text="Priority Access to Premium Services" />
                 <BenefitItem text="High-Margin Revenue Opportunities" />
               </div>
 

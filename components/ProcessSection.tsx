@@ -122,11 +122,11 @@ export default function ProcessSection() {
                                 <h3 className="text-3xl font-black text-white mb-2 uppercase tracking-tight">{step.title}</h3>
                                 <p className="text-primary-blue font-bold uppercase tracking-widest text-xs mb-8 italic">{step.subtitle}</p>
 
-                                <ul className={`space-y-4 inline-block ${index % 2 === 0 ? 'lg:text-left' : 'lg:text-right'}`}>
+                                <ul className={`space-y-4 inline-block text-left ${index % 2 === 0 ? 'lg:text-left' : 'lg:text-right'}`}>
                                     {step.details.map((detail, i) => (
-                                        <li key={i} className={`flex items-center gap-3 text-text-grey font-medium ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}>
-                                            <CheckCircle2 size={16} className="text-primary-blue shrink-0" />
-                                            <span>{detail}</span>
+                                        <li key={i} className={`flex items-start gap-3 text-text-grey font-medium ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}>
+                                            <CheckCircle2 size={16} className="text-primary-blue shrink-0 mt-1" />
+                                            <span className="leading-snug">{detail}</span>
                                         </li>
                                     ))}
                                 </ul>

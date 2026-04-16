@@ -18,7 +18,7 @@ const productOptions = [
   { value: 'SUNFILM', label: 'Sunfilm' },
   { value: 'GRAPHENE', label: 'Graphene Coating' },
   { value: 'CERAMIC', label: 'Ceramic Coating' },
-  { value: 'ALL', label: 'All Products' }
+  { value: 'ALL', label: 'All Services' }
 ];
 
 export default function DealerEnquiryForm({ onClose }: DealerEnquiryFormProps) {
@@ -163,7 +163,7 @@ export default function DealerEnquiryForm({ onClose }: DealerEnquiryFormProps) {
           />
           
           <FormSelect
-            label="Products Interested In"
+            label="Services Interested In"
             value={selectedProducts.join(',')}
             onChange={handleProductChange}
             options={productOptions}

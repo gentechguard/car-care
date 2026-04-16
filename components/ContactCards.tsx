@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MessageCircle, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import { useGlobalStore } from "@/context/GlobalStore";
@@ -21,24 +20,22 @@ export default function ContactCards() {
                         icon={Phone}
                         title="Call Us"
                         value={config.contact.phone.display}
-                        action="View PPF Solutions"
-                        href="/home#product-showcase"
+                        href={`tel:${config.contact.phone.value}`}
                         delay={0.1}
                     />
                     <ContactCard
                         icon={Mail}
                         title="Email Us"
                         value={config.contact.email}
-                        action="View Sunfilm Solutions"
-                        href="/home#product-showcase"
+                        href={`mailto:${config.contact.email}?subject=${encodeURIComponent("Inquiry from Gentech Car Care website")}`}
                         delay={0.2}
+                        isEmail
                     />
                     <ContactCard
                         icon={MessageCircle}
                         title="WhatsApp"
                         value={config.contact.phone.display}
-                        action="Chat Now"
-                        href={`https://wa.me/${whatsappNumber}`}
+                        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi, I have an inquiry about your services.")}`}
                         delay={0.3}
                         isWhatsApp
                     />
@@ -48,7 +45,7 @@ export default function ContactCards() {
     );
 }
 
-function ContactCard({ icon: Icon, title, value, action, href, delay, isWhatsApp }: any) {
+function ContactCard({ icon: Icon, title, value, href, delay, isWhatsApp, isEmail }: any) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -58,22 +55,19 @@ function ContactCard({ icon: Icon, title, value, action, href, delay, isWhatsApp
             className="group relative"
         >
             <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl blur-xl" />
-            <div className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-primary-blue/50 transition-all duration-300 flex flex-col items-center text-center group-hover:-translate-y-2 [container-type:inline-size]">
+            <a
+                href={href}
+                target={isWhatsApp ? "_blank" : undefined}
+                rel={isWhatsApp ? "noopener noreferrer" : undefined}
+                className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-primary-blue/50 transition-all duration-300 flex flex-col items-center text-center group-hover:-translate-y-2"
+            >
                 <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors ${isWhatsApp ? 'bg-green-500/20 text-green-400 group-hover:bg-green-500 group-hover:text-white' : 'bg-primary-blue/10 text-primary-blue group-hover:bg-primary-blue group-hover:text-white'}`}>
                     <Icon size={32} />
                 </div>
 
-                <h4 className="text-white font-black text-[clamp(0.9rem,1.5rem,6cqi)] mb-2">{value}</h4>
-                <p className="text-text-grey text-xs font-bold uppercase tracking-widest mb-8">{title}</p>
-
-                <Link
-                    href={href}
-                    className="mt-auto flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-white/50 group-hover:text-white transition-colors"
-                >
-                    {action}
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
-            </div>
+                <h4 className={`text-white font-black mb-2 ${isEmail ? 'text-base md:text-xs lg:text-sm xl:text-base whitespace-nowrap' : 'text-xl md:text-2xl break-all'}`}>{value}</h4>
+                <p className="text-text-grey text-xs font-bold uppercase tracking-widest">{title}</p>
+            </a>
         </motion.div>
     );
 }

@@ -80,7 +80,7 @@ export default function ContactForm() {
                                 </p>
 
                                 <div className="space-y-4 mb-10">
-                                    <DealerBenefit text="Quality Products & Training Support" />
+                                    <DealerBenefit text="Quality Services & Training Support" />
                                     <DealerBenefit text="Marketing & Technical Assistance" />
                                     <DealerBenefit text="Growing Nationwide Network" />
                                 </div>

@@ -61,6 +61,26 @@ const parseFeatures = (features: any): string[] => {
   return [];
 };
 
+type DisplayProduct = Product & { nonInteractive?: boolean };
+
+const PRODUCT_OVERRIDES: Record<string, { name: string; shortDesc: string }> = {
+  perfumes: {
+    name: 'Ceramic Coating',
+    shortDesc: 'Long-lasting hydrophobic ceramic layer that enhances gloss and shields paint from contaminants and UV.',
+  },
+  'detailing products': {
+    name: 'Premium Car Wash',
+    shortDesc: 'Contactless premium wash with pH-neutral foam and microfiber care for a spotless, swirl-free finish.',
+  },
+};
+
+const applyProductOverride = (product: Product): DisplayProduct => {
+  const key = product.name.trim().toLowerCase();
+  const override = PRODUCT_OVERRIDES[key];
+  if (!override) return product;
+  return { ...product, name: override.name, shortDesc: override.shortDesc, nonInteractive: true };
+};
+
 export default function SolutionsSection() {
   const { products, loading } = useGlobalStore();
   const [selectedParent, setSelectedParent] = useState<Product | null>(null);
@@ -92,9 +112,10 @@ export default function SolutionsSection() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const displayedProducts = selectedParent
+  const displayedProducts: DisplayProduct[] = (selectedParent
     ? products.filter(p => p.parent_id === selectedParent.id)
-    : products.filter(p => !p.parent_id);
+    : products.filter(p => !p.parent_id)
+  ).map(applyProductOverride);
 
   useEffect(() => {
     // Reset expanded state when navigating between parent/children or switching views
@@ -162,7 +183,9 @@ export default function SolutionsSection() {
     };
   }, []);
 
-  const handleCardClick = (product: Product, index: number) => {
+  const handleCardClick = (product: DisplayProduct, index: number) => {
+    if (product.nonInteractive) return;
+
     const hasChildren = products.some(p => p.parent_id === product.id);
 
     if (isClient && isMobile) {
@@ -277,7 +300,7 @@ export default function SolutionsSection() {
                   Complete Vehicle <span className="text-blue-400">Protection</span> Solutions
                 </h2>
                 <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
-                  Click any product to explore specific variants tailored to your needs
+                  Click any service to explore specific variants tailored to your needs
                 </p>
                 <div className="flex items-center justify-center mt-3">
                   <button
@@ -344,9 +367,9 @@ export default function SolutionsSection() {
                       backgroundRepeat: "no-repeat",
                     }}
                     className={`
-                      group relative overflow-hidden cursor-pointer rounded-2xl
+                      group relative overflow-hidden rounded-2xl
                       transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
-                      active:scale-[0.98] md:active:scale-100
+                      ${product.nonInteractive ? 'cursor-default' : 'cursor-pointer active:scale-[0.98] md:active:scale-100'}
                       md:flex-1 md:hover:flex-[2] md:min-h-0
                       md:will-change-[flex]
                       bg-[#111] border border-white/10
@@ -409,24 +432,28 @@ export default function SolutionsSection() {
                     {/* Desktop Layout - Hover: Content at bottom */}
                     <div className="hidden md:flex absolute inset-0 p-4 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 flex-col justify-end bg-gradient-to-t from-black/90 via-black/60 to-transparent pointer-events-none z-20">
                       <div className="w-full text-left pointer-events-auto transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                        <span className="text-blue-400 font-bold tracking-widest uppercase text-xs mb-2 block">
-                          {selectedParent ? 'View Details' : 'Click for Options'}
-                        </span>
+                        {!product.nonInteractive && (
+                          <span className="text-blue-400 font-bold tracking-widest uppercase text-xs mb-2 block">
+                            {selectedParent ? 'View Details' : 'Click for Options'}
+                          </span>
+                        )}
                         <h4 className="text-2xl md:text-4xl font-black text-white mb-2 leading-tight">
                           {product.name}
                         </h4>
                         <p className="text-white/90 text-sm md:text-base line-clamp-2 mb-4 md:mb-6 font-medium">
                           {product.shortDesc || 'Premium Protection Solution'}
                         </p>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleCardClick(product, index);
-                          }}
-                          className="border border-blue-400 text-blue-400 font-bold tracking-widest uppercase text-[10px] md:text-xs px-5 py-2 hover:bg-blue-400 hover:text-white transition-colors duration-300 pointer-events-auto"
-                        >
-                          {selectedParent ? 'View Solution' : 'Explore'}
-                        </button>
+                        {!product.nonInteractive && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleCardClick(product, index);
+                            }}
+                            className="border border-blue-400 text-blue-400 font-bold tracking-widest uppercase text-[10px] md:text-xs px-5 py-2 hover:bg-blue-400 hover:text-white transition-colors duration-300 pointer-events-auto"
+                          >
+                            {selectedParent ? 'View Solution' : 'Explore'}
+                          </button>
+                        )}
                       </div>
                     </div>
                   </motion.div>

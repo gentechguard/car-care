@@ -95,6 +95,14 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
                     current[keys[keys.length - 1]] = row.value;
                 });
             }
+
+            // Source-of-truth override: contact email, phone, and whatsapp are controlled by siteConfig, not DB
+            if (hydratedSettings?.contact) {
+                hydratedSettings.contact.email = siteConfig.contact.email;
+                hydratedSettings.contact.phone = { ...siteConfig.contact.phone };
+                hydratedSettings.contact.whatsapp = { ...siteConfig.contact.whatsapp };
+            }
+
             setSettings(hydratedSettings);
 
         } catch (err) {

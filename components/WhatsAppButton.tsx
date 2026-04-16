@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
     if (pathname === "/" || pathname?.startsWith("/admin")) return null;
 
     const whatsappNumber = siteConfig.contact.whatsapp.number;
-    const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi, I have an inquiry about your services.")}`;
 
     return (
         <a

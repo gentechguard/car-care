@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Linkedin, Globe, ArrowUpRight, Zap } from "lucide-react";
+import { Instagram, Facebook, Youtube, Linkedin, Globe, ArrowUpRight, Zap } from "lucide-react";
 import MetallicPaint, { parseLogoImage } from "./MetallicPaint";
 import { useEffect, useState } from "react";
 
@@ -12,18 +12,20 @@ import { useGlobalStore } from "@/context/GlobalStore";
 
 const navLinks = siteConfig.navigation;
 
-// We will map products inside the component
+const servicesList = [
+    "Paint Protection Film Installation",
+    "Sun Film Installation",
+    "Graphene Coating",
+    "Ceramic Coating",
+    "Premium Car Wash",
+    "Paint Correction",
+];
 
 export default function Footer() {
-    const { products, settings } = useGlobalStore();
+    const { settings } = useGlobalStore();
 
     // Prefer dynamic settings from DB, fallback to static siteConfig
     const config = settings || siteConfig;
-
-    // Compute dynamic product links
-    const productsLinks = products.length > 0
-        ? products.map(p => p.name)
-        : config.productCategories;
 
     return (
         <footer className="relative bg-[#030303] overflow-hidden">
@@ -53,7 +55,7 @@ export default function Footer() {
                         </p>
 
                         {/* Social Icons */}
-                        <div className="flex gap-3">
+                        <div className="flex gap-4">
                             {Object.entries(config.socials || {}).map(([key, href]) => {
                                 // Dynamic Icon Mapping
                                 const iconMap: Record<string, any> = {
@@ -71,9 +73,9 @@ export default function Footer() {
                                         aria-label={key}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-grey hover:text-white hover:border-primary-blue hover:bg-primary-blue/10 transition-all duration-300"
+                                        className="group w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-grey hover:text-white hover:border-primary-blue hover:bg-primary-blue/10 transition-all duration-300"
                                     >
-                                        <Icon size={18} className="group-hover:scale-110 transition-transform" />
+                                        <Icon size={26} className="group-hover:scale-110 transition-transform" />
                                     </a>
                                 );
                             })}
@@ -98,57 +100,20 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Products */}
+                    {/* Services */}
                     <div className="col-span-1 md:col-span-1 lg:col-span-2">
-                        <h4 className="text-[11px] font-black text-primary-blue tracking-[0.3em] uppercase mb-6">Products</h4>
+                        <h4 className="text-[11px] font-black text-primary-blue tracking-[0.3em] uppercase mb-6">Services</h4>
                         <ul className="flex flex-col gap-3">
-                            {productsLinks.map((item: string) => (
+                            {servicesList.map((item: string) => (
                                 <li key={item}>
-                                    <Link
-                                        href="/home#product-showcase"
-                                        className="group flex items-center gap-2 text-text-grey hover:text-white text-sm font-bold uppercase tracking-wider transition-colors"
-                                    >
-                                        <span className="w-0 h-[2px] bg-primary-blue group-hover:w-3 transition-all duration-300" />
+                                    <span className="text-text-grey text-sm font-bold uppercase tracking-wider">
                                         {item}
-                                    </Link>
+                                    </span>
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Contact */}
-                    <div className="row-start-2 sm:row-start-1 sm:!col-end-[-1] col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-4 md:row-start-1 md:!col-end-[-1]">
-                        <h4 className="text-[11px] font-black text-primary-blue tracking-[0.3em] uppercase mb-6">Get In Touch</h4>
-                        <ul className="flex flex-row flex-wrap sm:flex-col gap-5">
-                            <li className="group flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary-blue group-hover:border-primary-blue/50 transition-colors shrink-0">
-                                    <Phone size={18} />
-                                </div>
-                                <div>
-                                    <p className="text-[10px] text-text-grey uppercase font-black tracking-widest mb-1">Call Us</p>
-                                    <a href={`tel:${config.contact.phone.value}`} className="text-white font-bold text-sm hover:text-primary-blue transition-colors">{config.contact.phone.display}</a>
-                                </div>
-                            </li>
-                            <li className="group flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary-blue group-hover:border-primary-blue/50 transition-colors shrink-0">
-                                    <Mail size={18} />
-                                </div>
-                                <div>
-                                    <p className="text-[10px] text-text-grey uppercase font-black tracking-widest mb-1">Email</p>
-                                    <a href={`mailto:${config.contact.email}`} className="text-white font-bold text-sm hover:text-primary-blue transition-colors">{config.contact.email}</a>
-                                </div>
-                            </li>
-                            <li className="group flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary-blue group-hover:border-primary-blue/50 transition-colors shrink-0">
-                                    <MapPin size={18} />
-                                </div>
-                                <div>
-                                    <p className="text-[10px] text-text-grey uppercase font-black tracking-widest mb-1">Headquarters</p>
-                                    <a href={config.contact.address.mapLink} target="_blank" rel="noopener noreferrer" className="text-white font-bold text-sm hover:text-primary-blue transition-colors">{config.contact.address.line2}</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
 
                 <div className="py-4 flex flex-col md:flex-row justify-between items-center gap-6">
