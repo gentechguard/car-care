@@ -691,13 +691,6 @@ a:focus:not(:focus-visible) {
   }
 }
 
-/* Ensure no horizontal overflow on any viewport */
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 /* Avoid the iOS Safari zoom-on-focus behavior for form fields */
 @media (pointer: coarse) {
   input,
