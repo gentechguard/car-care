@@ -81,7 +81,7 @@ export default function ProcessSection() {
                     {steps.map((step, index) => (
                         <div
                             key={step.id}
-                            className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-16 lg:gap-24 relative z-10`}
+                            className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-24 relative z-10`}
                         >
                             {/* Visual Content */}
                             <motion.div

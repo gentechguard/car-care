@@ -40,7 +40,7 @@ const carouselImages = [
 
 export default function Hero() {
     const ref = useRef(null);
-    const { isMobile, isClient } = useDeviceCapability();
+    const { isPhoneViewport, isClient } = useDeviceCapability();
     const prefersReducedMotion = useReducedMotion();
 
     const { scrollYProgress } = useScroll({
@@ -48,21 +48,21 @@ export default function Hero() {
         offset: ["start start", "end start"],
     });
 
-    // Reduce parallax effect on mobile for better performance
+    // Reduce parallax effect on mobile (including landscape phones) for better performance
     const yDesktop = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
     const yMobile = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-    const y = isClient && isMobile ? yMobile : yDesktop;
+    const y = isClient && isPhoneViewport ? yMobile : yDesktop;
 
     const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
     // Animation settings based on device
-    const animationDuration = prefersReducedMotion ? 0.1 : (isMobile ? 0.5 : 0.8);
-    const animationDelay = prefersReducedMotion ? 0 : (isMobile ? 0.1 : 0);
+    const animationDuration = prefersReducedMotion ? 0.1 : (isPhoneViewport ? 0.5 : 0.8);
+    const animationDelay = prefersReducedMotion ? 0 : (isPhoneViewport ? 0.1 : 0);
 
     return (
         <section
             ref={ref}
-            className="relative h-[100dvh] w-full overflow-hidden bg-dark-bg flex items-start md:items-center justify-center pt-16 sm:pt-20 md:pt-20 pb-0"
+            className="relative h-[100dvh] w-full overflow-hidden bg-dark-bg flex items-start lg:items-center justify-center pt-16 sm:pt-20 lg:pt-20 pb-0"
         >
             {/* BACKGROUND: Static for Desktop, Carousel for Mobile */}
             <motion.div
@@ -70,7 +70,7 @@ export default function Hero() {
                 className="absolute inset-0 z-0 gpu-accelerated"
             >
                 {/* Desktop Static Image */}
-                <div className="hidden md:block relative w-full h-full">
+                <div className="hidden lg:block relative w-full h-full">
                     <Image
                         src="/assets/Hero Image Side On.png"
                         alt="Gentech Car Care Hero"
@@ -83,23 +83,26 @@ export default function Hero() {
                 </div>
 
                 {/* Mobile Carousel */}
-                <div className="block md:hidden relative w-full h-full">
+                <div className="block lg:hidden relative w-full h-full">
                     <EtherealFade images={carouselImages} interval={5000} />
                     <div className="hidden absolute inset-0 bg-gradient-to-t from-dark-bg via-black/20 to-transparent z-10" />
                 </div>
             </motion.div>
 
             {/* CONTENT */}
-            <div className="container mx-auto px-4 sm:px-6 md:px-8 pt-4 sm:pt-8 md:pt-0 relative z-10 w-full">
-                <div className="max-w-4xl text-center md:text-left mx-auto md:mx-0">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8 lg:pt-0 relative z-10 w-full">
+                <div className="max-w-4xl text-center lg:text-left mx-auto lg:mx-0">
                     <motion.div
                         initial={{ opacity: 0, x: prefersReducedMotion ? 0 : -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: animationDuration, ease: [0.25, 0.1, 0.25, 1] }}
-                        className="flex flex-col items-center md:items-start justify-center"
+                        className="flex flex-col items-center lg:items-start justify-center"
                     >
-                        {/* Main Heading - Responsive text sizing */}
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight mb-2 sm:mb-3">
+                        {/* Main Heading - Fluid sizing across all viewports */}
+                        <h1
+                            style={{ fontSize: 'clamp(1.625rem, 4.2vw + 0.25rem, 4rem)' }}
+                            className="font-black leading-tight mb-2 sm:mb-3"
+                        >
                             PREMIUM AUTOMOTIVE <br className="hidden sm:block" />
                             <span className="blue-text tracking-wider">
                                 SURFACE <br className="sm:hidden" />
@@ -127,7 +130,6 @@ export default function Hero() {
                                 className="bg-primary-blue hover:bg-white hover:text-dark-bg text-white px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center gap-2 group touch-manipulation active:scale-95"
                             >
                                 CALL
-                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </a>
                             <a
                                 href="https://maps.app.goo.gl/kEQprRRWBQSNBd9k9"
@@ -140,12 +142,12 @@ export default function Hero() {
                         </div>
                     </motion.div>
 
-                    {/* MICRO FEATURES - Hidden on mobile, visible on tablet+ */}
+                    {/* MICRO FEATURES - Hidden on phones (portrait + landscape), visible on desktop */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: animationDelay + 0.4, duration: animationDuration }}
-                        className="hidden md:grid grid-cols-3 gap-4 lg:gap-6 pt-8 lg:pt-12 border-t border-white/10"
+                        className="hidden lg:grid grid-cols-3 gap-4 lg:gap-6 pt-8 lg:pt-12 border-t border-white/10"
                     >
                         <div className="flex items-center gap-3 lg:gap-4">
                             <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-elevated-bg border border-white/10 flex items-center justify-center text-primary-blue shrink-0">
@@ -182,7 +184,7 @@ export default function Hero() {
             <div className="absolute bottom-0 right-0 w-1/4 sm:w-1/3 h-[1px] bg-gradient-to-r from-transparent to-primary-blue opacity-50" />
 
             {/* Mobile scroll indicator */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:hidden">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 lg:hidden">
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

@@ -37,16 +37,16 @@ export default function Footer() {
 
             {/* Main Grid */}
             <div className="container mx-auto px-4 md:px-8 relative z-10">
-                <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-4 gap-y-8 md:gap-8 lg:gap-8 pt-16 pb-8 border-y border-white/5">
+                <div className="grid grid-cols-2 lg:grid-cols-12 gap-x-4 gap-y-8 lg:gap-8 pt-16 pb-8 border-y border-white/5">
                     {/* Brand Column */}
-                    <div className="col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-4">
+                    <div className="col-span-2 lg:col-span-4">
                         <Link href="/home" className="inline-block mb-6">
                             <div className="w-48 h-12 relative">
                                 <Image
-                                    src="/assets/logo-final-wide.png"
+                                    src="/assets/logo-final-wide.jpeg"
                                     alt="Gentech Car Care"
                                     fill
-                                    className="object-contain object-left"
+                                    className="object-cover object-center mix-blend-screen"
                                 />
                             </div>
                         </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
                     </div>
 
                     {/* Navigation */}
-                    <div className="col-span-1 md:col-span-1 lg:col-span-2">
+                    <div className="col-span-1 lg:col-span-2">
                         <h4 className="text-[11px] font-black text-primary-blue tracking-[0.3em] uppercase mb-6">Navigation</h4>
                         <ul className="flex flex-col gap-3">
                             {navLinks.map((item: any) => (
@@ -101,7 +101,7 @@ export default function Footer() {
                     </div>
 
                     {/* Services */}
-                    <div className="col-span-1 md:col-span-1 lg:col-span-2">
+                    <div className="col-span-1 lg:col-span-2">
                         <h4 className="text-[11px] font-black text-primary-blue tracking-[0.3em] uppercase mb-6">Services</h4>
                         <ul className="flex flex-col gap-3">
                             {servicesList.map((item: string) => (
@@ -116,8 +116,8 @@ export default function Footer() {
 
                 </div>
 
-                <div className="py-4 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="flex flex-col items-center md:items-start gap-1">
+                <div className="py-4 flex flex-col lg:flex-row justify-between items-center gap-6">
+                    <div className="flex flex-col items-center lg:items-start gap-1">
                         <p className="text-text-grey/60 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                             <Zap size={12} className="text-primary-blue" />
                             {config.company.copyright}
@@ -141,7 +141,7 @@ export default function Footer() {
             </div>
 
             {/* Metallic Paint Effect */}
-            <div className="hidden md:block absolute bottom-0 top-0 right-[-10%] lg:right-[-4%] z-0 mx-auto opacity-10 hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+            <div className="hidden lg:block absolute bottom-0 top-0 right-[-10%] lg:right-[-4%] z-0 mx-auto opacity-10 hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                 <MetallicPaint
                     src="/assets/gentech-shield-bitmap.svg"
                     params={{

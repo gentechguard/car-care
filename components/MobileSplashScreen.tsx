@@ -5,30 +5,26 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import MetallicPaint from "./MetallicPaint";
 import Beams from "./Beams";
+import { useDeviceCapability } from "@/lib/hooks/useDeviceCapability";
 
 export default function MobileSplashScreen() {
     const [isVisible, setIsVisible] = useState(true);
-    const [isMobile, setIsMobile] = useState(false);
+    const { isCoarsePointer, screenWidth, screenHeight, isClient } = useDeviceCapability();
+
+    // Splash is for real touch devices only — not narrow desktop windows.
+    const isRealPhone = isCoarsePointer && (screenWidth < 1024 || screenHeight < 500);
 
     useEffect(() => {
-        const checkDevice = () => {
-            if (window.innerWidth < 768) {
-                setIsMobile(true);
-                // Hide after 5 seconds
-                const timer = setTimeout(() => {
-                    setIsVisible(false);
-                }, 15000);
-                return () => clearTimeout(timer);
-            } else {
-                setIsMobile(false);
-                setIsVisible(false);
-            }
-        };
+        if (!isClient) return;
+        if (!isRealPhone) {
+            setIsVisible(false);
+            return;
+        }
+        const timer = setTimeout(() => setIsVisible(false), 15000);
+        return () => clearTimeout(timer);
+    }, [isClient, isRealPhone]);
 
-        checkDevice();
-    }, []);
-
-    if (!isMobile) return null;
+    if (!isClient || !isRealPhone) return null;
 
     return (
         <AnimatePresence>
@@ -54,11 +50,11 @@ export default function MobileSplashScreen() {
                             />
                         </div>
                         <Image
-                            src="/assets/logo-final-wide.png"
+                            src="/assets/logo-final-wide.jpeg"
                             alt="Gentech Car Care"
                             width={240}
                             height={80}
-                            className="object-contain w-full h-auto hidden"
+                            className="object-contain w-full h-auto hidden mix-blend-screen"
                             priority
                         />
                         <div className="h-48 w-48 justify-self-center">

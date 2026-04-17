@@ -97,11 +97,11 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
                 <GentechLogo className="h-16 hidden" />
                 <div className="relative">
                     <Image
-                        src="/assets/logo-final-wide.png"
+                        src="/assets/logo-final-wide.jpeg"
                         alt="Gentech Car Care"
                         width={240}
                         height={80}
-                        className="object-contain object-right"
+                        className="object-contain object-right mix-blend-screen"
                         unoptimized
                     />
                 </div>

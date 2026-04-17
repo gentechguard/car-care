@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { useBackButton } from '@/hooks/useBackButton';
+import { useDeviceCapability } from '@/lib/hooks/useDeviceCapability';
 
 const CustomerEnquiryForm = dynamic(() => import('./CustomerEnquiryForm'), { ssr: false });
 const DealerEnquiryForm = dynamic(() => import('./DealerEnquiryForm'), { ssr: false });
@@ -17,17 +18,11 @@ interface EnquiryModalProps {
 }
 
 export default function EnquiryModal({ isOpen, onClose, type }: EnquiryModalProps) {
-  const [isMobile, setIsMobile] = useState(false);
+  const { isPhoneViewport } = useDeviceCapability();
+  const isMobile = isPhoneViewport;
 
   // Browser back button closes the modal
   useBackButton(isOpen, onClose);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   // Prevent body scroll when modal is open
   useEffect(() => {

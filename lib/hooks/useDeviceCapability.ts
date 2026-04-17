@@ -8,6 +8,11 @@ interface DeviceCapability {
     isTablet: boolean;
     isDesktop: boolean;
 
+    // Orientation + pointer — true source of truth for "treat as mobile"
+    orientation: 'portrait' | 'landscape';
+    isCoarsePointer: boolean;
+    isPhoneViewport: boolean;
+
     // Screen info
     screenWidth: number;
     screenHeight: number;
@@ -32,6 +37,9 @@ const defaultCapabilities: DeviceCapability = {
     isMobile: false,
     isTablet: false,
     isDesktop: true,
+    orientation: 'landscape',
+    isCoarsePointer: false,
+    isPhoneViewport: false,
     screenWidth: 1920,
     screenHeight: 1080,
     isLowEndDevice: false,
@@ -124,6 +132,20 @@ export function useDeviceCapability(): DeviceCapability {
             const isTablet = width >= 768 && width < 1024;
             const isDesktop = width >= 1024;
 
+            // Orientation
+            const orientation: 'portrait' | 'landscape' = width > height ? 'landscape' : 'portrait';
+
+            // Pointer coarseness — true for phones/tablets regardless of orientation
+            const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
+            // True source of truth for "render the mobile layout".
+            // Stays in sync with the CSS `lg:` breakpoint (1024) so that JS and CSS
+            // agree on when to show the mobile vs desktop layout. Landscape phones
+            // (width ≥ 1024 but coarse pointer with collapsed height) are also
+            // treated as phones — prevents Galaxy Fold / ultrawide phones from
+            // dropping into the desktop layout when rotated.
+            const isPhoneViewport = width < 1024 || (isCoarsePointer && height < 500);
+
             // Check WebGL support
             const webglSupport = checkWebGLSupport();
 
@@ -143,6 +165,9 @@ export function useDeviceCapability(): DeviceCapability {
                 isMobile,
                 isTablet,
                 isDesktop,
+                orientation,
+                isCoarsePointer,
+                isPhoneViewport,
                 screenWidth: width,
                 screenHeight: height,
                 isLowEndDevice,
@@ -158,8 +183,18 @@ export function useDeviceCapability(): DeviceCapability {
         // Initial check
         updateCapabilities();
 
-        // Listen for resize events
+        // Listen for resize events (fires on rotation too)
         window.addEventListener('resize', updateCapabilities);
+
+        // Explicit orientation listener for devices where resize lags behind rotation
+        const orientationQuery = window.matchMedia('(orientation: landscape)');
+        const handleOrientationChange = () => updateCapabilities();
+        orientationQuery.addEventListener('change', handleOrientationChange);
+
+        // Pointer coarseness can change (external mouse plugged into tablet)
+        const pointerQuery = window.matchMedia('(pointer: coarse)');
+        const handlePointerChange = () => updateCapabilities();
+        pointerQuery.addEventListener('change', handlePointerChange);
 
         // Listen for reduced motion preference changes
         const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -168,6 +203,8 @@ export function useDeviceCapability(): DeviceCapability {
 
         return () => {
             window.removeEventListener('resize', updateCapabilities);
+            orientationQuery.removeEventListener('change', handleOrientationChange);
+            pointerQuery.removeEventListener('change', handlePointerChange);
             motionQuery.removeEventListener('change', handleMotionChange);
         };
     }, []);

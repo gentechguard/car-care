@@ -6,6 +6,7 @@ import { ChevronLeft, X, ShieldCheck, Zap, Download } from 'lucide-react';
 import { useGlobalStore, Product } from '@/context/GlobalStore';
 import Image from 'next/image';
 import { useBackButton } from '@/hooks/useBackButton';
+import { useDeviceCapability } from '@/lib/hooks/useDeviceCapability';
 
 const getProductImageUrl = (imagePath?: string | null) => {
   if (!imagePath) return '/assets/gentech-tall.png';
@@ -87,8 +88,10 @@ export default function SolutionsSection() {
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [expandedMobileIndex, setExpandedMobileIndex] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isClient, setIsClient] = useState(false);
+
+  // Device detection — landscape phones should also be treated as "mobile"
+  const { isPhoneViewport, isClient } = useDeviceCapability();
+  const isMobile = isPhoneViewport;
 
   // Browser back button closes the product detail modal
   useBackButton(!!activeProduct, () => setActiveProduct(null));
@@ -99,18 +102,10 @@ export default function SolutionsSection() {
   const isSyncingRef = useRef(false);
   const isMobileRef = useRef(false);
 
-  // Client-side only detection
+  // Keep ref in sync with state (used inside rAF loop)
   useEffect(() => {
-    setIsClient(true);
-    const checkMobile = () => {
-      const mobile = window.innerWidth < 768;
-      setIsMobile(mobile);
-      isMobileRef.current = mobile;
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+    isMobileRef.current = isMobile;
+  }, [isMobile]);
 
   const displayedProducts: DisplayProduct[] = (selectedParent
     ? products.filter(p => p.parent_id === selectedParent.id)
@@ -333,7 +328,7 @@ export default function SolutionsSection() {
         {/* Products Grid */}
         <div
           ref={containerRef}
-          className="relative z-10 flex flex-col md:flex-row gap-3 mx-0 md:mx-4 lg:mx-10 xl:mx-20 my-0 md:my-8 md:pt-0 md:pb-0 h-[70vh] md:h-auto md:aspect-video rounded-2xl overflow-hidden"
+          className="solutions-products-grid relative z-10 flex flex-col lg:flex-row gap-3 mx-0 lg:mx-10 xl:mx-20 my-0 lg:my-8 lg:pt-0 lg:pb-0 h-[70vh] lg:h-auto lg:aspect-video rounded-2xl overflow-hidden"
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -342,7 +337,7 @@ export default function SolutionsSection() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="flex flex-col md:flex-row gap-3 md:gap-4 w-full h-full"
+              className="flex flex-col lg:flex-row gap-3 lg:gap-4 w-full h-full"
             >
               {displayedProducts.map((product, index) => {
                 const hasChildren = products.some(p => p.parent_id === product.id);
@@ -369,20 +364,20 @@ export default function SolutionsSection() {
                     className={`
                       group relative overflow-hidden rounded-2xl
                       transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
-                      ${product.nonInteractive ? 'cursor-default' : 'cursor-pointer active:scale-[0.98] md:active:scale-100'}
-                      md:flex-1 md:hover:flex-[2] md:min-h-0
-                      md:will-change-[flex]
+                      ${product.nonInteractive ? 'cursor-default' : 'cursor-pointer active:scale-[0.98] lg:active:scale-100'}
+                      lg:flex-1 lg:hover:flex-[2] lg:min-h-0
+                      lg:will-change-[flex]
                       bg-[#111] border border-white/10
                     `}
                   >
                     {/* Dark overlay - Desktop */}
                     <div
-                      className="hidden md:block absolute inset-0 z-10 pointer-events-none transition-colors duration-500 bg-black/60 group-hover:bg-black/30"
+                      className="hidden lg:block absolute inset-0 z-10 pointer-events-none transition-colors duration-500 bg-black/60 group-hover:bg-black/30"
                     />
 
                     {/* Dark overlay - Mobile */}
                     <div
-                      className="md:hidden absolute inset-0 z-10 pointer-events-none transition-all duration-500"
+                      className="lg:hidden absolute inset-0 z-10 pointer-events-none transition-all duration-500"
                       style={{
                         background: isExpanded
                           ? 'linear-gradient(to top, rgba(0,0,0,0.85) 25%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.15) 100%)'
@@ -392,7 +387,7 @@ export default function SolutionsSection() {
 
                     {/* Mobile Layout - Collapsed: Centered name */}
                     <div
-                      className="md:hidden absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-300"
+                      className="lg:hidden absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-300"
                       style={{ opacity: isExpanded ? 0 : 1 }}
                     >
                       <h3 className="text-sm font-black tracking-widest text-white/90 uppercase drop-shadow-lg">
@@ -402,7 +397,7 @@ export default function SolutionsSection() {
 
                     {/* Mobile Layout - Expanded: Content at bottom */}
                     <div
-                      className="md:hidden absolute inset-0 z-20 flex flex-col justify-end p-5 transition-opacity duration-500 pointer-events-none"
+                      className="lg:hidden absolute inset-0 z-20 flex flex-col justify-end p-5 transition-opacity duration-500 pointer-events-none"
                       style={{ opacity: isExpanded ? 1 : 0 }}
                     >
                       <motion.div
@@ -423,14 +418,14 @@ export default function SolutionsSection() {
                     </div>
 
                     {/* Desktop Layout - Default: Rotated name centered */}
-                    <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none z-20 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-                      <h3 className="whitespace-nowrap text-xl md:text-2xl font-black tracking-widest text-white/90 uppercase -rotate-90 drop-shadow-lg">
+                    <div className="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none z-20 opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+                      <h3 className="whitespace-nowrap text-xl lg:text-2xl font-black tracking-widest text-white/90 uppercase -rotate-90 drop-shadow-lg">
                         {product.name}
                       </h3>
                     </div>
 
                     {/* Desktop Layout - Hover: Content at bottom */}
-                    <div className="hidden md:flex absolute inset-0 p-4 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 flex-col justify-end bg-gradient-to-t from-black/90 via-black/60 to-transparent pointer-events-none z-20">
+                    <div className="hidden lg:flex absolute inset-0 p-4 lg:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 flex-col justify-end bg-gradient-to-t from-black/90 via-black/60 to-transparent pointer-events-none z-20">
                       <div className="w-full text-left pointer-events-auto transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                         {!product.nonInteractive && (
                           <span className="text-blue-400 font-bold tracking-widest uppercase text-xs mb-2 block">

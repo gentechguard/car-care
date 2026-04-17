@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, ShieldCheck, Zap } from 'lucide-react';
 import { useGlobalStore, Product } from '@/context/GlobalStore';
 import Image from 'next/image';
+import { useDeviceCapability } from '@/lib/hooks/useDeviceCapability';
 
 // Helper to get Supabase image URL - SAME AS GALLERY
 const getProductImageUrl = (imagePath: string | null | undefined): string | null => {
@@ -72,25 +73,14 @@ export default function ProductShowcase() {
   // Mobile accordion expansion state
   const [expandedMobileIndex, setExpandedMobileIndex] = useState<number | null>(null);
 
-  // Track if we're on mobile - with proper SSR handling
-  const [isMobile, setIsMobile] = useState(false);
-  const [isClient, setIsClient] = useState(false);
+  // Device detection — landscape phones should also be treated as "mobile"
+  const { isPhoneViewport, isClient } = useDeviceCapability();
+  const isMobile = isPhoneViewport;
 
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const rafIdRef = useRef<number | null>(null);
   const isSyncingRef = useRef(false);
-
-  // Client-side only detection to avoid hydration mismatch
-  useEffect(() => {
-    setIsClient(true);
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const displayedProducts = selectedParent
     ? products.filter(p => p.parent_id === selectedParent.id)

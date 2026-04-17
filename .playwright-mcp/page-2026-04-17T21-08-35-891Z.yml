@@ -1,0 +1,199 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - link "Gentech Car Care" [ref=e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Gentech Car Care" [ref=e7]
+      - button "Open menu" [ref=e8]:
+        - img [ref=e9]
+    - generic [ref=e10]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - img "PPF" [ref=e16]
+          - generic [ref=e18]:
+            - heading "PPF" [level=2] [ref=e20]
+            - paragraph [ref=e21]: Premium Paint Protection Films with self-healing technology and high-gloss finish
+        - generic [ref=e22]:
+          - img "SUN FILM" [ref=e24]
+          - generic [ref=e26]:
+            - heading "SUN FILM" [level=2] [ref=e27]
+            - paragraph [ref=e28]: Ultra-Premium Automotive Sun Films for UV and heat protection
+        - generic [ref=e29]:
+          - img "GRAPHENE COATING" [ref=e31]
+          - generic [ref=e33]:
+            - heading "GRAPHENE COATING" [level=2] [ref=e34]
+            - paragraph [ref=e35]: Advanced Nano Protection Technology for enhanced gloss and surface protection
+        - generic [ref=e36]:
+          - img "PERFUMES" [ref=e38]
+          - generic [ref=e40]:
+            - heading "PERFUMES" [level=2] [ref=e41]
+            - paragraph [ref=e42]: Luxurious Car Air Fresheners with premium fragrances
+        - generic [ref=e43]:
+          - img "DETAILING PRODUCTS" [ref=e45]
+          - generic [ref=e47]:
+            - heading "DETAILING PRODUCTS" [level=2] [ref=e48]
+            - paragraph [ref=e49]: Professional Grade Detailing and Cleaning Solutions
+        - generic:
+          - generic: "01"
+          - generic: "02"
+          - generic: "03"
+          - generic: "04"
+          - generic: "05"
+      - generic [ref=e52]:
+        - heading "PREMIUM AUTOMOTIVE SURFACE PROTECTION SERVICE" [level=1] [ref=e53]:
+          - text: PREMIUM AUTOMOTIVE
+          - generic [ref=e54]: SURFACE PROTECTION SERVICE
+        - paragraph [ref=e55]: Engineered to protect. Designed to impress.
+        - paragraph [ref=e56]: Gentech Car Care provides premium detailing and protection services designed to keep your vehicle looking brand new. From advanced paint protection to professional maintenance, we safeguard your car’s finish against the elements with precision and expertise.
+        - generic [ref=e57]:
+          - link "CALL" [ref=e58] [cursor=pointer]:
+            - /url: tel:+919989367878
+          - link "MAP" [ref=e59] [cursor=pointer]:
+            - /url: https://maps.app.goo.gl/kEQprRRWBQSNBd9k9
+    - generic [ref=e67]:
+      - heading "Get In Touch" [level=2] [ref=e68]
+      - paragraph [ref=e70]: Write to us with your query and we shall get back to you
+      - generic [ref=e71]:
+        - textbox "Name*" [ref=e72]
+        - textbox "Phone Number*" [ref=e73]
+        - textbox "Email ID*" [ref=e74]
+        - generic [ref=e75]:
+          - combobox [ref=e76]:
+            - option "Select Product" [disabled] [selected]
+          - generic:
+            - img
+        - button "SUBMIT" [ref=e77]
+    - generic [ref=e80]: Loading Products...
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e83]: Our Process
+        - heading "PRECISION. EXPERTISE. QUALITY CONTROL" [level=2] [ref=e84]
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e89]:
+            - img "Surface Preparation" [ref=e90]
+            - generic [ref=e92]: "01"
+          - generic [ref=e93]:
+            - img [ref=e95]
+            - heading "Surface Preparation" [level=3] [ref=e99]
+            - paragraph [ref=e100]: Washing, Decontamination & Inspection
+            - list [ref=e101]:
+              - listitem [ref=e102]:
+                - img [ref=e103]
+                - generic [ref=e106]: Thorough vehicle washing
+              - listitem [ref=e107]:
+                - img [ref=e108]
+                - generic [ref=e111]: Surface decontamination
+              - listitem [ref=e112]:
+                - img [ref=e113]
+                - generic [ref=e116]: Multi-point inspection to ensure flawless product performance
+        - generic [ref=e117]:
+          - generic [ref=e119]:
+            - img "Precision Installation" [ref=e120]
+            - generic [ref=e122]: "02"
+          - generic [ref=e123]:
+            - img [ref=e125]
+            - heading "Precision Installation" [level=3] [ref=e128]
+            - paragraph [ref=e129]: Expert Application & Alignment
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - img [ref=e132]
+                - generic [ref=e135]: Trained professional application
+              - listitem [ref=e136]:
+                - img [ref=e137]
+                - generic [ref=e140]: Advanced tools for perfect alignment
+              - listitem [ref=e141]:
+                - img [ref=e142]
+                - generic [ref=e145]: Precision fit and finish
+        - generic [ref=e146]:
+          - generic [ref=e148]:
+            - img "Curing & Quality Check" [ref=e149]
+            - generic [ref=e151]: "03"
+          - generic [ref=e152]:
+            - img [ref=e154]
+            - heading "Curing & Quality Check" [level=3] [ref=e157]
+            - paragraph [ref=e158]: Final Inspection & Delivery
+            - list [ref=e159]:
+              - listitem [ref=e160]:
+                - img [ref=e161]
+                - generic [ref=e164]: Final curing process
+              - listitem [ref=e165]:
+                - img [ref=e166]
+                - generic [ref=e169]: Edge sealing
+              - listitem [ref=e170]:
+                - img [ref=e171]
+                - generic [ref=e174]: Multi-point quality inspection before delivery
+    - generic [ref=e177]:
+      - link "+91 99893 67878 Call Us" [ref=e180] [cursor=pointer]:
+        - /url: tel:+919989367878
+        - img [ref=e182]
+        - heading "+91 99893 67878" [level=4] [ref=e184]
+        - paragraph [ref=e185]: Call Us
+      - link "support@gentechcarcare.com Email Us" [ref=e188] [cursor=pointer]:
+        - /url: mailto:support@gentechcarcare.com?subject=Inquiry%20from%20Gentech%20Car%20Care%20website
+        - img [ref=e190]
+        - heading "support@gentechcarcare.com" [level=4] [ref=e193]
+        - paragraph [ref=e194]: Email Us
+      - link "+91 99893 67878 Chat Now" [ref=e197] [cursor=pointer]:
+        - /url: https://wa.me/919989367878?text=Hi%2C%20I%20have%20an%20inquiry%20about%20your%20services.
+        - img [ref=e199]
+        - heading "+91 99893 67878" [level=4] [ref=e201]
+        - paragraph [ref=e202]: Chat Now
+    - generic [ref=e203]:
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - generic [ref=e207]:
+            - link "Gentech Car Care" [ref=e208] [cursor=pointer]:
+              - /url: /home/
+              - img "Gentech Car Care" [ref=e210]
+            - paragraph [ref=e211]: Premium Automotive Protection Solutions
+            - generic [ref=e212]:
+              - link "instagram" [ref=e213] [cursor=pointer]:
+                - /url: https://instagram.com/gentechguard
+                - img [ref=e214]
+              - link "facebook" [ref=e217] [cursor=pointer]:
+                - /url: https://facebook.com/gentechguard
+                - img [ref=e218]
+              - link "youtube" [ref=e220] [cursor=pointer]:
+                - /url: https://youtube.com/@gentechguard
+                - img [ref=e221]
+          - generic [ref=e224]:
+            - heading "Navigation" [level=4] [ref=e225]
+            - list [ref=e226]:
+              - listitem [ref=e227]:
+                - link "Home" [ref=e228] [cursor=pointer]:
+                  - /url: /home/
+                  - text: Home
+              - listitem [ref=e229]:
+                - link "Services" [ref=e230] [cursor=pointer]:
+                  - /url: /home/#product-showcase
+                  - text: Services
+              - listitem [ref=e231]:
+                - link "Process" [ref=e232] [cursor=pointer]:
+                  - /url: /home/#process
+                  - text: Process
+          - generic [ref=e233]:
+            - heading "Services" [level=4] [ref=e234]
+            - list [ref=e235]:
+              - listitem [ref=e236]: Paint Protection Film Installation
+              - listitem [ref=e237]: Sun Film Installation
+              - listitem [ref=e238]: Graphene Coating
+              - listitem [ref=e239]: Ceramic Coating
+              - listitem [ref=e240]: Premium Car Wash
+              - listitem [ref=e241]: Paint Correction
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - paragraph [ref=e244]:
+              - img [ref=e245]
+              - text: © 2025 Gentech Car Care™. All Rights Reserved.
+            - paragraph [ref=e247]: ™ denotes an unregistered trademark. Registration pending.
+          - generic [ref=e248]:
+            - generic [ref=e249]: Privacy Policy
+            - generic [ref=e250]: Terms of Service
+      - generic:
+        - generic: Gentech Car Care
+  - link "Chat on WhatsApp" [ref=e251] [cursor=pointer]:
+    - /url: https://wa.me/919989367878?text=Hi%2C%20I%20have%20an%20inquiry%20about%20your%20services.
+    - img [ref=e252]
+  - button "Open Next.js Dev Tools" [ref=e259] [cursor=pointer]:
+    - img [ref=e260]

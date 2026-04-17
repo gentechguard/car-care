@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useBackButton } from '@/hooks/useBackButton';
@@ -48,6 +48,7 @@ export default function Header() {
     };
 
     return (
+        <>
         <header
             className={`fixed top-0 left-0 w-full z-[60] transition-all duration-300 ${
                 scrolled ? "glass py-3" : "bg-transparent py-4 sm:py-5"
@@ -65,13 +66,13 @@ export default function Header() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="w-36 md:w-48 h-10 md:h-12 relative"
+                        className="w-36 lg:w-48 h-10 lg:h-12 relative"
                     >
                         <Image
-                            src="/assets/logo-final-wide.png"
+                            src="/assets/logo-final-wide.jpeg"
                             alt="Gentech Car Care"
                             fill
-                            className="object-contain"
+                            className="object-cover object-center mix-blend-screen"
                             priority
                         />
                     </motion.div>
@@ -99,60 +100,47 @@ export default function Header() {
 
                 {/* MOBILE TOGGLE */}
                 <button
-                    className="lg:hidden text-white p-2 relative z-10"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    type="button"
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isMenuOpen}
+                    className="lg:hidden text-white p-2 relative z-[70]"
+                    onClick={() => setIsMenuOpen((prev) => !prev)}
                 >
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
 
-            {/* Mobile Menu */}
-            <AnimatePresence>
-                {isMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.15 }}
-                        className="lg:hidden fixed inset-0 z-[55] bg-[#0A0A0A] pt-20 pb-8 px-6 overflow-y-auto"
-                    >
-                        <nav className="flex flex-col gap-1 mt-4">
-                            {navLinks.map((link, i) => (
-                                <motion.div
-                                    key={link.name}
-                                    initial={{ opacity: 0, x: -16 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.25, delay: 0.04 * i, ease: [0.25, 0.1, 0.25, 1] }}
-                                >
-                                    <Link
-                                        href={link.href}
-                                        className="text-lg py-3.5 font-bold uppercase tracking-widest text-white/80 hover:text-primary-blue flex items-center justify-between group border-b border-white/5"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        {link.name}
-                                        <ChevronRight size={20} className="text-primary-blue opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                                    </Link>
-                                </motion.div>
-                            ))}
-
-                            {/* Get In Touch button in mobile menu */}
-                            <motion.div
-                                initial={{ opacity: 0, x: -16 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.25, delay: 0.04 * navLinks.length, ease: [0.25, 0.1, 0.25, 1] }}
-                                className="mt-4"
-                            >
-                                <button
-                                    onClick={scrollToGetInTouch}
-                                    className="w-full bg-primary-blue hover:bg-blue-600 text-white py-3.5 rounded-xl text-center font-bold uppercase tracking-wider text-lg transition-colors"
-                                >
-                                    Get In Touch
-                                </button>
-                            </motion.div>
-                        </nav>
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </header>
+
+        {/* Mobile Menu — rendered OUTSIDE <header> so its `fixed` is viewport-relative.
+             (A parent with backdrop-filter / transform / filter becomes a containing block
+             for position:fixed descendants, which would otherwise shrink this menu to the
+             header's bounds once scrolled.) */}
+        {isMenuOpen && (
+            <div className="lg:hidden fixed inset-0 z-[55] bg-[#0A0A0A] pt-20 pb-8 px-6 overflow-y-auto">
+                <nav className="flex flex-col gap-1 mt-4">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="text-lg py-3.5 font-bold uppercase tracking-widest text-white/80 hover:text-primary-blue flex items-center justify-between group border-b border-white/5"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            {link.name}
+                            <ChevronRight size={20} className="text-primary-blue opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        </Link>
+                    ))}
+
+                    {/* Get In Touch button in mobile menu */}
+                    <button
+                        onClick={scrollToGetInTouch}
+                        className="mt-4 w-full bg-primary-blue hover:bg-blue-600 text-white py-3.5 rounded-xl text-center font-bold uppercase tracking-wider text-lg transition-colors"
+                    >
+                        Get In Touch
+                    </button>
+                </nav>
+            </div>
+        )}
+        </>
     );
 }

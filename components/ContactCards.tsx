@@ -15,7 +15,7 @@ export default function ContactCards() {
     return (
         <section id="contact-cards" className="relative py-16 md:py-24 overflow-hidden bg-dark-bg" style={{ background: '#050505' }}>
             <div className="container mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <ContactCard
                         icon={Phone}
                         title="Call Us"
@@ -33,7 +33,7 @@ export default function ContactCards() {
                     />
                     <ContactCard
                         icon={MessageCircle}
-                        title="WhatsApp"
+                        title="Chat Now"
                         value={config.contact.phone.display}
                         href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi, I have an inquiry about your services.")}`}
                         delay={0.3}
@@ -65,7 +65,7 @@ function ContactCard({ icon: Icon, title, value, href, delay, isWhatsApp, isEmai
                     <Icon size={32} />
                 </div>
 
-                <h4 className={`text-white font-black mb-2 ${isEmail ? 'text-base md:text-xs lg:text-sm xl:text-base whitespace-nowrap' : 'text-xl md:text-2xl break-all'}`}>{value}</h4>
+                <h4 className={`text-white font-black mb-2 ${isEmail ? 'text-sm lg:text-base break-all' : 'text-xl lg:text-2xl break-all'}`}>{value}</h4>
                 <p className="text-text-grey text-xs font-bold uppercase tracking-widest">{title}</p>
             </a>
         </motion.div>

@@ -1,0 +1,10 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - heading "404" [level=1] [ref=e4]
+    - heading "This page could not be found." [level=2] [ref=e6]
+  - link "Chat on WhatsApp" [ref=e7] [cursor=pointer]:
+    - /url: https://wa.me/919989367878?text=Hi%2C%20I%20have%20an%20inquiry%20about%20your%20services.
+    - img [ref=e8]
+  - button "Open Next.js Dev Tools" [ref=e15] [cursor=pointer]:
+    - img [ref=e16]
+  - alert [ref=e19]

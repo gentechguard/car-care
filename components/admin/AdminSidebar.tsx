@@ -69,7 +69,7 @@ export default function AdminSidebar() {
     return (
         <>
             {/* Mobile Hamburguer (Visible only on small screens) */}
-            <div className="md:hidden fixed top-6 right-4 z-[100]">
+            <div className="lg:hidden fixed top-6 right-4 z-[100]">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="text-[#1e1b4b] bg-white p-2 rounded-lg shadow-lg"
@@ -80,21 +80,21 @@ export default function AdminSidebar() {
 
             {/* Sidebar Container */}
             <aside className={`
-                fixed inset-y-0 left-0 z-40 w-[260px] transform transition-transform duration-300 ease-in-out md:translate-x-0 md:static md:h-[100dvh]
+                fixed inset-y-0 left-0 z-40 w-[260px] transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:h-[100dvh]
                 bg-linear-to-b from-black via-[#110e30] to-[#2a2275] flex flex-col justify-between px-4 py-8 text-white overflow-hidden
                 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}
             `}>
                 {/* Top Section */}
                 <div>
                     {/* Brand */}
-                    <div className="flex items-center gap-3 mb-16 mt-0 md:mt-2">
+                    <div className="flex items-center gap-3 mb-16 mt-0 lg:mt-2">
                         <div className="w-auto flex flex-1 items-center justify-center">
                             <Image
-                                src="/assets/logo-final-wide.png"
+                                src="/assets/logo-final-wide.jpeg"
                                 alt="Gentech"
                                 width={400}
                                 height={200}
-                                className="object-contain h-auto w-full"
+                                className="object-contain h-auto w-full mix-blend-screen"
                             />
                         </div>
                         <span className="hidden text-[10px] uppercase border border-white/30 px-[6px] py-[2px] rounded-[12px] text-white/80 tracking-wider">
@@ -177,7 +177,7 @@ export default function AdminSidebar() {
             {/* Overlay for Mobile */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 md:hidden"
+                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 lg:hidden"
                     onClick={() => setIsOpen(false)}
                 />
             )}
