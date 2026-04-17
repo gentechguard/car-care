@@ -2,6 +2,15 @@
 
 html {
   scroll-behavior: smooth;
+  /* Never let ancestors block vertical scroll on the viewport */
+  overflow-y: auto;
+}
+
+html,
+body {
+  /* Guarantee the page can always grow and scroll */
+  min-height: 100%;
+  height: auto;
 }
 
 @theme inline {
@@ -32,7 +41,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-roboto), sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   /* Prevent pull-to-refresh on mobile */
   overscroll-behavior-y: contain;
 }
@@ -664,21 +674,20 @@ a:focus:not(:focus-visible) {
 
 /* ===== LANDSCAPE-PHONE SAFETY NET =====
    A touch device rotated to landscape has height collapsed to ~390-430 px.
-   Keep section scroll offsets tight and clamp heading sizes so content
-   actually fits on screen without requiring aggressive scrolling. */
-@media (pointer: coarse) and (max-height: 500px) {
+   Trim hero content and section padding so the page actually fits. */
+@media (max-height: 500px) {
   section[id] {
     scroll-margin-top: 64px;
   }
 
-  h1 {
-    font-size: clamp(1.375rem, 4.2vh, 2rem);
-    line-height: 1.15;
+  .hero-section h1 {
+    font-size: clamp(1rem, 5.5vh, 1.75rem) !important;
+    line-height: 1.1 !important;
   }
 
-  h2 {
-    font-size: clamp(1.125rem, 3.5vh, 1.625rem);
-    line-height: 1.2;
+  /* Free up vertical space by hiding prose on landscape phones */
+  .hero-description {
+    display: none !important;
   }
 
   /* Tighten vertical section padding so the user sees the content, not padding */

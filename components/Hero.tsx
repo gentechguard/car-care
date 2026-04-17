@@ -62,7 +62,7 @@ export default function Hero() {
     return (
         <section
             ref={ref}
-            className="relative h-[100dvh] w-full overflow-hidden bg-dark-bg flex items-start lg:items-center justify-center pt-16 sm:pt-20 lg:pt-20 pb-0"
+            className="hero-section relative min-h-[100dvh] w-full overflow-hidden bg-dark-bg flex items-start lg:items-center justify-center pt-16 sm:pt-20 lg:pt-20 pb-0"
         >
             {/* BACKGROUND: Static for Desktop, Carousel for Mobile */}
             <motion.div
@@ -98,19 +98,14 @@ export default function Hero() {
                         transition={{ duration: animationDuration, ease: [0.25, 0.1, 0.25, 1] }}
                         className="flex flex-col items-center lg:items-start justify-center"
                     >
-                        {/* Main Heading - Fluid sizing across all viewports */}
+                        {/* Main Heading — always 3 lines, fluid size across every viewport */}
                         <h1
-                            style={{ fontSize: 'clamp(1.625rem, 4.2vw + 0.25rem, 4rem)' }}
-                            className="font-black leading-tight mb-2 sm:mb-3"
+                            style={{ fontSize: 'clamp(1.125rem, 4.2vw, 3.75rem)' }}
+                            className="font-black leading-[1.08] tracking-tight mb-2 sm:mb-3 whitespace-nowrap"
                         >
-                            PREMIUM AUTOMOTIVE <br className="hidden sm:block" />
-                            <span className="blue-text tracking-wider">
-                                SURFACE <br className="sm:hidden" />
-                                <span className="hidden sm:inline"> </span>
-                                PROTECTION <br className="sm:hidden" />
-                                <span className="hidden sm:inline"> </span>
-                                SERVICE
-                            </span>
+                            <span className="block">PREMIUM AUTOMOTIVE</span>
+                            <span className="block blue-text tracking-wider">SURFACE PROTECTION</span>
+                            <span className="block blue-text tracking-wider">SERVICE</span>
                         </h1>
 
                         {/* Tagline */}
@@ -118,8 +113,8 @@ export default function Hero() {
                             Engineered to protect. Designed to impress.
                         </p>
 
-                        {/* Description - Hidden on mobile for cleaner look */}
-                        <p className="hidden sm:block text-sm sm:text-base md:text-lg text-text-grey max-w-xl mb-6 sm:mb-8 font-medium leading-relaxed">
+                        {/* Description - Hidden on mobile and landscape phones for cleaner look */}
+                        <p className="hero-description hidden sm:block text-sm sm:text-base md:text-lg text-text-grey max-w-xl mb-6 sm:mb-8 font-medium leading-relaxed">
                             Gentech Car Care provides premium detailing and protection services designed to keep your vehicle looking brand new. From advanced paint protection to professional maintenance, we safeguard your car’s finish against the elements with precision and expertise.
                         </p>
 
