@@ -2,8 +2,14 @@
 
 html {
   scroll-behavior: smooth;
-  /* Never let ancestors block vertical scroll on the viewport */
-  overflow-y: auto;
+  /* Single scroll container: html handles vertical scroll for the viewport.
+     `overflow-x: clip` prevents horizontal overflow without creating an
+     additional scroll container. Do NOT set overflow-y here — leaving it
+     at the default lets the browser use the standard viewport scroll path,
+     which is the only way touch scroll reliably works on mobile. */
+  overflow-x: clip;
+  /* Prevent pull-to-refresh on mobile (moved from body) */
+  overscroll-behavior-y: contain;
 }
 
 html,
@@ -41,10 +47,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-roboto), sans-serif;
-  overflow-x: clip;
-  overflow-y: visible;
-  /* Prevent pull-to-refresh on mobile */
-  overscroll-behavior-y: contain;
+  /* Body is NOT a scroll container — the viewport (html) scrolls.
+     Previously body had `overflow-x: clip` + `overflow-y: visible`, which
+     per CSS spec forced overflow-y to compute to `auto`, creating a second
+     scroll container. That dual-scroller setup broke touch scrolling on
+     mobile and caused `scrollTo` / anchor jumps to target the wrong element. */
 }
 
 /* ===== SAFE AREA UTILITIES ===== */
