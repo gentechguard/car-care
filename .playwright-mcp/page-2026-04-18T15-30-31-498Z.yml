@@ -1,0 +1,270 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Supabase" [ref=e9] [cursor=pointer]:
+            - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+            - img "Supabase" [ref=e10]
+          - generic [ref=e11]:
+            - img [ref=e13]
+            - generic [ref=e15]:
+              - link "p-sai-gowtham Free" [ref=e16] [cursor=pointer]:
+                - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+                - img [ref=e17]
+                - generic [ref=e27]: p-sai-gowtham
+                - generic [ref=e28]: Free
+              - button [ref=e29] [cursor=pointer]:
+                - img [ref=e31]
+            - generic [ref=e34]:
+              - img [ref=e36]
+              - generic [ref=e38]:
+                - link "Gentech Guard" [ref=e39] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                  - img [ref=e40]
+                  - generic "Gentech Guard" [ref=e43]
+                - button [ref=e44] [cursor=pointer]:
+                  - img [ref=e46]
+              - img [ref=e50]
+              - generic [ref=e52]:
+                - link "main Production" [ref=e53] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                  - generic "main" [ref=e54]
+                  - generic [ref=e55]: Production
+                - button [ref=e56] [cursor=pointer]:
+                  - img [ref=e58]
+          - button "Connect" [ref=e62] [cursor=pointer]:
+            - img [ref=e64]
+            - generic [ref=e66]: Connect
+        - generic [ref=e67]:
+          - generic [ref=e69] [cursor=pointer]: Feedback
+          - generic [ref=e70]:
+            - button "Search..." [ref=e71] [cursor=pointer]:
+              - generic [ref=e72]:
+                - img [ref=e73]
+                - paragraph [ref=e76]: Search...
+              - generic [ref=e78]: Ctrl K
+            - button [ref=e79] [cursor=pointer]:
+              - img [ref=e81]
+            - button [ref=e85] [cursor=pointer]:
+              - img [ref=e87]
+            - button [ref=e89] [cursor=pointer]:
+              - img [ref=e91]
+            - button [ref=e93] [cursor=pointer]:
+              - img [ref=e97]
+          - button "p-sai-gowtham" [ref=e100] [cursor=pointer]:
+            - img "p-sai-gowtham" [ref=e102]
+    - generic [ref=e103]:
+      - generic [ref=e107]:
+        - list [ref=e110]:
+          - generic [ref=e111]:
+            - listitem [ref=e112]:
+              - link "Project Overview" [ref=e113] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                - img [ref=e114]
+                - generic: Project Overview
+            - listitem [ref=e116]:
+              - link "Table Editor" [ref=e117] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/editor
+                - img [ref=e118]
+                - generic: Table Editor
+            - listitem [ref=e120]:
+              - link "SQL Editor" [ref=e121] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql
+                - img [ref=e122]
+                - generic: SQL Editor
+          - generic [ref=e124]:
+            - listitem [ref=e125]:
+              - link "Database" [ref=e126] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/database/schemas
+                - img [ref=e127]
+                - generic: Database
+            - listitem [ref=e131]:
+              - link "Authentication" [ref=e132] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/auth/users
+                - img [ref=e133]
+                - generic: Authentication
+            - listitem [ref=e135]:
+              - link "Storage" [ref=e136] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files
+                - img [ref=e137]
+                - generic: Storage
+            - listitem [ref=e139]:
+              - link "Edge Functions" [ref=e140] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/functions
+                - img [ref=e141]
+                - generic: Edge Functions
+            - listitem [ref=e146]:
+              - link "Realtime" [ref=e147] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/realtime/inspector
+                - img [ref=e148]
+                - generic: Realtime
+          - generic [ref=e150]:
+            - listitem [ref=e152]:
+              - link "Advisors" [ref=e153] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/advisors/security
+                - img [ref=e154]
+                - generic: Advisors
+            - listitem [ref=e156]:
+              - link "Observability" [ref=e157] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/observability
+                - img [ref=e158]
+                - generic: Observability
+            - listitem [ref=e166]:
+              - link "Logs" [ref=e167] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/logs/explorer
+                - img [ref=e168]
+                - generic: Logs
+            - listitem [ref=e169]:
+              - link "Integrations" [ref=e170] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/integrations
+                - img [ref=e171]
+                - generic: Integrations
+          - listitem [ref=e175]:
+            - link "Project Settings" [ref=e176] [cursor=pointer]:
+              - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/settings/general
+              - img [ref=e177]
+              - generic: Project Settings
+        - button [ref=e182] [cursor=pointer]:
+          - img [ref=e184]
+      - generic [ref=e191]:
+        - generic [ref=e195]:
+          - heading "Storage" [level=4] [ref=e197]
+          - menu "Sidebar" [disabled] [ref=e199]:
+            - list [ref=e200]:
+              - generic [ref=e201]:
+                - generic [ref=e202]:
+                  - generic [ref=e204]: Manage
+                  - link "Files" [disabled] [ref=e205] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files
+                    - menuitem "Files" [disabled] [ref=e206]:
+                      - paragraph [ref=e209]: Files
+                  - link "Analytics New" [disabled] [ref=e210] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/analytics
+                    - menuitem "Analytics New" [disabled] [ref=e211]:
+                      - generic [ref=e213]:
+                        - paragraph [ref=e214]: Analytics
+                        - generic [ref=e215]: New
+                  - link "Vectors" [disabled] [ref=e216] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/vectors
+                    - menuitem "Vectors" [disabled] [ref=e217]:
+                      - paragraph [ref=e220]: Vectors
+                - generic [ref=e222]:
+                  - generic [ref=e224]: Configuration
+                  - link "S3" [disabled] [ref=e225] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/s3
+                    - menuitem "S3" [disabled] [ref=e226]:
+                      - paragraph [ref=e228]: S3
+        - separator [disabled] [ref=e229]:
+          - img [ref=e231]
+        - main [ref=e240]:
+          - generic [ref=e241]:
+            - generic [ref=e243]:
+              - generic [ref=e244]:
+                - heading "Files" [level=1] [ref=e245]
+                - generic [ref=e246]: General file storage for most types of digital content
+              - link "Docs" [ref=e248] [cursor=pointer]:
+                - /url: https://supabase.com/docs/guides/storage/buckets/fundamentals
+                - img [ref=e250]
+                - generic [ref=e253]: Docs
+            - navigation [ref=e256]:
+              - menu [ref=e257]:
+                - listitem [ref=e258]:
+                  - link "Buckets" [ref=e259] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files
+                - listitem [ref=e260]:
+                  - link "Settings" [ref=e261] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files/settings
+                - listitem [ref=e262]:
+                  - link "Policies" [ref=e263] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files/policies
+          - generic [ref=e266]:
+            - generic [ref=e267]:
+              - generic [ref=e268]:
+                - group [ref=e269]:
+                  - textbox "Search for a bucket" [ref=e270]
+                  - group [ref=e271]:
+                    - img [ref=e272]
+                - button "Sorted by created at" [ref=e275] [cursor=pointer]:
+                  - img [ref=e277]
+                  - generic [ref=e279]: Sorted by created at
+              - button "New bucket" [ref=e280] [cursor=pointer]:
+                - img [ref=e282]
+                - generic [ref=e283]: New bucket
+            - table [ref=e287]:
+              - rowgroup [ref=e288]:
+                - row "Icon Name Policies File size limit Allowed MIME types Actions" [ref=e289]:
+                  - columnheader "Icon" [ref=e290]:
+                    - generic [ref=e291]: Icon
+                  - columnheader "Name" [ref=e292]
+                  - columnheader "Policies" [ref=e293]
+                  - columnheader "File size limit" [ref=e294]
+                  - columnheader "Allowed MIME types" [ref=e295]
+                  - columnheader "Actions" [ref=e296]:
+                    - generic [ref=e297]: Actions
+              - rowgroup [ref=e298]:
+                - row "bucket icon warranty-certificates Public 0 Unset (50 MB) application/pdf Go to bucket details" [ref=e299] [cursor=pointer]:
+                  - cell "bucket icon" [ref=e300]:
+                    - img "bucket icon" [ref=e301]
+                  - cell "warranty-certificates Public" [ref=e303]:
+                    - generic [ref=e304]:
+                      - paragraph [ref=e305]: warranty-certificates
+                      - generic [ref=e306]: Public
+                  - cell "0" [ref=e307]:
+                    - paragraph [ref=e308]: "0"
+                  - cell "Unset (50 MB)" [ref=e309]:
+                    - paragraph [ref=e310]: Unset (50 MB)
+                  - cell "application/pdf" [ref=e311]:
+                    - paragraph [ref=e312]: application/pdf
+                  - cell "Go to bucket details" [ref=e313]:
+                    - img [ref=e315]
+                    - button "Go to bucket details" [ref=e317]
+                - row "bucket icon gallery Public 0 Unset (50 MB) Any Go to bucket details" [ref=e318] [cursor=pointer]:
+                  - cell "bucket icon" [ref=e319]:
+                    - img "bucket icon" [ref=e320]
+                  - cell "gallery Public" [ref=e322]:
+                    - generic [ref=e323]:
+                      - paragraph [ref=e324]: gallery
+                      - generic [ref=e325]: Public
+                  - cell "0" [ref=e326]:
+                    - paragraph [ref=e327]: "0"
+                  - cell "Unset (50 MB)" [ref=e328]:
+                    - paragraph [ref=e329]: Unset (50 MB)
+                  - cell "Any" [ref=e330]:
+                    - paragraph [ref=e331]: Any
+                  - cell "Go to bucket details" [ref=e332]:
+                    - img [ref=e334]
+                    - button "Go to bucket details" [ref=e336]
+                - row "bucket icon product Public 0 Unset (50 MB) Any Go to bucket details" [ref=e337] [cursor=pointer]:
+                  - cell "bucket icon" [ref=e338]:
+                    - img "bucket icon" [ref=e339]
+                  - cell "product Public" [ref=e341]:
+                    - generic [ref=e342]:
+                      - paragraph [ref=e343]: product
+                      - generic [ref=e344]: Public
+                  - cell "0" [ref=e345]:
+                    - paragraph [ref=e346]: "0"
+                  - cell "Unset (50 MB)" [ref=e347]:
+                    - paragraph [ref=e348]: Unset (50 MB)
+                  - cell "Any" [ref=e349]:
+                    - paragraph [ref=e350]: Any
+                  - cell "Go to bucket details" [ref=e351]:
+                    - img [ref=e353]
+                    - button "Go to bucket details" [ref=e355]
+                - row "bucket icon warranty-uploads Public 0 Unset (50 MB) Any Go to bucket details" [ref=e356] [cursor=pointer]:
+                  - cell "bucket icon" [ref=e357]:
+                    - img "bucket icon" [ref=e358]
+                  - cell "warranty-uploads Public" [ref=e360]:
+                    - generic [ref=e361]:
+                      - paragraph [ref=e362]: warranty-uploads
+                      - generic [ref=e363]: Public
+                  - cell "0" [ref=e364]:
+                    - paragraph [ref=e365]: "0"
+                  - cell "Unset (50 MB)" [ref=e366]:
+                    - paragraph [ref=e367]: Unset (50 MB)
+                  - cell "Any" [ref=e368]:
+                    - paragraph [ref=e369]: Any
+                  - cell "Go to bucket details" [ref=e370]:
+                    - img [ref=e372]
+                    - button "Go to bucket details" [ref=e374]
+  - alert [ref=e375]: Files | Storage | Supabase

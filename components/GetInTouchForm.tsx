@@ -75,8 +75,8 @@ export default function GetInTouchForm() {
                     {/* Card */}
                     <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 md:p-10">
                         {/* Title */}
-                        <h2 className="text-2xl md:text-3xl font-black text-white text-center mb-2">
-                            Get In Touch
+                        <h2 className="text-2xl md:text-3xl font-black text-primary-gold text-center mb-2">
+                            Customer Enquiry
                         </h2>
                         <div className="w-full h-px bg-white/20 my-4" />
                         <p className="text-white/60 text-sm md:text-base text-center mb-8">

@@ -19,6 +19,9 @@ const servicesList = [
     "Ceramic Coating",
     "Premium Car Wash",
     "Paint Correction",
+    "Germ Free Deep Interior Cleaning",
+    "AC Treatment",
+    "Trim Restoration",
 ];
 
 export default function Footer() {

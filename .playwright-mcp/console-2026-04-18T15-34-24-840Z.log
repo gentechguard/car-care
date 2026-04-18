@@ -1,0 +1,3 @@
+[    1619ms] [LOG] Supabase Studio is running commit a5f4a59e0e262394b345600e8d8a2241d6ac3b64 deployed at 2026-04-18 15:26:08 +05:30. @ https://frontend-assets.supabase.com/studio/a5f4a59e0e26/_next/static/chunks/03dqb8kdmgexg.js?dpl=dpl_FZ1a5ZdyrP5Pmw4x5pf3Mpz9jtHk:12
+[    5373ms] [WARNING] [Warning] Please install/enable Redux devtools extension @ https://frontend-assets.supabase.com/studio/a5f4a59e0e26/_next/static/chunks/03dqb8kdmgexg.js?dpl=dpl_FZ1a5ZdyrP5Pmw4x5pf3Mpz9jtHk:12
+[   28387ms] [ERROR] Failed to load resource: the server responded with a status of 520 () @ https://ph.supabase.com/i/v0/e/?ip=0&_=1776526466702&ver=1.357.0&compression=gzip-js:0

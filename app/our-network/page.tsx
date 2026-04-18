@@ -140,7 +140,7 @@ export default function OurNetworkPage() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry', { detail: { type: 'dealer' } }))}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-bold text-lg transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-white font-bold text-lg transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 Apply for Dealership
@@ -183,7 +183,7 @@ export default function OurNetworkPage() {
 
                 {/* Floating Elements */}
                 <motion.div
-                  className="absolute -top-4 -right-4 px-4 py-2 rounded-full bg-[#D4AF37] text-black font-bold text-sm"
+                  className="absolute -top-4 -right-4 px-4 py-2 rounded-full bg-[#D4AF37] text-white font-bold text-sm"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >

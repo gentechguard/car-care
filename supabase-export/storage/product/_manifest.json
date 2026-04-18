@@ -1,0 +1,62 @@
+[
+  {
+    "path": ".emptyFolderPlaceholder",
+    "size": 0,
+    "mime": "application/octet-stream"
+  },
+  {
+    "path": "detailing/all-purpose-cleaner.png",
+    "size": 167505,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "detailing/car-shampoo.png",
+    "size": 125277,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "detailing/glass-cleaner.png",
+    "size": 149806,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "detailing/multi-surface-shiner.png",
+    "size": 168002,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "graphene-coating/graphene-ultra-pro.png",
+    "size": 343995,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "graphene-coating/graphene-ultra.png",
+    "size": 338429,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "perfumes/luxurious-freshener.png",
+    "size": 387715,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "ppf/gentech-s.png",
+    "size": 424786,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "ppf/ultra-pro-8.png",
+    "size": 438669,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "window-film/gt-50.png",
+    "size": 330495,
+    "mime": "image/jpeg"
+  },
+  {
+    "path": "window-film/gt-70.png",
+    "size": 322926,
+    "mime": "image/jpeg"
+  }
+]

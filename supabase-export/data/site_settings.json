@@ -1,0 +1,71 @@
+[
+  {
+    "key": "contact.phone.display",
+    "value": "+91 99898 20222",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "contact.phone.value",
+    "value": "+919989820222",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "contact.email",
+    "value": "customercare@gentechguard.com",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "contact.whatsapp.number",
+    "value": "919989820222",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "contact.address.line1",
+    "value": "Gentech Headquarters",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "contact.address.line2",
+    "value": "Hyderabad, Telangana",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "contact.address.mapLink",
+    "value": "https://maps.google.com/?q=Gentech+Guard+Hyderabad",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "socials",
+    "value": {
+      "youtube": "https://youtube.com/@gentechguard",
+      "facebook": "https://facebook.com/gentechguard",
+      "instagram": "https://instagram.com/gentechguard"
+    },
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "company.name",
+    "value": "Gentech Guard",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "company.legalName",
+    "value": "Gentech Guard Pvt Ltd",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "company.copyright",
+    "value": "© 2025 Gentech Guard™. All Rights Reserved.",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "metadata.title",
+    "value": "Gentech Guard | Premium Paint Protection Film",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  },
+  {
+    "key": "metadata.description",
+    "value": "Premium Automotive Protection Solutions",
+    "updated_at": "2026-02-16T16:41:38.39347+00:00"
+  }
+]

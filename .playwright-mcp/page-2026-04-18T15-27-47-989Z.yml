@@ -1,0 +1,332 @@
+- generic [ref=e1]:
+  - generic [ref=e76]:
+    - banner [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - link "Supabase" [ref=e81] [cursor=pointer]:
+            - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+            - img "Supabase" [ref=e82]
+          - generic [ref=e83]:
+            - img [ref=e85]
+            - generic [ref=e87]:
+              - link "p-sai-gowtham Free" [ref=e88] [cursor=pointer]:
+                - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+                - img [ref=e89]
+                - generic [ref=e99]: p-sai-gowtham
+                - generic [ref=e100]: Free
+              - button [ref=e101] [cursor=pointer]:
+                - img [ref=e103]
+            - generic [ref=e106]:
+              - img [ref=e108]
+              - generic [ref=e110]:
+                - link "Gentech Guard" [ref=e111] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                  - img [ref=e112]
+                  - generic "Gentech Guard" [ref=e115]
+                - button [ref=e116] [cursor=pointer]:
+                  - img [ref=e118]
+              - img [ref=e122]
+              - generic [ref=e124]:
+                - link "main Production" [ref=e125] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                  - generic "main" [ref=e126]
+                  - generic [ref=e127]: Production
+                - button [ref=e128] [cursor=pointer]:
+                  - img [ref=e130]
+          - button "Connect" [ref=e134] [cursor=pointer]:
+            - img [ref=e136]
+            - generic [ref=e138]: Connect
+        - generic [ref=e139]:
+          - generic [ref=e141] [cursor=pointer]: Feedback
+          - generic [ref=e142]:
+            - button "Search..." [ref=e143] [cursor=pointer]:
+              - generic [ref=e144]:
+                - img [ref=e145]
+                - paragraph [ref=e148]: Search...
+              - generic [ref=e150]: Ctrl K
+            - button [ref=e151] [cursor=pointer]:
+              - img [ref=e153]
+            - button [ref=e157] [cursor=pointer]:
+              - img [ref=e159]
+            - button [ref=e161] [cursor=pointer]:
+              - img [ref=e163]
+            - button [ref=e165] [cursor=pointer]:
+              - img [ref=e169]
+          - button "p-sai-gowtham" [ref=e172] [cursor=pointer]:
+            - img "p-sai-gowtham" [ref=e174]
+    - generic [ref=e175]:
+      - generic [ref=e179]:
+        - list [ref=e182]:
+          - generic [ref=e183]:
+            - listitem [ref=e184]:
+              - link "Project Overview" [ref=e185] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                - img [ref=e186]
+                - generic: Project Overview
+            - listitem [ref=e188]:
+              - link "Table Editor" [ref=e189] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/editor
+                - img [ref=e190]
+                - generic: Table Editor
+            - listitem [ref=e192]:
+              - link "SQL Editor" [ref=e193] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql
+                - img [ref=e194]
+                - generic: SQL Editor
+          - generic [ref=e196]:
+            - listitem [ref=e197]:
+              - link "Database" [ref=e198] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/database/schemas
+                - img [ref=e199]
+                - generic: Database
+            - listitem [ref=e203]:
+              - link "Authentication" [ref=e204] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/auth/users
+                - img [ref=e205]
+                - generic: Authentication
+            - listitem [ref=e207]:
+              - link "Storage" [ref=e208] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files
+                - img [ref=e209]
+                - generic: Storage
+            - listitem [ref=e211]:
+              - link "Edge Functions" [ref=e212] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/functions
+                - img [ref=e213]
+                - generic: Edge Functions
+            - listitem [ref=e218]:
+              - link "Realtime" [ref=e219] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/realtime/inspector
+                - img [ref=e220]
+                - generic: Realtime
+          - generic [ref=e222]:
+            - listitem [ref=e224]:
+              - link "Advisors" [ref=e225] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/advisors/security
+                - img [ref=e226]
+                - generic: Advisors
+            - listitem [ref=e228]:
+              - link "Observability" [ref=e229] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/observability
+                - img [ref=e230]
+                - generic: Observability
+            - listitem [ref=e238]:
+              - link "Logs" [ref=e239] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/logs/explorer
+                - img [ref=e240]
+                - generic: Logs
+            - listitem [ref=e241]:
+              - link "Integrations" [ref=e242] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/integrations
+                - img [ref=e243]
+                - generic: Integrations
+          - listitem [ref=e247]:
+            - link "Project Settings" [ref=e248] [cursor=pointer]:
+              - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/settings/general
+              - img [ref=e249]
+              - generic: Project Settings
+        - button [ref=e254] [cursor=pointer]:
+          - img [ref=e256]
+      - generic [ref=e263]:
+        - generic [ref=e267]:
+          - heading "SQL Editor" [level=4] [ref=e269]
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - generic [ref=e275]:
+                  - generic [ref=e276]: Search queries
+                  - textbox "Search queries..." [ref=e277]
+                  - button [ref=e278] [cursor=pointer]:
+                    - img [ref=e279]
+                  - img [ref=e282]
+                - button [ref=e285] [cursor=pointer]:
+                  - img [ref=e287]
+              - button "Shared" [ref=e290] [cursor=pointer]:
+                - img [ref=e291]
+                - generic [ref=e293]: Shared
+              - button "Favorites" [ref=e296] [cursor=pointer]:
+                - img [ref=e297]
+                - generic [ref=e299]: Favorites
+              - generic [ref=e301]:
+                - button "PRIVATE (20)" [expanded] [ref=e604] [cursor=pointer]:
+                  - img [ref=e303]
+                  - generic [ref=e305]: PRIVATE (20)
+                - tree "private-snippets" [ref=e307]:
+                  - generic "Database Schema and Extensions JSON Report" [ref=e695] [cursor=pointer]:
+                    - generic [ref=e606]:
+                      - img [ref=e607]
+                      - generic [ref=e613]: Database Schema and Extensions JSON Report
+                  - generic "Contact Submissions Inbox" [ref=e308] [cursor=pointer]:
+                    - generic [ref=e309]:
+                      - img [ref=e310]
+                      - generic [ref=e316]: Contact Submissions Inbox
+                  - generic "Insert 31 dealer records" [ref=e317] [cursor=pointer]:
+                    - generic [ref=e318]:
+                      - img [ref=e319]
+                      - generic [ref=e325]: Insert 31 dealer records
+                  - generic "OTP and Warranty Certificate Tables" [ref=e326] [cursor=pointer]:
+                    - generic [ref=e327]:
+                      - img [ref=e328]
+                      - generic [ref=e334]: OTP and Warranty Certificate Tables
+                  - generic "Gentech Guard Dealer Locations" [ref=e335] [cursor=pointer]:
+                    - generic [ref=e336]:
+                      - img [ref=e337]
+                      - generic [ref=e343]: Gentech Guard Dealer Locations
+                  - generic "List buckets and search objects by name" [ref=e344] [cursor=pointer]:
+                    - generic [ref=e345]:
+                      - img [ref=e346]
+                      - generic [ref=e352]: List buckets and search objects by name
+                  - generic "Update Parent Products Order" [ref=e353] [cursor=pointer]:
+                    - generic [ref=e354]:
+                      - img [ref=e355]
+                      - generic [ref=e361]: Update Parent Products Order
+                  - generic "Enquiries Schema with Row-Level Security & Auto Timestamps" [ref=e362] [cursor=pointer]:
+                    - generic [ref=e363]:
+                      - img [ref=e364]
+                      - generic [ref=e370]: Enquiries Schema with Row-Level Security & Auto Timestamps
+                  - generic "Add gallery image record" [ref=e371] [cursor=pointer]:
+                    - generic [ref=e372]:
+                      - img [ref=e373]
+                      - generic [ref=e379]: Add gallery image record
+                  - generic "Public Access Gallery Policy" [ref=e380] [cursor=pointer]:
+                    - generic [ref=e381]:
+                      - img [ref=e382]
+                      - generic [ref=e388]: Public Access Gallery Policy
+                  - generic "Gallery images table with row-level access" [ref=e389] [cursor=pointer]:
+                    - generic [ref=e390]:
+                      - img [ref=e391]
+                      - generic [ref=e397]: Gallery images table with row-level access
+                  - generic "Gallery images metadata table" [ref=e398] [cursor=pointer]:
+                    - generic [ref=e399]:
+                      - img [ref=e400]
+                      - generic [ref=e406]: Gallery images metadata table
+                  - generic "Product image paths" [ref=e407] [cursor=pointer]:
+                    - generic [ref=e408]:
+                      - img [ref=e409]
+                      - generic [ref=e415]: Product image paths
+                  - generic "Product Catalog Seed Data" [ref=e416] [cursor=pointer]:
+                    - generic [ref=e417]:
+                      - img [ref=e418]
+                      - generic [ref=e424]: Product Catalog Seed Data
+                  - generic "PPF Product Catalog Seed Data" [ref=e425] [cursor=pointer]:
+                    - generic [ref=e426]:
+                      - img [ref=e427]
+                      - generic [ref=e433]: PPF Product Catalog Seed Data
+                  - generic "Hierarchical Products Support" [ref=e434] [cursor=pointer]:
+                    - generic [ref=e435]:
+                      - img [ref=e436]
+                      - generic [ref=e442]: Hierarchical Products Support
+                  - generic "Public Access Policies for Warranty Uploads" [ref=e443] [cursor=pointer]:
+                    - generic [ref=e444]:
+                      - img [ref=e445]
+                      - generic [ref=e451]: Public Access Policies for Warranty Uploads
+                  - generic "Warranty Registrations & Site Settings" [ref=e452] [cursor=pointer]:
+                    - generic [ref=e453]:
+                      - img [ref=e454]
+                      - generic [ref=e460]: Warranty Registrations & Site Settings
+                  - generic "Products table with RLS and seeded catalog" [ref=e461] [cursor=pointer]:
+                    - generic [ref=e462]:
+                      - img [ref=e463]
+                      - generic [ref=e469]: Products table with RLS and seeded catalog
+                  - generic "Admin Profiles & Auth Trigger" [ref=e470] [cursor=pointer]:
+                    - generic [ref=e471]:
+                      - img [ref=e472]
+                      - generic [ref=e478]: Admin Profiles & Auth Trigger
+              - generic [ref=e480]:
+                - button "Community" [expanded] [ref=e481] [cursor=pointer]:
+                  - img [ref=e482]
+                  - generic [ref=e484]: Community
+                - generic [ref=e485]:
+                  - link "templates" [ref=e486] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql/templates
+                    - img [ref=e487]
+                    - text: templates
+                  - link "quickstarts" [ref=e489] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql/quickstarts
+                    - img [ref=e490]
+                    - text: quickstarts
+            - button "View running queries" [ref=e494] [cursor=pointer]:
+              - generic [ref=e495]: View running queries
+        - separator [ref=e496]:
+          - img [ref=e498]
+        - main [ref=e507]:
+          - generic [ref=e508]:
+            - generic [ref=e509]:
+              - generic [ref=e510]:
+                - button [ref=e511] [cursor=pointer]:
+                  - img [ref=e512]
+                - tablist [ref=e515]:
+                  - button "Database Schema and Extensions JSON Report" [ref=e696] [cursor=pointer]:
+                    - tab "Database Schema and Extensions JSON Report" [selected] [ref=e697]:
+                      - img [ref=e617]
+                      - generic [ref=e624]: Database Schema and Extensions JSON Report
+                      - button [ref=e625]:
+                        - img [ref=e626]
+                    - separator [ref=e630]
+                  - button [ref=e631] [cursor=pointer]:
+                    - img [ref=e632]
+              - status [ref=e526]
+            - generic [ref=e529]:
+              - code [ref=e536]:
+                - generic [ref=e537]:
+                  - generic [ref=e546]:
+                    - generic [ref=e1147]: table_constraints tc join information_schema.key_column_usage kcu on tc.constraint_name=kcu.constraint_name join
+                    - generic [ref=e1149]: information_schema.constraint_column_usage ccu on ccu.constraint_name=tc.constraint_name join information_schema.
+                    - generic [ref=e1151]: referential_constraints rc on rc.constraint_name=tc.constraint_name where tc.constraint_type='FOREIGN KEY' and tc.
+                    - generic [ref=e1153]: table_schema='public'),'unique_cons',(select jsonb_agg(jsonb_build_object('t',tc.table_name,'col',kcu.column_name)) from
+                    - generic [ref=e1155]: information_schema.table_constraints tc join information_schema.key_column_usage kcu on tc.constraint_name=kcu.
+                    - generic [ref=e1157]: constraint_name where tc.constraint_type='UNIQUE' and tc.table_schema='public'),'checks',(select jsonb_agg(jsonb_build_object
+                    - generic [ref=e1159]: ('t',tc.table_name,'name',tc.constraint_name,'def',cc.check_clause)) from information_schema.table_constraints tc join
+                    - generic [ref=e1161]: information_schema.check_constraints cc on cc.constraint_name=tc.constraint_name where tc.constraint_type='CHECK' and tc.
+                    - generic [ref=e1163]: table_schema='public' and tc.constraint_name not like '%_not_null')));
+                  - textbox "Editor content" [active] [ref=e550]: (select jsonb_agg(jsonb_build_object('t',tc.table_name,'col',kcu.column_name)) from information_schema.table_constraints tc join information_schema.key_column_usage kcu on tc.constraint_name=kcu.constraint_name where tc.constraint_type='UNIQUE' and tc.table_schema='public'),'checks',(select jsonb_agg(jsonb_build_object('t',tc.table_name,'name',tc.constraint_name,'def',cc.check_clause)) from information_schema.table_constraints tc join information_schema.check_constraints cc on cc.constraint_name=tc.constraint_name where tc.constraint_type='CHECK' and tc.table_schema='public' and tc.constraint_name not like '%_not_null')));
+              - separator [ref=e551]:
+                - img [ref=e553]
+              - generic [ref=e562]:
+                - tablist [ref=e563]:
+                  - generic [ref=e564]:
+                    - tab "Results" [selected] [ref=e565] [cursor=pointer]:
+                      - generic [ref=e566]: Results
+                    - tab "Explain" [ref=e567] [cursor=pointer]:
+                      - generic [ref=e568]: Explain
+                    - tab "Chart" [ref=e569] [cursor=pointer]:
+                      - generic [ref=e570]: Chart
+                    - button "Export" [ref=e698] [cursor=pointer]:
+                      - generic [ref=e699]: Export
+                      - img [ref=e701]
+                  - generic [ref=e571]:
+                    - button [ref=e572] [cursor=pointer]:
+                      - img [ref=e574]
+                    - generic [ref=e579]:
+                      - generic [ref=e580] [cursor=pointer]:
+                        - generic [ref=e581]: Source
+                        - button "Primary database" [ref=e582]:
+                          - generic [ref=e583]: Primary database
+                          - img [ref=e585]
+                      - button "Role postgres" [ref=e587] [cursor=pointer]:
+                        - generic [ref=e589]:
+                          - generic [ref=e590]: Role
+                          - generic [ref=e591]: postgres
+                          - img [ref=e592]
+                      - button "Run Ctrl ↵" [ref=e1109] [cursor=pointer]:
+                        - generic [ref=e595]: Run
+                        - generic [ref=e1170]: Ctrl ↵
+                - grid [ref=e1171]:
+                  - row "jsonb_pretty" [ref=e1172]:
+                    - columnheader "jsonb_pretty" [ref=e1173]:
+                      - generic [ref=e1174]: jsonb_pretty
+                  - row [ref=e1176]:
+                    - gridcell [ref=e1177]:
+                      - generic [ref=e1178]: "{ \"fk\": [ { \"t\": \"products\", \"col\": \"parent_id\", \"ref_t\": \"products\", \"ref_col\": \"id\", \"on_delete\": \"CASCADE\", \"on_update\": \"NO ACTION\" }, { \"t\": \"otp_verifications\", \"col\": \"dealer_id\", \"ref_t\": \"dealers\", \"ref_col\": \"id\", \"on_delete\": \"NO ACTION\", \"on_update\": \"NO ACTION\" } ], \"pk\": [ { \"t\": \"admin_profiles\", \"col\": \"id\" }, { \"t\": \"products\", \"col\": \"id\" }, { \"t\": \"warranty_registrations\", \"col\": \"id\" }, { \"t\": \"site_settings\", \"col\": \"key\" }, { \"t\": \"gallery_images\", \"col\": \"id\" }, { \"t\": \"customer_enquiries\", \"col\": \"id\" }, { \"t\": \"dealer_enquiries\", \"col\": \"id\" }, { \"t\": \"distributor_enquiries\", \"col\": \"id\" }, { \"t\": \"dealers\", \"col\": \"id\" }, { \"t\": \"otp_verifications\", \"col\": \"id\" }, { \"t\": \"warranty_certificates\", \"col\": \"id\" }, { \"t\": \"get_in_touch\", \"col\": \"id\" } ], \"checks\": [ { \"t\": \"customer_enquiries\", \"def\": \"(status = ANY (ARRAY['NEW'::text, 'CONTACTED'::text, 'CONVERTED'::text, 'CLOSED'::text]))\", \"name\": \"customer_enquiries_status_check\" }, { \"t\": \"customer_enquiries\", \"def\": \"(treatment_type = ANY (ARRAY['PPF'::text, 'SUNFILM'::text, 'GRAPHENE_COATING'::text, 'MULTIPLE'::text]))\", \"name\": \"customer_enquiries_treatment_type_check\" }, { \"t\": \"dealer_enquiries\", \"def\": \"(status = ANY (ARRAY['PENDING'::text, 'UNDER_REVIEW'::text, 'APPROVED'::text, 'REJECTED'::text]))\", \"name\": \"dealer_enquiries_status_check\" }, { \"t\": \"dealers\", \"def\": \"(dealer_type = ANY (ARRAY['premium'::text, 'standard'::text, 'coming_soon'::text]))\", \"name\": \"dealers_dealer_type_check\" }, { \"t\": \"distributor_enquiries\", \"def\": \"(status = ANY (ARRAY['PENDING'::text, 'UNDER_REVIEW'::text, 'APPROVED'::text, 'REJECTED'::text]))\", \"name\": \"distributor_enquiries_status_check\" }, { \"t\": \"gallery_images\", \"def\": \"(category = ANY (ARRAY['all'::text, 'installations'::text, 'products'::text, 'events'::text, 'showroom'::text]))\", \"name\": \"gallery_images_category_check\" } ], \"columns\": [ { \"c\": \"id\", \"t\": \"admin_profiles\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"email\", \"t\": \"admin_profiles\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"full_name\", \"t\": \"admin_profiles\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"is_active\", \"t\": \"admin_profiles\", \"udt\": \"bool\", \"type\": \"boolean\", \"default\": \"false\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"role\", \"t\": \"admin_profiles\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'admin'::text\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"created_at\", \"t\": \"admin_profiles\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"timezone('utc'::text, now())\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"id\", \"t\": \"customer_enquiries\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"uuid_generate_v4()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"customer_name\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"mobile_number\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"city_name\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"vehicle_name_model\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"treatment_type\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"status\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'NEW'::text\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"source\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'WEBSITE_HEADER'::text\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"notes\", \"t\": \"customer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"created_at\", \"t\": \"customer_enquiries\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"updated_at\", \"t\": \"customer_enquiries\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"id\", \"t\": \"dealer_enquiries\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"uuid_generate_v4()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"dealer_name\", \"t\": \"dealer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"mobile_number\", \"t\": \"dealer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"studio_name\", \"t\": \"dealer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"products_interested\", \"t\": \"dealer_enquiries\", \"udt\": \"jsonb\", \"type\": \"jsonb\", \"default\": \"'[]'::jsonb\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"city\", \"t\": \"dealer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"state\", \"t\": \"dealer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"investment_capacity\", \"t\": \"dealer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"existing_business\", \"t\": \"dealer_enquiries\", \"udt\": \"bool\", \"type\": \"boolean\", \"default\": \"false\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"status\", \"t\": \"dealer_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'PENDING'::text\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"created_at\", \"t\": \"dealer_enquiries\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"updated_at\", \"t\": \"dealer_enquiries\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"id\", \"t\": \"dealers\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"gen_random_uuid()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"dealer_name\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"contact_person\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"phone\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"email\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"address\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"city\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"state\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"pincode\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"latitude\", \"t\": \"dealers\", \"udt\": \"float8\", \"type\": \"double precision\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"longitude\", \"t\": \"dealers\", \"udt\": \"float8\", \"type\": \"double precision\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"is_active\", \"t\": \"dealers\", \"udt\": \"bool\", \"type\": \"boolean\", \"default\": \"true\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"dealer_type\", \"t\": \"dealers\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'standard'::text\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"created_at\", \"t\": \"dealers\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"id\", \"t\": \"distributor_enquiries\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"uuid_generate_v4()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"distributor_name\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"mobile_number\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"firm_name\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"products_interested\", \"t\": \"distributor_enquiries\", \"udt\": \"jsonb\", \"type\": \"jsonb\", \"default\": \"'[]'::jsonb\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"city\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"state\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"gst_number\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"current_distribution_network\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"status\", \"t\": \"distributor_enquiries\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'PENDING'::text\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"created_at\", \"t\": \"distributor_enquiries\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"updated_at\", \"t\": \"distributor_enquiries\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"id\", \"t\": \"gallery_images\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"gen_random_uuid()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"storage_path\", \"t\": \"gallery_images\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"title\", \"t\": \"gallery_images\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"category\", \"t\": \"gallery_images\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"description\", \"t\": \"gallery_images\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"created_at\", \"t\": \"gallery_images\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"timezone('utc'::text, now())\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"width\", \"t\": \"gallery_images\", \"udt\": \"int4\", \"type\": \"integer\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"height\", \"t\": \"gallery_images\", \"udt\": \"int4\", \"type\": \"integer\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"id\", \"t\": \"get_in_touch\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"gen_random_uuid()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"name\", \"t\": \"get_in_touch\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"phone\", \"t\": \"get_in_touch\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"email\", \"t\": \"get_in_touch\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"product\", \"t\": \"get_in_touch\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"created_at\", \"t\": \"get_in_touch\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"id\", \"t\": \"otp_verifications\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"gen_random_uuid()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"phone\", \"t\": \"otp_verifications\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"otp_code\", \"t\": \"otp_verifications\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"dealer_id\", \"t\": \"otp_verifications\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"purpose\", \"t\": \"otp_verifications\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'warranty_registration'::text\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"attempts\", \"t\": \"otp_verifications\", \"udt\": \"int4\", \"type\": \"integer\", \"default\": \"0\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"max_attempts\", \"t\": \"otp_verifications\", \"udt\": \"int4\", \"type\": \"integer\", \"default\": \"3\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"is_verified\", \"t\": \"otp_verifications\", \"udt\": \"bool\", \"type\": \"boolean\", \"default\": \"false\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"expires_at\", \"t\": \"otp_verifications\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"created_at\", \"t\": \"otp_verifications\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"id\", \"t\": \"products\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"name\", \"t\": \"products\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"short_desc\", \"t\": \"products\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"features\", \"t\": \"products\", \"udt\": \"jsonb\", \"type\": \"jsonb\", \"default\": \"'[]'::jsonb\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"specs\", \"t\": \"products\", \"udt\": \"jsonb\", \"type\": \"jsonb\", \"default\": \"'[]'::jsonb\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"created_at\", \"t\": \"products\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"timezone('utc'::text, now())\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"parent_id\", \"t\": \"products\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"image_url\", \"t\": \"products\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"sort_order\", \"t\": \"products\", \"udt\": \"int4\", \"type\": \"integer\", \"default\": \"999\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"key\", \"t\": \"site_settings\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"value\", \"t\": \"site_settings\", \"udt\": \"jsonb\", \"type\": \"jsonb\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"updated_at\", \"t\": \"site_settings\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"id\", \"t\": \"warranty_certificates\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": \"gen_random_uuid()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"warranty_id\", \"t\": \"warranty_certificates\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"registration_id\", \"t\": \"warranty_certificates\", \"udt\": \"uuid\", \"type\": \"uuid\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"pdf_storage_path\", \"t\": \"warranty_certificates\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"pdf_public_url\", \"t\": \"warranty_certificates\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"delivered_to_dealer\", \"t\": \"warranty_certificates\", \"udt\": \"bool\", \"type\": \"boolean\", \"default\": \"false\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"delivered_to_customer\", \"t\": \"warranty_certificates\", \"udt\": \"bool\", \"type\": \"boolean\", \"default\": \"false\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"delivered_to_admin\", \"t\": \"warranty_certificates\", \"udt\": \"bool\", \"type\": \"boolean\", \"default\": \"false\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"delivery_errors\", \"t\": \"warranty_certificates\", \"udt\": \"jsonb\", \"type\": \"jsonb\", \"default\": \"'[]'::jsonb\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"created_at\", \"t\": \"warranty_certificates\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"id\", \"t\": \"warranty_registrations\", \"udt\": \"int8\", \"type\": \"bigint\", \"default\": \"nextval('warranty_registrations_id_seq'::regclass)\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"created_at\", \"t\": \"warranty_registrations\", \"udt\": \"timestamptz\", \"type\": \"timestamp with time zone\", \"default\": \"now()\", \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"name\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"phone\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"email\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"reg_number\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"NO\" }, { \"c\": \"chassis_number\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"ppf_roll\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"ppf_category\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"dealer_name\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"installer_mobile\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"installation_location\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"message\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"vehicle_image_url\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"rc_image_url\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": null, \"max_len\": null, \"nullable\": \"YES\" }, { \"c\": \"status\", \"t\": \"warranty_registrations\", \"udt\": \"text\", \"type\": \"text\", \"default\": \"'pending'::text\", \"max_len\": null, \"nullable\": \"NO\" } ], \"unique_cons\": null }"
+              - generic "Table grid footer" [ref=e1179]:
+                - button "1 row (Limited to only 100 rows)" [ref=e1180] [cursor=pointer]:
+                  - paragraph [ref=e1181]:
+                    - generic [ref=e1182]: 1 row
+                    - text: (Limited to only 100 rows)
+                - 'button "Limit results to: 100 rows" [ref=e1183] [cursor=pointer]':
+                  - generic [ref=e1184]: "Limit results to: 100 rows"
+                  - img [ref=e1186]
+  - alert [ref=e75]: SQL Editor | Gentech Guard | p-sai-gowtham | Supabase
+  - generic [ref=e602]:
+    - alert
+    - alert

@@ -1,0 +1,233 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Supabase" [ref=e9] [cursor=pointer]:
+            - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+            - img "Supabase" [ref=e10]
+          - generic [ref=e11]:
+            - img [ref=e13]
+            - generic [ref=e15]:
+              - link "p-sai-gowtham Free" [ref=e16] [cursor=pointer]:
+                - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+                - img [ref=e17]
+                - generic [ref=e27]: p-sai-gowtham
+                - generic [ref=e28]: Free
+              - button [ref=e29] [cursor=pointer]:
+                - img [ref=e31]
+            - generic [ref=e34]:
+              - img [ref=e36]
+              - generic [ref=e38]:
+                - link "Gentech Guard" [ref=e39] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                  - img [ref=e40]
+                  - generic "Gentech Guard" [ref=e43]
+                - button [ref=e44] [cursor=pointer]:
+                  - img [ref=e46]
+              - img [ref=e50]
+          - button "Connect" [ref=e54] [cursor=pointer]:
+            - img [ref=e56]
+            - generic [ref=e58]: Connect
+        - generic [ref=e59]:
+          - generic [ref=e61] [cursor=pointer]: Feedback
+          - generic [ref=e62]:
+            - button "Search..." [ref=e63] [cursor=pointer]:
+              - generic [ref=e64]:
+                - img [ref=e65]
+                - paragraph [ref=e68]: Search...
+              - generic [ref=e70]: Ctrl K
+            - button [ref=e71] [cursor=pointer]:
+              - img [ref=e73]
+            - button [ref=e77] [cursor=pointer]:
+              - img [ref=e79]
+            - button [ref=e81] [cursor=pointer]:
+              - img [ref=e83]
+            - button [ref=e85] [cursor=pointer]:
+              - img [ref=e89]
+          - button "p-sai-gowtham" [ref=e92] [cursor=pointer]:
+            - img "p-sai-gowtham" [ref=e94]
+    - generic [ref=e95]:
+      - generic [ref=e99]:
+        - list [ref=e102]:
+          - generic [ref=e103]:
+            - listitem [ref=e104]:
+              - link "Project Overview" [ref=e105] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                - img [ref=e106]
+                - generic: Project Overview
+            - listitem [ref=e108]:
+              - link "Table Editor" [ref=e109] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/editor
+                - img [ref=e110]
+                - generic: Table Editor
+            - listitem [ref=e112]:
+              - link "SQL Editor" [ref=e113] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql
+                - img [ref=e114]
+                - generic: SQL Editor
+          - generic [ref=e116]:
+            - listitem [ref=e117]:
+              - link "Database" [ref=e118] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/database/schemas
+                - img [ref=e119]
+                - generic: Database
+            - listitem [ref=e123]:
+              - link "Authentication" [ref=e124] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/auth/users
+                - img [ref=e125]
+                - generic: Authentication
+            - listitem [ref=e127]:
+              - link "Storage" [ref=e128] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files
+                - img [ref=e129]
+                - generic: Storage
+            - listitem [ref=e131]:
+              - link "Edge Functions" [ref=e132] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/functions
+                - img [ref=e133]
+                - generic: Edge Functions
+            - listitem [ref=e138]:
+              - link "Realtime" [ref=e139] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/realtime/inspector
+                - img [ref=e140]
+                - generic: Realtime
+          - generic [ref=e142]:
+            - listitem [ref=e144]:
+              - link "Advisors" [ref=e145] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/advisors/security
+                - img [ref=e146]
+                - generic: Advisors
+            - listitem [ref=e148]:
+              - link "Observability" [ref=e149] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/observability
+                - img [ref=e150]
+                - generic: Observability
+            - listitem [ref=e158]:
+              - link "Logs" [ref=e159] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/logs/explorer
+                - img [ref=e160]
+                - generic: Logs
+            - listitem [ref=e161]:
+              - link "Integrations" [ref=e162] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/integrations
+                - img [ref=e163]
+                - generic: Integrations
+          - listitem [ref=e167]:
+            - link "Project Settings" [ref=e168] [cursor=pointer]:
+              - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/settings/general
+              - img [ref=e169]
+              - generic: Project Settings
+        - button [ref=e174] [cursor=pointer]:
+          - img [ref=e176]
+      - main [ref=e186]:
+        - generic [ref=e187]:
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - heading "Gentech Guard" [level=1] [ref=e196]
+                  - generic [ref=e200]: nano
+                - button "Copy" [ref=e203] [cursor=pointer]:
+                  - generic [ref=e204]: Copy
+                  - img [ref=e206]
+              - generic [ref=e210]:
+                - button "Status Checking..." [ref=e211] [cursor=pointer]:
+                  - generic [ref=e221]:
+                    - generic [ref=e222]: Status
+                    - generic [ref=e224]: Checking...
+                - link "Last migration" [ref=e225] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/database/migrations
+                  - generic [ref=e226]:
+                    - img [ref=e228]
+                    - generic [ref=e233]: Last migration
+                - link "Last backup" [ref=e236] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/database/backups/scheduled
+                  - generic [ref=e237]:
+                    - img [ref=e239]
+                    - generic [ref=e243]: Last backup
+                - link "Recent branch" [ref=e246] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/branches
+                  - generic [ref=e247]:
+                    - img [ref=e249]
+                    - generic [ref=e254]: Recent branch
+            - application [ref=e261]:
+              - img
+          - generic [ref=e266]:
+            - generic [ref=e268]:
+              - button "Drag to reorder section" [ref=e269]:
+                - img [ref=e270]
+              - generic [ref=e278]:
+                - generic [ref=e279]:
+                  - generic [ref=e280]:
+                    - generic [ref=e281]: "0"
+                    - generic [ref=e282]: Total Requests
+                  - button "Last 24 hours" [ref=e283] [cursor=pointer]:
+                    - generic [ref=e284]: Last 24 hours
+                    - img [ref=e286]
+                - generic [ref=e288]:
+                  - button "Scroll right" [ref=e289] [cursor=pointer]:
+                    - img [ref=e291]
+                  - region "Horizontally scrollable content" [ref=e293]:
+                    - generic [ref=e294]:
+                      - generic [ref=e296]:
+                        - generic [ref=e299]:
+                          - heading "Database requests" [level=3] [ref=e300]:
+                            - link "Database requests" [ref=e301] [cursor=pointer]:
+                              - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/editor
+                          - generic [ref=e302]: "0"
+                        - generic [ref=e304]:
+                          - generic [ref=e307]:
+                            - img [ref=e308]
+                            - paragraph [ref=e310]: No data for selected period
+                          - img [ref=e311]
+                      - generic [ref=e314]:
+                        - generic [ref=e317]:
+                          - heading "Auth requests" [level=3] [ref=e318]:
+                            - link "Auth requests" [ref=e319] [cursor=pointer]:
+                              - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/auth/users
+                          - generic [ref=e320]: "0"
+                        - generic [ref=e322]:
+                          - generic [ref=e325]:
+                            - img [ref=e326]
+                            - paragraph [ref=e328]: No data for selected period
+                          - img [ref=e329]
+                      - generic [ref=e332]:
+                        - generic [ref=e335]:
+                          - heading "Storage requests" [level=3] [ref=e336]:
+                            - link "Storage requests" [ref=e337] [cursor=pointer]:
+                              - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/buckets
+                          - generic [ref=e338]: "0"
+                        - generic [ref=e340]:
+                          - generic [ref=e343]:
+                            - img [ref=e344]
+                            - paragraph [ref=e346]: No data for selected period
+                          - img [ref=e347]
+                      - generic [ref=e350]:
+                        - generic [ref=e353]:
+                          - heading "Realtime requests" [level=3] [ref=e354]
+                          - generic [ref=e355]: "0"
+                        - generic [ref=e357]:
+                          - generic [ref=e360]:
+                            - img [ref=e361]
+                            - paragraph [ref=e363]: No data for selected period
+                          - img [ref=e364]
+            - button "Drag to reorder section" [ref=e368]:
+              - img [ref=e369]
+            - generic [ref=e384]:
+              - button "Drag to reorder section" [ref=e385]:
+                - img [ref=e386]
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - heading "Reports" [level=3] [ref=e396]
+                  - button "Add block" [ref=e398] [cursor=pointer]:
+                    - img [ref=e400]
+                    - generic [ref=e401]: Add block
+                - generic [ref=e403]:
+                  - heading "Build a custom report" [level=4] [ref=e404]
+                  - paragraph [ref=e405]: Keep track of your most important metrics
+                  - button "Add your first block" [ref=e406] [cursor=pointer]:
+                    - generic [ref=e407]: Add your first block
+                    - img [ref=e409]
+            - status [ref=e410]
+  - alert [ref=e411]: Supabase

@@ -152,7 +152,7 @@ export default function GalleryGrid() {
                 <p className="text-neutral-400 mb-6">No images available in this category yet.</p>
                 <button
                   onClick={() => setActiveCategory('all')}
-                  className="px-6 py-3 rounded-full bg-[#D4AF37] text-black font-bold uppercase tracking-wider text-sm hover:bg-[#F5C842] transition-colors"
+                  className="px-6 py-3 rounded-full bg-[#D4AF37] text-white font-bold uppercase tracking-wider text-sm hover:bg-[#F5C842] transition-colors"
                 >
                   View All
                 </button>

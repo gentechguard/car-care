@@ -1,0 +1,344 @@
+[
+  {
+    "id": "ultra-pro-8",
+    "name": "GenTech Ultra Pro 8",
+    "short_desc": "Ultimate Protection • Unmatched Gloss • 8 Year Durability",
+    "features": [
+      "Instant Self-Healing",
+      "Ultra High Gloss",
+      "Advanced Hydrophobic",
+      "200 Micron Heavy Duty",
+      "8 Year Warranty"
+    ],
+    "specs": {
+      "thickness": "200 Microns",
+      "gloss_level": "98+",
+      "uv_blocking": "99%",
+      "self_healing": "100%",
+      "tear_strength": "85.3 kN/m",
+      "warranty_years": 8,
+      "tensile_strength": "30 MPa",
+      "elongation_at_break": "325%"
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "ppf",
+    "image_url": "ppf/ultra-pro-8.png",
+    "sort_order": 999
+  },
+  {
+    "id": "gentech-s",
+    "name": "GenTech 5",
+    "short_desc": "High Gloss Finish • Hydrophobic • 190 Micron Heavy-Duty • Self-Healing",
+    "features": [
+      "Instant Self-Healing",
+      "High Gloss Finish",
+      "Advanced Hydrophobic",
+      "190 Micron Heavy Duty",
+      "5 Year Warranty"
+    ],
+    "specs": {
+      "thickness": "190 Microns",
+      "gloss_level": "94+",
+      "uv_blocking": "96.9%",
+      "self_healing": "100%",
+      "tear_strength": "74 kN/m",
+      "warranty_years": 5,
+      "tensile_strength": "16 MPa",
+      "elongation_at_break": "305%"
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "ppf",
+    "image_url": "ppf/gentech-s.png",
+    "sort_order": 999
+  },
+  {
+    "id": "gt-70",
+    "name": "GT 70 Window Film",
+    "short_desc": "Ultra-Premium Automotive Sun Film with high visibility",
+    "features": [
+      "High Light Transmission",
+      "99.9% UV Rejection",
+      "Heat Reduction",
+      "Day & Night Clarity"
+    ],
+    "specs": {
+      "irr": "90%",
+      "vlt": "70%",
+      "tser": "56%",
+      "type": "Sun Control Film",
+      "width": "1.52 M",
+      "length": "15 M",
+      "uv_rejection": "99.9%"
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "window-film",
+    "image_url": "window-film/gt-70.png",
+    "sort_order": 999
+  },
+  {
+    "id": "gt-50",
+    "name": "GT 50 Window Film",
+    "short_desc": "Premium sun protection with superior heat rejection",
+    "features": [
+      "Optimal Visibility",
+      "Maximum UV Protection",
+      "Superior Heat Rejection",
+      "Stylish Dark Tint"
+    ],
+    "specs": {
+      "irr": "95.4%",
+      "vlt": "50%",
+      "tser": "60%",
+      "type": "Sun Control Film",
+      "width": "1.52 M",
+      "length": "15 M",
+      "uv_rejection": "99.9%"
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "window-film",
+    "image_url": "window-film/gt-50.png",
+    "sort_order": 999
+  },
+  {
+    "id": "graphene-ultra-pro",
+    "name": "Graphene Ultra Pro",
+    "short_desc": "Advanced Nano Protection Technology with 3 Years Warranty",
+    "features": [
+      "Enhances Gloss & Color Depth",
+      "Improves Surface Smoothness",
+      "Hydrophobic & Dirt Repellent",
+      "UV & Environmental Resistance",
+      "Reduces Oxidation & Paint Fading"
+    ],
+    "specs": {
+      "size": "30ML",
+      "effect": "Ultra High Gloss",
+      "technology": "Advanced Nano Protection",
+      "warranty_years": 3
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "graphene-coating",
+    "image_url": "graphene-coating/graphene-ultra-pro.png",
+    "sort_order": 999
+  },
+  {
+    "id": "graphene-ultra",
+    "name": "Graphene Ultra",
+    "short_desc": "Advanced Nano Protection Technology with 1 Year Warranty",
+    "features": [
+      "Enhances Gloss & Color Depth",
+      "Improves Surface Smoothness",
+      "Hydrophobic & Dirt Repellent",
+      "UV & Environmental Resistance",
+      "Reduces Oxidation & Paint Fading"
+    ],
+    "specs": {
+      "size": "30ML",
+      "effect": "High Gloss",
+      "technology": "Advanced Nano Protection",
+      "warranty_years": 1
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "graphene-coating",
+    "image_url": "graphene-coating/graphene-ultra.png",
+    "sort_order": 999
+  },
+  {
+    "id": "luxurious-car-freshener",
+    "name": "Luxurious Car Air Fresheners",
+    "short_desc": "Premium card fresheners available in 4 exotic fragrances",
+    "features": [
+      "Island Breeze Scent",
+      "Passion Scent",
+      "Sandalwood Scent",
+      "Ruby Scent",
+      "Harrera Scent",
+      "Long Lasting Fragrance",
+      "Premium Card Design"
+    ],
+    "specs": {
+      "type": "Card Freshener",
+      "category": "Luxury",
+      "variants": 4,
+      "available_scents": [
+        "Island Breeze",
+        "Passion",
+        "Sandalwood",
+        "Ruby"
+      ]
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "perfumes",
+    "image_url": "perfumes/luxurious-freshener.png",
+    "sort_order": 999
+  },
+  {
+    "id": "car-shampoo",
+    "name": "Car Shampoo",
+    "short_desc": "Super Concentrate High Foam pH Neutral Formula (5L)",
+    "features": [
+      "Super Concentrate 1:50",
+      "High Foam Formula",
+      "pH Neutral",
+      "No Water Spots",
+      "Biodegradable",
+      "Safe on All Finishes"
+    ],
+    "specs": {
+      "volume": "5L",
+      "ph_balance": "Neutral",
+      "application": "Exterior Cleaning",
+      "eco_friendly": true,
+      "concentrate_ratio": "1:50"
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "detailing1",
+    "image_url": "detailing/car-shampoo.png",
+    "sort_order": 999
+  },
+  {
+    "id": "graphene-coating",
+    "name": "Graphene Coating",
+    "short_desc": "Advanced Nano Protection Technology for enhanced gloss and surface protection",
+    "features": [],
+    "specs": {},
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": null,
+    "image_url": null,
+    "sort_order": 3
+  },
+  {
+    "id": "ppf",
+    "name": "Paint Protection Film",
+    "short_desc": "Premium Paint Protection Films with self-healing technology and high-gloss finish",
+    "features": [],
+    "specs": {},
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": null,
+    "image_url": null,
+    "sort_order": 1
+  },
+  {
+    "id": "window-film",
+    "name": "Sun Film",
+    "short_desc": "Ultra-Premium Automotive Sun Films for UV and heat protection",
+    "features": [],
+    "specs": {},
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": null,
+    "image_url": null,
+    "sort_order": 2
+  },
+  {
+    "id": "perfumes",
+    "name": "Perfumes",
+    "short_desc": "Luxurious Car Air Fresheners with premium fragrances",
+    "features": [],
+    "specs": {},
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": null,
+    "image_url": null,
+    "sort_order": 4
+  },
+  {
+    "id": "all-purpose-cleaner",
+    "name": "All Purpose Cleaner",
+    "short_desc": "Deep penetrating cleaner for all interior and exterior surfaces (5L)",
+    "features": [
+      "Instant Deep Cleaning",
+      "No Residue Formula",
+      "Removes Dirt and Dust",
+      "Deep Penetrating Action",
+      "Safe on Fabrics & Plastics",
+      "Prevents Plastic Cracking"
+    ],
+    "specs": {
+      "volume": "5L",
+      "residue_free": true,
+      "safe_surfaces": [
+        "Fabrics",
+        "Plastics",
+        "Rubber",
+        "Vinyl"
+      ],
+      "special_feature": "Prevents stress cracking"
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "detailing1",
+    "image_url": "detailing/all-purpose-cleaner.png",
+    "sort_order": 999
+  },
+  {
+    "id": "glass-cleaner",
+    "name": "Glass Cleaner",
+    "short_desc": "Streak-free glass cleaner with water repellency (5L)",
+    "features": [
+      "Cleans All Glass Surfaces",
+      "Removes Dust & Bird Droppings",
+      "Removes Tree Sap",
+      "Streak-Free Finish",
+      "Water Repellency Effect"
+    ],
+    "specs": {
+      "volume": "5L",
+      "removes": [
+        "Dust",
+        "Bird Droppings",
+        "Tree Sap"
+      ],
+      "suitable_for": [
+        "Windshield",
+        "Windows",
+        "Rear Glass",
+        "Sunroof",
+        "Mirrors"
+      ],
+      "special_properties": [
+        "Streak-free",
+        "Water Repellency"
+      ]
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "detailing1",
+    "image_url": "detailing/glass-cleaner.png",
+    "sort_order": 999
+  },
+  {
+    "id": "multi-surface-shiner",
+    "name": "Multi Surface Shiner",
+    "short_desc": "Silicone based premium shiner for plastics, rubber and vinyl (5L)",
+    "features": [
+      "Silicone Based Formula",
+      "Restores Dull Surfaces",
+      "Works on Plastics, Rubber, Vinyl",
+      "Repels Dirt and Dust",
+      "Long Lasting Shine Effect"
+    ],
+    "specs": {
+      "base": "Silicone",
+      "finish": "Original Factory Finish",
+      "volume": "5L",
+      "longevity": "Long Lasting",
+      "compatible_surfaces": [
+        "Plastic",
+        "Rubber",
+        "Vinyl"
+      ]
+    },
+    "created_at": "2026-02-01T10:23:56.429405+00:00",
+    "parent_id": "detailing1",
+    "image_url": "detailing/multi-surface-shiner.png",
+    "sort_order": 999
+  },
+  {
+    "id": "detailing1",
+    "name": "Detailing Products",
+    "short_desc": "Professional Grade Detailing and Cleaning Solutions",
+    "features": [],
+    "specs": [],
+    "created_at": "2026-02-03T05:43:45.25805+00:00",
+    "parent_id": null,
+    "image_url": null,
+    "sort_order": 5
+  }
+]

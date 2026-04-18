@@ -1,0 +1,319 @@
+- generic [ref=e1]:
+  - generic [ref=e76]:
+    - banner [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - link "Supabase" [ref=e81] [cursor=pointer]:
+            - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+            - img "Supabase" [ref=e82]
+          - generic [ref=e83]:
+            - img [ref=e85]
+            - generic [ref=e87]:
+              - link "p-sai-gowtham Free" [ref=e88] [cursor=pointer]:
+                - /url: /dashboard/org/bycqdhcpwejviheiwcqm
+                - img [ref=e89]
+                - generic [ref=e99]: p-sai-gowtham
+                - generic [ref=e100]: Free
+              - button [ref=e101] [cursor=pointer]:
+                - img [ref=e103]
+            - generic [ref=e106]:
+              - img [ref=e108]
+              - generic [ref=e110]:
+                - link "Gentech Guard" [ref=e111] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                  - img [ref=e112]
+                  - generic "Gentech Guard" [ref=e115]
+                - button [ref=e116] [cursor=pointer]:
+                  - img [ref=e118]
+              - img [ref=e122]
+              - generic [ref=e124]:
+                - link "main Production" [ref=e125] [cursor=pointer]:
+                  - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                  - generic "main" [ref=e126]
+                  - generic [ref=e127]: Production
+                - button [ref=e128] [cursor=pointer]:
+                  - img [ref=e130]
+          - button "Connect" [ref=e134] [cursor=pointer]:
+            - img [ref=e136]
+            - generic [ref=e138]: Connect
+        - generic [ref=e139]:
+          - generic [ref=e141] [cursor=pointer]: Feedback
+          - generic [ref=e142]:
+            - button "Search..." [ref=e143] [cursor=pointer]:
+              - generic [ref=e144]:
+                - img [ref=e145]
+                - paragraph [ref=e148]: Search...
+              - generic [ref=e150]: Ctrl K
+            - button [ref=e151] [cursor=pointer]:
+              - img [ref=e153]
+            - button [ref=e157] [cursor=pointer]:
+              - img [ref=e159]
+            - button [ref=e161] [cursor=pointer]:
+              - img [ref=e163]
+            - button [ref=e165] [cursor=pointer]:
+              - img [ref=e169]
+          - button "p-sai-gowtham" [ref=e172] [cursor=pointer]:
+            - img "p-sai-gowtham" [ref=e174]
+    - generic [ref=e175]:
+      - generic [ref=e179]:
+        - list [ref=e182]:
+          - generic [ref=e183]:
+            - listitem [ref=e184]:
+              - link "Project Overview" [ref=e185] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz
+                - img [ref=e186]
+                - generic: Project Overview
+            - listitem [ref=e188]:
+              - link "Table Editor" [ref=e189] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/editor
+                - img [ref=e190]
+                - generic: Table Editor
+            - listitem [ref=e192]:
+              - link "SQL Editor" [ref=e193] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql
+                - img [ref=e194]
+                - generic: SQL Editor
+          - generic [ref=e196]:
+            - listitem [ref=e197]:
+              - link "Database" [ref=e198] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/database/schemas
+                - img [ref=e199]
+                - generic: Database
+            - listitem [ref=e203]:
+              - link "Authentication" [ref=e204] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/auth/users
+                - img [ref=e205]
+                - generic: Authentication
+            - listitem [ref=e207]:
+              - link "Storage" [ref=e208] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/storage/files
+                - img [ref=e209]
+                - generic: Storage
+            - listitem [ref=e211]:
+              - link "Edge Functions" [ref=e212] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/functions
+                - img [ref=e213]
+                - generic: Edge Functions
+            - listitem [ref=e218]:
+              - link "Realtime" [ref=e219] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/realtime/inspector
+                - img [ref=e220]
+                - generic: Realtime
+          - generic [ref=e222]:
+            - listitem [ref=e224]:
+              - link "Advisors" [ref=e225] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/advisors/security
+                - img [ref=e226]
+                - generic: Advisors
+            - listitem [ref=e228]:
+              - link "Observability" [ref=e229] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/observability
+                - img [ref=e230]
+                - generic: Observability
+            - listitem [ref=e238]:
+              - link "Logs" [ref=e239] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/logs/explorer
+                - img [ref=e240]
+                - generic: Logs
+            - listitem [ref=e241]:
+              - link "Integrations" [ref=e242] [cursor=pointer]:
+                - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/integrations
+                - img [ref=e243]
+                - generic: Integrations
+          - listitem [ref=e247]:
+            - link "Project Settings" [ref=e248] [cursor=pointer]:
+              - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/settings/general
+              - img [ref=e249]
+              - generic: Project Settings
+        - button [ref=e254] [cursor=pointer]:
+          - img [ref=e256]
+      - generic [ref=e263]:
+        - generic [ref=e267]:
+          - heading "SQL Editor" [level=4] [ref=e269]
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - generic [ref=e275]:
+                  - generic [ref=e276]: Search queries
+                  - textbox "Search queries..." [ref=e277]
+                  - button [ref=e278] [cursor=pointer]:
+                    - img [ref=e279]
+                  - img [ref=e282]
+                - button [ref=e285] [cursor=pointer]:
+                  - img [ref=e287]
+              - button "Shared" [ref=e290] [cursor=pointer]:
+                - img [ref=e291]
+                - generic [ref=e293]: Shared
+              - button "Favorites" [ref=e296] [cursor=pointer]:
+                - img [ref=e297]
+                - generic [ref=e299]: Favorites
+              - generic [ref=e301]:
+                - button "PRIVATE (20)" [expanded] [ref=e604] [cursor=pointer]:
+                  - img [ref=e303]
+                  - generic [ref=e305]: PRIVATE (20)
+                - tree "private-snippets" [ref=e307]:
+                  - generic "Untitled query" [ref=e605] [cursor=pointer]:
+                    - generic [ref=e606]:
+                      - img [ref=e607]
+                      - generic [ref=e613]: Untitled query
+                  - generic "Contact Submissions Inbox" [ref=e308] [cursor=pointer]:
+                    - generic [ref=e309]:
+                      - img [ref=e310]
+                      - generic [ref=e316]: Contact Submissions Inbox
+                  - generic "Insert 31 dealer records" [ref=e317] [cursor=pointer]:
+                    - generic [ref=e318]:
+                      - img [ref=e319]
+                      - generic [ref=e325]: Insert 31 dealer records
+                  - generic "OTP and Warranty Certificate Tables" [ref=e326] [cursor=pointer]:
+                    - generic [ref=e327]:
+                      - img [ref=e328]
+                      - generic [ref=e334]: OTP and Warranty Certificate Tables
+                  - generic "Gentech Guard Dealer Locations" [ref=e335] [cursor=pointer]:
+                    - generic [ref=e336]:
+                      - img [ref=e337]
+                      - generic [ref=e343]: Gentech Guard Dealer Locations
+                  - generic "List buckets and search objects by name" [ref=e344] [cursor=pointer]:
+                    - generic [ref=e345]:
+                      - img [ref=e346]
+                      - generic [ref=e352]: List buckets and search objects by name
+                  - generic "Update Parent Products Order" [ref=e353] [cursor=pointer]:
+                    - generic [ref=e354]:
+                      - img [ref=e355]
+                      - generic [ref=e361]: Update Parent Products Order
+                  - generic "Enquiries Schema with Row-Level Security & Auto Timestamps" [ref=e362] [cursor=pointer]:
+                    - generic [ref=e363]:
+                      - img [ref=e364]
+                      - generic [ref=e370]: Enquiries Schema with Row-Level Security & Auto Timestamps
+                  - generic "Add gallery image record" [ref=e371] [cursor=pointer]:
+                    - generic [ref=e372]:
+                      - img [ref=e373]
+                      - generic [ref=e379]: Add gallery image record
+                  - generic "Public Access Gallery Policy" [ref=e380] [cursor=pointer]:
+                    - generic [ref=e381]:
+                      - img [ref=e382]
+                      - generic [ref=e388]: Public Access Gallery Policy
+                  - generic "Gallery images table with row-level access" [ref=e389] [cursor=pointer]:
+                    - generic [ref=e390]:
+                      - img [ref=e391]
+                      - generic [ref=e397]: Gallery images table with row-level access
+                  - generic "Gallery images metadata table" [ref=e398] [cursor=pointer]:
+                    - generic [ref=e399]:
+                      - img [ref=e400]
+                      - generic [ref=e406]: Gallery images metadata table
+                  - generic "Product image paths" [ref=e407] [cursor=pointer]:
+                    - generic [ref=e408]:
+                      - img [ref=e409]
+                      - generic [ref=e415]: Product image paths
+                  - generic "Product Catalog Seed Data" [ref=e416] [cursor=pointer]:
+                    - generic [ref=e417]:
+                      - img [ref=e418]
+                      - generic [ref=e424]: Product Catalog Seed Data
+                  - generic "PPF Product Catalog Seed Data" [ref=e425] [cursor=pointer]:
+                    - generic [ref=e426]:
+                      - img [ref=e427]
+                      - generic [ref=e433]: PPF Product Catalog Seed Data
+                  - generic "Hierarchical Products Support" [ref=e434] [cursor=pointer]:
+                    - generic [ref=e435]:
+                      - img [ref=e436]
+                      - generic [ref=e442]: Hierarchical Products Support
+                  - generic "Public Access Policies for Warranty Uploads" [ref=e443] [cursor=pointer]:
+                    - generic [ref=e444]:
+                      - img [ref=e445]
+                      - generic [ref=e451]: Public Access Policies for Warranty Uploads
+                  - generic "Warranty Registrations & Site Settings" [ref=e452] [cursor=pointer]:
+                    - generic [ref=e453]:
+                      - img [ref=e454]
+                      - generic [ref=e460]: Warranty Registrations & Site Settings
+                  - generic "Products table with RLS and seeded catalog" [ref=e461] [cursor=pointer]:
+                    - generic [ref=e462]:
+                      - img [ref=e463]
+                      - generic [ref=e469]: Products table with RLS and seeded catalog
+                  - generic "Admin Profiles & Auth Trigger" [ref=e470] [cursor=pointer]:
+                    - generic [ref=e471]:
+                      - img [ref=e472]
+                      - generic [ref=e478]: Admin Profiles & Auth Trigger
+              - generic [ref=e480]:
+                - button "Community" [expanded] [ref=e481] [cursor=pointer]:
+                  - img [ref=e482]
+                  - generic [ref=e484]: Community
+                - generic [ref=e485]:
+                  - link "templates" [ref=e486] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql/templates
+                    - img [ref=e487]
+                    - text: templates
+                  - link "quickstarts" [ref=e489] [cursor=pointer]:
+                    - /url: /dashboard/project/rnscmxjrkqelmaiwrouz/sql/quickstarts
+                    - img [ref=e490]
+                    - text: quickstarts
+            - button "View running queries" [ref=e494] [cursor=pointer]:
+              - generic [ref=e495]: View running queries
+        - separator [ref=e496]:
+          - img [ref=e498]
+        - main [ref=e507]:
+          - generic [ref=e508]:
+            - generic [ref=e509]:
+              - generic [ref=e510]:
+                - button [ref=e511] [cursor=pointer]:
+                  - img [ref=e512]
+                - tablist [ref=e515]:
+                  - button "Untitled query" [ref=e615] [cursor=pointer]:
+                    - tab "Untitled query" [selected] [ref=e616]:
+                      - img [ref=e617]
+                      - generic [ref=e624]: Untitled query
+                      - button [ref=e625]:
+                        - img [ref=e626]
+                    - separator [ref=e630]
+                  - button [ref=e631] [cursor=pointer]:
+                    - img [ref=e632]
+              - status [ref=e526]
+            - generic [ref=e529]:
+              - code [ref=e536]:
+                - generic [ref=e537]:
+                  - generic [ref=e635]: "1"
+                  - generic [ref=e546]:
+                    - generic [ref=e676]: select jsonb_pretty(jsonb_build_object('schemas', (select array_agg(distinct table_schema) from information_schema.tables
+                    - generic [ref=e678]: where table_schema not in ('pg_catalog','information_schema','pg_toast')), 'public_tables', (select jsonb_agg
+                    - generic [ref=e680]: (jsonb_build_object('table', table_name, 'type', table_type)) from information_schema.tables where table_schema='public'),
+                    - generic [ref=e682]: "'extensions', (select jsonb_agg(jsonb_build_object('name', extname, 'version', extversion, 'schema', n.nspname)) from"
+                    - generic [ref=e684]: pg_extension e join pg_namespace n on n.oid=e.extnamespace), 'publications', (select jsonb_agg(jsonb_build_object('name',
+                    - generic [ref=e686]: pubname, 'all_tables', puballtables, 'insert', pubinsert, 'update', pubupdate, 'delete', pubdelete)) from pg_publication),
+                    - generic [ref=e688]: "'custom_types', (select jsonb_agg(jsonb_build_object('schema', n.nspname, 'name', t.typname, 'kind', t.typtype)) from pg_type"
+                    - generic [ref=e690]: t join pg_namespace n on n.oid=t.typnamespace where n.nspname='public' and t.typtype in ('e','c','d')), 'cron_jobs', (select
+                    - generic [ref=e692]: jsonb_agg(row_to_json(j)) from (select * from pg_catalog.pg_tables where schemaname='cron') j)));
+                  - textbox "Editor content" [active] [ref=e550]: ('name', extname, 'version', extversion, 'schema', n.nspname)) from pg_extension e join pg_namespace n on n.oid=e.extnamespace), 'publications', (select jsonb_agg(jsonb_build_object('name', pubname, 'all_tables', puballtables, 'insert', pubinsert, 'update', pubupdate, 'delete', pubdelete)) from pg_publication), 'custom_types', (select jsonb_agg(jsonb_build_object('schema', n.nspname, 'name', t.typname, 'kind', t.typtype)) from pg_type t join pg_namespace n on n.oid=t.typnamespace where n.nspname='public' and t.typtype in ('e','c','d')), 'cron_jobs', (select jsonb_agg(row_to_json(j)) from (select * from pg_catalog.pg_tables where schemaname='cron') j)));
+              - separator [ref=e551]:
+                - img [ref=e553]
+              - generic [ref=e562]:
+                - tablist [ref=e563]:
+                  - generic [ref=e564]:
+                    - tab "Results" [selected] [ref=e565] [cursor=pointer]:
+                      - generic [ref=e566]: Results
+                    - tab "Explain" [ref=e567] [cursor=pointer]:
+                      - generic [ref=e568]: Explain
+                    - tab "Chart" [ref=e569] [cursor=pointer]:
+                      - generic [ref=e570]: Chart
+                  - generic [ref=e571]:
+                    - button [ref=e572] [cursor=pointer]:
+                      - img [ref=e574]
+                    - generic [ref=e579]:
+                      - generic [ref=e580] [cursor=pointer]:
+                        - generic [ref=e581]: Source
+                        - button "Primary database" [ref=e582]:
+                          - generic [ref=e583]: Primary database
+                          - img [ref=e585]
+                      - button "Role postgres" [ref=e587] [cursor=pointer]:
+                        - generic [ref=e589]:
+                          - generic [ref=e590]: Role
+                          - generic [ref=e591]: postgres
+                          - img [ref=e592]
+                      - button "Run Ctrl ↵" [ref=e594] [cursor=pointer]:
+                        - generic [ref=e595]: Run
+                        - generic [ref=e597]: Ctrl ↵
+                - paragraph [ref=e599]:
+                  - text: Click
+                  - code [ref=e600]: Run
+                  - text: to execute your query.
+  - alert [ref=e75]: SQL Editor | Gentech Guard | p-sai-gowtham | Supabase
+  - generic [ref=e602]:
+    - alert
+    - alert

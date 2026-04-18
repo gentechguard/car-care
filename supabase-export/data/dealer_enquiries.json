@@ -1,0 +1,35 @@
+[
+  {
+    "id": "611a16a6-9691-4467-92b8-ee37e1bb4dd6",
+    "dealer_name": "Vrishi enterprises ",
+    "mobile_number": "+919966660416",
+    "studio_name": "Vrishi enterprises ",
+    "products_interested": [
+      "PPF",
+      "SUNFILM"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "investment_capacity": null,
+    "existing_business": false,
+    "status": "PENDING",
+    "created_at": "2026-02-08T09:04:47.560941+00:00",
+    "updated_at": "2026-02-08T09:04:47.560941+00:00"
+  },
+  {
+    "id": "2d5305e0-98ea-43bb-adaf-6c35d038f2d2",
+    "dealer_name": "Crs car Care studio ",
+    "mobile_number": "+918179252490",
+    "studio_name": "Crs",
+    "products_interested": [
+      "PPF"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "investment_capacity": null,
+    "existing_business": false,
+    "status": "PENDING",
+    "created_at": "2026-02-21T10:27:57.212765+00:00",
+    "updated_at": "2026-02-21T10:27:57.212765+00:00"
+  }
+]

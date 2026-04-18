@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
+import StudioSection from "@/components/StudioSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import ProcessSection from "@/components/ProcessSection";
 import DealerMap from "@/components/DealerMap";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-[100dvh] bg-dark-bg text-white selection:bg-primary-gold selection:text-white" style={{ background: '#070604', color: '#fff' }}>
       <Header />
       <Hero />
+      <StudioSection />
       <GetInTouchForm />
       <SolutionsSection />
       <ProcessSection />

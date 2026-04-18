@@ -92,9 +92,9 @@ export default function Header() {
 
                     <button
                         onClick={scrollToGetInTouch}
-                        className="shrink-0 bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-dark-bg text-xs xl:text-sm font-black uppercase tracking-widest px-6 py-2.5 rounded-full transition-colors whitespace-nowrap"
+                        className="shrink-0 bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-white hover:text-dark-bg text-xs xl:text-sm font-black uppercase tracking-widest px-6 py-2.5 rounded-full transition-colors whitespace-nowrap"
                     >
-                        Get In Touch
+                        Customer Enquiry
                     </button>
                 </nav>
 
@@ -131,12 +131,12 @@ export default function Header() {
                         </Link>
                     ))}
 
-                    {/* Get In Touch button in mobile menu */}
+                    {/* Customer Enquiry button in mobile menu */}
                     <button
                         onClick={scrollToGetInTouch}
-                        className="mt-4 w-full bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-dark-bg py-3.5 rounded-xl text-center font-bold uppercase tracking-wider text-lg transition-colors"
+                        className="mt-4 w-full bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-white hover:text-dark-bg py-3.5 rounded-xl text-center font-bold uppercase tracking-wider text-lg transition-colors"
                     >
-                        Get In Touch
+                        Customer Enquiry
                     </button>
                 </nav>
             </div>

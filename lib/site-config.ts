@@ -31,6 +31,7 @@ export const siteConfig = {
         { name: "Home", href: "/home" },
         { name: "Services", href: "/home#product-showcase" },
         { name: "Process", href: "/home#process" },
+        { name: "Gallery", href: "/gallery" },
     ],
     // Fallback products if DB fails or for static generation references
     productCategories: [

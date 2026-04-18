@@ -138,7 +138,7 @@ export function PinPopup({ dealer, onClose }: PinPopupProps) {
               href={`https://maps.google.com/?q=${dealer.latitude},${dealer.longitude}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-white font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <Navigation className="w-4 h-4" />
               Directions

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "147a3604-2de1-4274-ba10-d569bf75f2a5",
+    "name": "Gen Tech Guard",
+    "phone": "3456789",
+    "email": "customercare@gentechguard.com",
+    "product": "Graphene Coating",
+    "created_at": "2026-04-12T16:29:28.804038+00:00"
+  },
+  {
+    "id": "84e5c554-42f0-47a7-aee8-3c197495768f",
+    "name": "Sarat",
+    "phone": "9000073232",
+    "email": "sarat.thithy@gmail.com",
+    "product": "Paint Protection Film",
+    "created_at": "2026-04-16T17:57:57.609657+00:00"
+  },
+  {
+    "id": "fb8d55fa-54d4-462c-a077-673e3c05b68d",
+    "name": "sai",
+    "phone": "1234567898",
+    "email": "devops@wellness360.co",
+    "product": "Detailing Products",
+    "created_at": "2026-04-16T20:51:08.500652+00:00"
+  },
+  {
+    "id": "76f724cf-b57d-43c4-a285-8c8479eb2fd0",
+    "name": "sai",
+    "phone": "1234567898",
+    "email": "devops@wellness360.co",
+    "product": "Paint Protection Film",
+    "created_at": "2026-04-16T20:56:36.303254+00:00"
+  },
+  {
+    "id": "e9ce7ad3-3d6c-409b-9540-08b704d8cc59",
+    "name": "sai",
+    "phone": "1234567898",
+    "email": "devops@wellness360.co",
+    "product": "Sun Film",
+    "created_at": "2026-04-16T21:02:53.019112+00:00"
+  }
+]
