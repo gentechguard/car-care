@@ -109,7 +109,7 @@ export default function GalleryGrid() {
               className="flex justify-center items-center py-32"
             >
               <div className="flex flex-col items-center gap-4 p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10">
-                <Loader2 className="w-10 h-10 text-cyan-400 animate-spin" />
+                <Loader2 className="w-10 h-10 text-[#F5C842] animate-spin" />
                 <span className="text-neutral-400 text-sm uppercase tracking-widest">Loading Gallery</span>
               </div>
             </motion.div>
@@ -152,7 +152,7 @@ export default function GalleryGrid() {
                 <p className="text-neutral-400 mb-6">No images available in this category yet.</p>
                 <button
                   onClick={() => setActiveCategory('all')}
-                  className="px-6 py-3 rounded-full bg-cyan-500 text-black font-bold uppercase tracking-wider text-sm hover:bg-cyan-400 transition-colors"
+                  className="px-6 py-3 rounded-full bg-[#D4AF37] text-black font-bold uppercase tracking-wider text-sm hover:bg-[#F5C842] transition-colors"
                 >
                   View All
                 </button>

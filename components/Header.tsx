@@ -84,7 +84,7 @@ export default function Header() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-xs xl:text-sm font-bold uppercase tracking-wider xl:tracking-widest text-text-grey hover:text-primary-blue transition-colors whitespace-nowrap"
+                            className="text-xs xl:text-sm font-bold uppercase tracking-wider xl:tracking-widest text-text-grey hover:text-primary-gold transition-colors whitespace-nowrap"
                         >
                             {link.name}
                         </Link>
@@ -92,7 +92,7 @@ export default function Header() {
 
                     <button
                         onClick={scrollToGetInTouch}
-                        className="shrink-0 bg-primary-blue hover:bg-blue-600 text-white text-xs xl:text-sm font-black uppercase tracking-widest px-6 py-2.5 rounded-full transition-colors whitespace-nowrap"
+                        className="shrink-0 bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-dark-bg text-xs xl:text-sm font-black uppercase tracking-widest px-6 py-2.5 rounded-full transition-colors whitespace-nowrap"
                     >
                         Get In Touch
                     </button>
@@ -123,18 +123,18 @@ export default function Header() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-lg py-3.5 font-bold uppercase tracking-widest text-white/80 hover:text-primary-blue flex items-center justify-between group border-b border-white/5"
+                            className="text-lg py-3.5 font-bold uppercase tracking-widest text-white/80 hover:text-primary-gold flex items-center justify-between group border-b border-white/5"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             {link.name}
-                            <ChevronRight size={20} className="text-primary-blue opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                            <ChevronRight size={20} className="text-primary-gold opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                         </Link>
                     ))}
 
                     {/* Get In Touch button in mobile menu */}
                     <button
                         onClick={scrollToGetInTouch}
-                        className="mt-4 w-full bg-primary-blue hover:bg-blue-600 text-white py-3.5 rounded-xl text-center font-bold uppercase tracking-wider text-lg transition-colors"
+                        className="mt-4 w-full bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-dark-bg py-3.5 rounded-xl text-center font-bold uppercase tracking-wider text-lg transition-colors"
                     >
                         Get In Touch
                     </button>

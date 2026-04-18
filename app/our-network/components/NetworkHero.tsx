@@ -37,7 +37,7 @@ export function NetworkHero({ stats }: NetworkHeroProps) {
         <motion.div
           className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(0,168,255,0.15) 0%, transparent 70%)",
+            background: "radial-gradient(circle, GOLD_GLOW(0.15) 0%, transparent 70%)",
             y
           }}
           animate={{
@@ -53,7 +53,7 @@ export function NetworkHero({ stats }: NetworkHeroProps) {
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(0,168,255,0.1) 0%, transparent 70%)"
+            background: "radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 70%)"
           }}
           animate={{
             scale: [1.2, 1, 1.2],
@@ -71,7 +71,7 @@ export function NetworkHero({ stats }: NetworkHeroProps) {
           <svg width="100%" height="100%">
             <defs>
               <pattern id="hero-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-                <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00A8FF" strokeWidth="0.5"/>
+                <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#D4AF37" strokeWidth="0.5"/>
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#hero-grid)" />
@@ -80,7 +80,7 @@ export function NetworkHero({ stats }: NetworkHeroProps) {
 
         {/* Light Streaks */}
         <motion.div
-          className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00A8FF] to-transparent"
+          className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"
           style={{ opacity: 0.5 }}
           animate={{
             x: ["-100%", "100%"]
@@ -105,7 +105,7 @@ export function NetworkHero({ stats }: NetworkHeroProps) {
           transition={{ duration: 0.6 }}
           className="mb-6"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00A8FF]/10 border border-[#00A8FF]/20 text-[#00A8FF] text-sm font-semibold uppercase tracking-wider">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] text-sm font-semibold uppercase tracking-wider">
             <Globe className="w-4 h-4" />
             Nationwide Presence
           </span>
@@ -119,7 +119,7 @@ export function NetworkHero({ stats }: NetworkHeroProps) {
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
         >
           <span className="text-white">OUR </span>
-          <span className="text-[#00A8FF]">NETWORK</span>
+          <span className="text-[#D4AF37]">NETWORK</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -174,7 +174,7 @@ export function NetworkHero({ stats }: NetworkHeroProps) {
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
           <motion.div
-            className="w-1.5 h-1.5 rounded-full bg-[#00A8FF]"
+            className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"
             animate={{ opacity: [1, 0.3, 1] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -197,9 +197,9 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 0.5 + delay }}
-      className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#00A8FF]/30 transition-colors group"
+      className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#D4AF37]/30 transition-colors group"
     >
-      <div className="w-12 h-12 rounded-xl bg-[#00A8FF]/10 flex items-center justify-center text-[#00A8FF] group-hover:scale-110 transition-transform">
+      <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] group-hover:scale-110 transition-transform">
         {icon}
       </div>
       <div className="text-4xl md:text-5xl font-bold text-white">

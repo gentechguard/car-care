@@ -20,9 +20,12 @@ body {
 }
 
 @theme inline {
-  --color-primary-blue: #00aaff;
-  --color-dark-bg: #050505;
-  --color-elevated-bg: #111111;
+  --color-primary-gold: #D4AF37;
+  --color-gold-bright: #F5C842;
+  --color-gold-deep: #8B6F1F;
+  --color-gold-soft: #E8C879;
+  --color-dark-bg: #070604;
+  --color-elevated-bg: #141210;
   --color-text-white: #ffffff;
   --color-text-grey: #b3b3b3;
   --color-action-red: #d32f2f;
@@ -32,10 +35,13 @@ body {
 }
 
 :root {
-  --background: #050505;
+  --background: #070604;
   --foreground: #ffffff;
-  --primary-blue: #00aaff;
-  --elevated-bg: #111111;
+  --primary-gold: #D4AF37;
+  --gold-bright: #F5C842;
+  --gold-deep: #8B6F1F;
+  --gold-soft: #E8C879;
+  --elevated-bg: #141210;
   --text-grey: #b3b3b3;
   --safe-top: env(safe-area-inset-top);
   --safe-bottom: env(safe-area-inset-bottom);
@@ -99,11 +105,11 @@ section[id] {
 
 /* ===== NEON EFFECTS ===== */
 .neon-glow {
-  box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.55);
 }
 
-.blue-text {
-  color: var(--primary-blue);
+.gold-text {
+  color: var(--primary-gold);
 }
 
 /* ===== KEYFRAME ANIMATIONS ===== */
@@ -122,12 +128,12 @@ section[id] {
   0%,
   100% {
     opacity: 0.5;
-    box-shadow: 0 0 15px var(--primary-blue), 0 0 30px var(--primary-blue);
+    box-shadow: 0 0 20px var(--primary-gold), 0 0 35px var(--primary-gold);
   }
 
   50% {
     opacity: 1;
-    box-shadow: 0 0 25px var(--primary-blue), 0 0 50px var(--primary-blue);
+    box-shadow: 0 0 30px var(--gold-bright), 0 0 55px var(--gold-bright);
   }
 }
 
@@ -209,8 +215,8 @@ section[id] {
     @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl;
   }
 
-  .text-gradient-cyan {
-    @apply bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent;
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[#F5C842] to-[#8B6F1F] bg-clip-text text-transparent;
   }
 
   /* Touch-specific utilities */
@@ -376,13 +382,13 @@ section[id] {
 .bottom-sheet {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  box-shadow: 0 -4px 30px rgba(0, 170, 255, 0.1);
+  box-shadow: 0 -4px 30px rgba(212, 175, 55, 0.18);
 }
 
 /* ===== FOCUS STATES FOR ACCESSIBILITY ===== */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--primary-blue);
+  outline: 2px solid var(--gold-bright);
   outline-offset: 2px;
 }
 
@@ -538,7 +544,7 @@ a:focus:not(:focus-visible) {
 .mobile-sheet {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  box-shadow: 0 -4px 30px rgba(0, 170, 255, 0.1);
+  box-shadow: 0 -4px 30px rgba(212, 175, 55, 0.18);
   transform: translateZ(0);
 }
 
@@ -571,7 +577,7 @@ a:focus:not(:focus-visible) {
 }
 
 .map-state-hover:hover {
-  filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 168, 255, 0.5));
+  filter: brightness(1.2) drop-shadow(0 0 12px rgba(245, 200, 66, 0.65));
 }
 
 /* Add these styles to your existing globals.css */
@@ -647,7 +653,7 @@ a:focus:not(:focus-visible) {
 
 .retry-button {
   padding: 0.5rem 1rem;
-  background: #00aaff;
+  background: #D4AF37;
   color: black;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -655,7 +661,7 @@ a:focus:not(:focus-visible) {
 }
 
 .retry-button:hover {
-  background: #0099ee;
+  background: #F5C842;
 }
 
 /* ===== MODAL SCROLL FIX ===== */

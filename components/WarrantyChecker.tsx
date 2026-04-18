@@ -262,7 +262,7 @@ export default function WarrantyChecker() {
                                 key={type.id}
                                 onClick={() => { setSearchType(type.id as SearchType); setQuery(""); setError(""); setResult(null); }}
                                 className={`flex flex-col items-center gap-2 p-4 rounded-xl transition-all w-28 ${isActive
-                                    ? "bg-primary-blue text-white shadow-lg shadow-blue-500/20"
+                                    ? "bg-primary-gold text-white shadow-lg shadow-[#D4AF37]/20"
                                     : "bg-white/5 text-white/40 hover:bg-white/10 hover:text-white"
                                     }`}
                             >
@@ -290,14 +290,14 @@ export default function WarrantyChecker() {
                                     searchType === 'vin' ? "Enter Chassis Number" :
                                         "e.g. TS 09 AB 1234"
                             }
-                            className={`w-full bg-white/5 border border-white/10 rounded-2xl py-5 md:pr-40 pr-6 outline-none focus:border-primary-blue focus:bg-white/10 transition-all font-black tracking-widest uppercase placeholder:text-text-grey/30 placeholder:normal-case ${searchType === 'mobile' ? 'pl-16' : 'pl-6'
+                            className={`w-full bg-white/5 border border-white/10 rounded-2xl py-5 md:pr-40 pr-6 outline-none focus:border-primary-gold focus:bg-white/10 transition-all font-black tracking-widest uppercase placeholder:text-text-grey/30 placeholder:normal-case ${searchType === 'mobile' ? 'pl-16' : 'pl-6'
                                 }`}
                         />
                         {/* Desktop: button inside input */}
                         <button
                             type="submit"
                             disabled={loading}
-                            className="hidden md:flex absolute right-2 top-2 bottom-2 bg-primary-blue hover:bg-white hover:text-dark-bg text-white px-6 rounded-xl font-black text-xs transition-all items-center gap-2 neon-glow disabled:opacity-50 uppercase tracking-wider"
+                            className="hidden md:flex absolute right-2 top-2 bottom-2 bg-primary-gold hover:bg-white hover:text-dark-bg text-white px-6 rounded-xl font-black text-xs transition-all items-center gap-2 neon-glow disabled:opacity-50 uppercase tracking-wider"
                         >
                             {loading ? <Loader2 className="animate-spin" size={16} /> : <Search size={16} />}
                             {loading ? "Checking" : "Verify"}
@@ -307,7 +307,7 @@ export default function WarrantyChecker() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="md:hidden w-full mt-4 bg-primary-blue hover:bg-white hover:text-dark-bg text-white py-4 rounded-xl font-black text-xs transition-all flex items-center justify-center gap-2 neon-glow disabled:opacity-50 uppercase tracking-wider"
+                        className="md:hidden w-full mt-4 bg-primary-gold hover:bg-white hover:text-dark-bg text-white py-4 rounded-xl font-black text-xs transition-all flex items-center justify-center gap-2 neon-glow disabled:opacity-50 uppercase tracking-wider"
                     >
                         {loading ? <Loader2 className="animate-spin" size={16} /> : <Search size={16} />}
                         {loading ? "Checking" : "Verify"}
@@ -371,7 +371,7 @@ export default function WarrantyChecker() {
                                             </div>
                                             <div>
                                                 <p className="text-[10px] text-text-grey uppercase tracking-widest mb-1 opacity-60">Roll Code</p>
-                                                <p className="text-primary-blue font-bold font-mono">{result.ppf_roll}</p>
+                                                <p className="text-primary-gold font-bold font-mono">{result.ppf_roll}</p>
                                             </div>
                                         </div>
 
@@ -384,7 +384,7 @@ export default function WarrantyChecker() {
                                             </button>
                                             <button
                                                 onClick={downloadPdf}
-                                                className="w-full py-4 bg-primary-blue hover:bg-blue-400 text-white border border-transparent rounded-xl font-black text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
+                                                className="w-full py-4 bg-primary-gold hover:bg-[#F5C842] text-white border border-transparent rounded-xl font-black text-xs uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#D4AF37]/20"
                                             >
                                                 <Download size={16} /> PDF
                                             </button>

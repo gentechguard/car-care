@@ -242,7 +242,7 @@ export default function SolutionsSection() {
           <p className="text-white/40 text-sm uppercase tracking-widest">No products available</p>
           <button
             onClick={() => window.location.reload()}
-            className="px-6 py-2 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors text-sm"
+            className="px-6 py-2 bg-[#D4AF37]/20 border border-[#D4AF37]/30 text-[#F5C842] rounded-lg hover:bg-[#D4AF37]/30 transition-colors text-sm"
           >
             Retry
           </button>
@@ -274,7 +274,7 @@ export default function SolutionsSection() {
                   <span className="uppercase tracking-widest text-sm font-bold">Back to All Solutions</span>
                 </button>
                 <div className="text-left md:text-right">
-                  <span className="text-blue-400 text-xs tracking-widest uppercase block mb-1">
+                  <span className="text-[#F5C842] text-xs tracking-widest uppercase block mb-1">
                     {selectedParent.name} Variants
                   </span>
                   <p className="text-gray-500 text-xs">
@@ -292,7 +292,7 @@ export default function SolutionsSection() {
                 className="flex flex-col items-center justify-center text-center min-h-[4rem]"
               >
                 <h2 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tight">
-                  Complete Vehicle <span className="text-blue-400">Protection</span> Solutions
+                  Complete Vehicle <span className="text-[#F5C842]">Protection</span> Solutions
                 </h2>
                 <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
                   Click any service to explore specific variants tailored to your needs
@@ -314,7 +314,7 @@ export default function SolutionsSection() {
                         document.body.removeChild(a);
                       });
                     }}
-                    className="inline-flex items-center gap-2 text-blue-400/80 hover:text-blue-400 text-sm tracking-wide transition-colors duration-300"
+                    className="inline-flex items-center gap-2 text-[#F5C842]/80 hover:text-[#F5C842] text-sm tracking-wide transition-colors duration-300"
                   >
                     <Download size={15} />
                     Download Brochures For PPF & Sun Film
@@ -428,7 +428,7 @@ export default function SolutionsSection() {
                     <div className="hidden lg:flex absolute inset-0 p-4 lg:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 flex-col justify-end bg-gradient-to-t from-black/90 via-black/60 to-transparent pointer-events-none z-20">
                       <div className="w-full text-left pointer-events-auto transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
                         {!product.nonInteractive && (
-                          <span className="text-blue-400 font-bold tracking-widest uppercase text-xs mb-2 block">
+                          <span className="text-[#F5C842] font-bold tracking-widest uppercase text-xs mb-2 block">
                             {selectedParent ? 'View Details' : 'Click for Options'}
                           </span>
                         )}
@@ -444,7 +444,7 @@ export default function SolutionsSection() {
                               e.stopPropagation();
                               handleCardClick(product, index);
                             }}
-                            className="border border-blue-400 text-blue-400 font-bold tracking-widest uppercase text-[10px] md:text-xs px-5 py-2 hover:bg-blue-400 hover:text-white transition-colors duration-300 pointer-events-auto"
+                            className="border border-[#F5C842] text-[#F5C842] font-bold tracking-widest uppercase text-[10px] md:text-xs px-5 py-2 hover:bg-[#F5C842] hover:text-white transition-colors duration-300 pointer-events-auto"
                           >
                             {selectedParent ? 'View Solution' : 'Explore'}
                           </button>
@@ -475,7 +475,7 @@ export default function SolutionsSection() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.92, opacity: 0, y: 20 }}
               transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-              className="bg-[#0a0a0a] border border-white/10 rounded-2xl w-full max-w-md md:max-w-5xl max-h-[90vh] overflow-y-auto relative flex flex-col md:flex-row shadow-2xl shadow-blue-400/10"
+              className="bg-[#0a0a0a] border border-white/10 rounded-2xl w-full max-w-md md:max-w-5xl max-h-[90vh] overflow-y-auto relative flex flex-col md:flex-row shadow-2xl shadow-[#F5C842]/10"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -487,7 +487,7 @@ export default function SolutionsSection() {
 
               {/* Image Section */}
               <div className="w-full md:w-2/5 relative overflow-hidden bg-gradient-to-br from-gray-900 to-black min-h-[200px] md:min-h-[500px]">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-transparent" />
                 {/* SVG filter to make white/near-white pixels transparent */}
                 <svg className="absolute w-0 h-0" aria-hidden="true">
                   <defs>
@@ -519,7 +519,7 @@ export default function SolutionsSection() {
                       <h2 className="text-3xl md:text-5xl font-black text-white uppercase leading-none drop-shadow-lg">
                         {activeProduct.name}
                       </h2>
-                      <div className="h-1 w-16 bg-blue-400 mx-auto mt-4 shadow-[0_0_20px_rgba(0,170,255,0.8)]" />
+                      <div className="h-1 w-16 bg-[#F5C842] mx-auto mt-4 shadow-[0_0_20px_rgba(212,175,55,0.9)]" />
                     </div>
                   </div>
                 )}
@@ -533,7 +533,7 @@ export default function SolutionsSection() {
                   <h2 className="text-2xl md:text-4xl font-black text-white uppercase leading-tight pr-8 md:pr-10">
                     {activeProduct.name}
                   </h2>
-                  <div className="h-1 w-16 bg-blue-400 mx-auto md:mx-0 mt-3 shadow-[0_0_15px_rgba(0,170,255,0.6)]" />
+                  <div className="h-1 w-16 bg-[#F5C842] mx-auto md:mx-0 mt-3 shadow-[0_0_15px_rgba(212,175,55,0.8)]" />
                   {activeProduct.shortDesc && (
                     <p className="text-gray-400 text-sm mt-3">{activeProduct.shortDesc}</p>
                   )}
@@ -542,15 +542,15 @@ export default function SolutionsSection() {
                 {/* Features */}
                 {parseFeatures(activeProduct.features).length > 0 && (
                   <div className="mb-6">
-                    <h3 className="text-sm md:text-lg font-bold text-blue-400 mb-3 md:mb-4 uppercase tracking-widest flex items-center gap-2">
+                    <h3 className="text-sm md:text-lg font-bold text-[#F5C842] mb-3 md:mb-4 uppercase tracking-widest flex items-center gap-2">
                       <ShieldCheck size={18} />
                       Flavors
                     </h3>
                     <div className="space-y-2.5">
                       {parseFeatures(activeProduct.features).map((feature, i) => (
                         <div key={i} className="flex items-start gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-blue-400/20 flex items-center justify-center shrink-0 mt-0.5">
-                            <div className="w-2 h-2 rounded-full bg-blue-400" />
+                          <div className="w-5 h-5 rounded-full bg-[#F5C842]/20 flex items-center justify-center shrink-0 mt-0.5">
+                            <div className="w-2 h-2 rounded-full bg-[#F5C842]" />
                           </div>
                           <span className="text-white/80 text-sm leading-relaxed">{feature}</span>
                         </div>
@@ -562,7 +562,7 @@ export default function SolutionsSection() {
                 {/* Specs */}
                 <div>
                   <h3 className="text-sm md:text-lg font-bold text-white mb-3 md:mb-4 uppercase tracking-widest flex items-center gap-2">
-                    <Zap size={18} className="text-blue-400" />
+                    <Zap size={18} className="text-[#F5C842]" />
                     Technical Specs
                   </h3>
                   <div className="grid grid-cols-2 gap-2 md:gap-3">
@@ -578,7 +578,7 @@ export default function SolutionsSection() {
                       return specEntries.map((spec, i) => (
                         <div
                           key={i}
-                          className="bg-white/5 rounded-lg p-3 border border-white/5 hover:border-blue-400/30 transition-colors"
+                          className="bg-white/5 rounded-lg p-3 border border-white/5 hover:border-[#F5C842]/30 transition-colors"
                         >
                           <p className="text-white/40 text-[10px] uppercase font-bold tracking-wider mb-0.5 line-clamp-1">
                             {spec.label}

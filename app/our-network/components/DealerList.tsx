@@ -47,7 +47,7 @@ function DealerCard({ dealer, index, onClick }: DealerCardProps) {
   const getTypeIcon = () => {
     switch (dealer.dealer_type) {
       case "premium":
-        return <Star className="w-4 h-4 text-[#00A8FF]" />;
+        return <Star className="w-4 h-4 text-[#D4AF37]" />;
       case "coming_soon":
         return <Clock className="w-4 h-4 text-[#F59E0B]" />;
       default:
@@ -58,7 +58,7 @@ function DealerCard({ dealer, index, onClick }: DealerCardProps) {
   const getTypeColor = () => {
     switch (dealer.dealer_type) {
       case "premium":
-        return "border-[#00A8FF]/30 bg-[#00A8FF]/5";
+        return "border-[#D4AF37]/30 bg-[#D4AF37]/5";
       case "coming_soon":
         return "border-[#F59E0B]/30 bg-[#F59E0B]/5";
       default:
@@ -96,7 +96,7 @@ function DealerCard({ dealer, index, onClick }: DealerCardProps) {
           <Phone className="w-4 h-4 text-white/40" />
           <a 
             href={`tel:${dealer.phone}`}
-            className="text-[#00A8FF] hover:underline"
+            className="text-[#D4AF37] hover:underline"
             onClick={(e) => e.stopPropagation()}
           >
             {dealer.phone}

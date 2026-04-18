@@ -20,7 +20,7 @@ export default function GalleryFilter({
       {/* Glassmorphism Container */}
       <div className="relative inline-flex flex-wrap justify-center gap-1 p-2 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl shadow-black/50">
         {/* Ambient Glow Background */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5 pointer-events-none" />
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#D4AF37]/5 via-transparent to-[#D4AF37]/5 pointer-events-none" />
         
         {categories.map((cat) => (
           <button
@@ -32,7 +32,7 @@ export default function GalleryFilter({
             {activeCategory === cat.value && (
               <motion.div
                 layoutId="activeGlassFilter"
-                className="absolute inset-0 bg-primary-blue rounded-xl shadow-lg shadow-cyan-500/30"
+                className="absolute inset-0 bg-primary-gold rounded-xl shadow-lg shadow-[#D4AF37]/30"
                 transition={{ 
                   type: "spring", 
                   stiffness: 400, 

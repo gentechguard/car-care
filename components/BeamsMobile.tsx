@@ -36,7 +36,7 @@ export default function BeamsMobile({
             <div
                 className="absolute inset-0"
                 style={{
-                    background: 'radial-gradient(ellipse at center, rgba(30,35,60,0.9) 0%, rgba(5,5,10,1) 75%)',
+                    background: 'radial-gradient(ellipse at center, rgba(40,30,10,0.9) 0%, rgba(7,6,4,1) 75%)',
                 }}
             />
 
@@ -54,9 +54,9 @@ export default function BeamsMobile({
                         background: `linear-gradient(
               to bottom,
               transparent 0%,
-              rgba(140, 160, 255, 0.4) 25%,
-              rgba(180, 200, 255, 0.7) 50%,
-              rgba(140, 160, 255, 0.4) 75%,
+              rgba(212, 175, 55, 0.55) 25%,
+              rgba(245, 200, 66, 0.85) 50%,
+              rgba(212, 175, 55, 0.55) 75%,
               transparent 100%
             )`,
                         transform: 'rotate(-25deg) translateY(-50%)',

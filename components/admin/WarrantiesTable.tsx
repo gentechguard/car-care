@@ -202,7 +202,7 @@ export default function WarrantiesTable() {
         {
             accessorKey: "reg_number",
             header: "Reg. Number",
-            cell: ({ row }) => <span className="font-mono bg-indigo-50 text-indigo-700 border border-indigo-100 px-2 py-0.5 rounded text-[10px] font-bold tracking-wide whitespace-nowrap">{row.getValue("reg_number")}</span>,
+            cell: ({ row }) => <span className="font-mono bg-[#FFF8E7] text-[#8B6F1F] border border-[#F5D88A] px-2 py-0.5 rounded text-[10px] font-bold tracking-wide whitespace-nowrap">{row.getValue("reg_number")}</span>,
         },
         {
             accessorKey: "ppf_roll",
@@ -246,7 +246,7 @@ export default function WarrantiesTable() {
                 <div className="flex gap-1 whitespace-nowrap">
                     {row.original.vehicle_image_url ? (
                         <div
-                            className="w-7 h-7 rounded-md border border-slate-200 overflow-hidden cursor-pointer hover:ring-2 hover:ring-indigo-500 hover:z-10 transition-all bg-slate-100 flex items-center justify-center group"
+                            className="w-7 h-7 rounded-md border border-slate-200 overflow-hidden cursor-pointer hover:ring-2 hover:ring-[#D4AF37] hover:z-10 transition-all bg-slate-100 flex items-center justify-center group"
                             onClick={() => setSelectedImage(row.original.vehicle_image_url)}
                             title="View Vehicle"
                         >
@@ -259,7 +259,7 @@ export default function WarrantiesTable() {
                     )}
                     {row.original.rc_image_url ? (
                         <div
-                            className="w-7 h-7 rounded-md border border-slate-200 overflow-hidden cursor-pointer hover:ring-2 hover:ring-indigo-500 hover:z-10 transition-all bg-slate-100 group"
+                            className="w-7 h-7 rounded-md border border-slate-200 overflow-hidden cursor-pointer hover:ring-2 hover:ring-[#D4AF37] hover:z-10 transition-all bg-slate-100 group"
                             onClick={() => setSelectedImage(row.original.rc_image_url)}
                             title="View RC"
                         >
@@ -287,7 +287,7 @@ export default function WarrantiesTable() {
                         <Popover.Content className="bg-white border border-slate-200 shadow-xl rounded-xl p-1 w-32 flex flex-col z-10" sideOffset={5} align="end">
                             <button
                                 onClick={() => setEditingWarranty(warranty)}
-                                className="flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 rounded-lg transition-colors w-full text-left font-medium"
+                                className="flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:bg-[#FFF8E7] hover:text-[#8B6F1F] rounded-lg transition-colors w-full text-left font-medium"
                             >
                                 <Edit2 size={14} /> Edit
                             </button>
@@ -326,13 +326,13 @@ export default function WarrantiesTable() {
             {/* Toolbar */}
             <div className="flex flex-row gap-4 justify-between items-center bg-slate-50 p-1.5 rounded-lg border border-slate-200">
                 <div className="relative flex-1 sm:w-96 group">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-indigo-500 transition-colors" size={16} />
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-[#D4AF37] transition-colors" size={16} />
                     <input
                         type="text"
                         placeholder="Filter by keyword..."
                         value={globalFilter}
                         onChange={(e) => setGlobalFilter(e.target.value)}
-                        className="w-full bg-white border border-slate-200 pl-10 pr-4 py-2 rounded-md text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
+                        className="w-full bg-white border border-slate-200 pl-10 pr-4 py-2 rounded-md text-sm outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all placeholder:text-slate-400"
                     />
                 </div>
 
@@ -340,17 +340,17 @@ export default function WarrantiesTable() {
                     {/* Add Data Button */}
                     <button
                         onClick={() => setIsCreateOpen(true)}
-                        className="flex items-center gap-2 px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-md transition-colors shadow-sm"
+                        className="flex items-center gap-2 px-3 py-2 bg-[#8B6F1F] hover:bg-[#8B6F1F] text-white text-sm font-medium rounded-md transition-colors shadow-sm"
                     >
                         <Plus size={16} /> <p className="hidden sm:inline">Add Warranty</p>
                     </button>
                     <button
                         onClick={() => setShowFilters(!showFilters)}
-                        className={`hidden p-2 border border-slate-200 rounded-md transition-colors ${showFilters ? 'bg-indigo-50 text-indigo-600 border-indigo-200' : 'bg-white text-slate-600 hover:bg-slate-50 hover:text-indigo-600'}`}
+                        className={`hidden p-2 border border-slate-200 rounded-md transition-colors ${showFilters ? 'bg-[#FFF8E7] text-[#8B6F1F] border-[#F5D88A]' : 'bg-white text-slate-600 hover:bg-slate-50 hover:text-[#8B6F1F]'}`}
                     >
                         <Filter size={16} />
                     </button>
-                    <button className="hidden p-2 bg-white border border-slate-200 rounded-md text-slate-600 hover:bg-slate-50 hover:text-indigo-600 transition-colors">
+                    <button className="hidden p-2 bg-white border border-slate-200 rounded-md text-slate-600 hover:bg-slate-50 hover:text-[#8B6F1F] transition-colors">
                         <Download size={16} />
                     </button>
                 </div>
@@ -365,7 +365,7 @@ export default function WarrantiesTable() {
                             placeholder={`Filter ${key.replace('_', ' ')}...`}
                             value={(table.getColumn(key)?.getFilterValue() as string) ?? ""}
                             onChange={(event) => table.getColumn(key)?.setFilterValue(event.target.value)}
-                            className="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-md outline-none focus:border-indigo-500 transition-colors"
+                            className="w-full px-3 py-2 text-xs bg-white border border-slate-200 rounded-md outline-none focus:border-[#D4AF37] transition-colors"
                         />
                     ))}
                 </div>
@@ -386,8 +386,8 @@ export default function WarrantiesTable() {
                                         >
                                             <div className="flex items-center gap-1">
                                                 {flexRender(header.column.columnDef.header, header.getContext())}
-                                                {header.column.getIsSorted() === "asc" && <ChevronDown className="rotate-180 text-indigo-500" size={14} />}
-                                                {header.column.getIsSorted() === "desc" && <ChevronDown className="text-indigo-500" size={14} />}
+                                                {header.column.getIsSorted() === "asc" && <ChevronDown className="rotate-180 text-[#D4AF37]" size={14} />}
+                                                {header.column.getIsSorted() === "desc" && <ChevronDown className="text-[#D4AF37]" size={14} />}
                                             </div>
                                         </th>
                                     ))}
@@ -535,7 +535,7 @@ export default function WarrantiesTable() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Customer Name</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                         value={editingWarranty.name}
                                         onChange={e => setEditingWarranty({ ...editingWarranty, name: e.target.value })}
                                     />
@@ -543,7 +543,7 @@ export default function WarrantiesTable() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Phone</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                         value={editingWarranty.phone}
                                         onChange={e => setEditingWarranty({ ...editingWarranty, phone: e.target.value })}
                                     />
@@ -551,7 +551,7 @@ export default function WarrantiesTable() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Email</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                         value={editingWarranty.email}
                                         onChange={e => setEditingWarranty({ ...editingWarranty, email: e.target.value })}
                                     />
@@ -559,7 +559,7 @@ export default function WarrantiesTable() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Reg Number</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-mono"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all font-mono"
                                         value={editingWarranty.reg_number}
                                         onChange={e => setEditingWarranty({ ...editingWarranty, reg_number: e.target.value })}
                                     />
@@ -567,7 +567,7 @@ export default function WarrantiesTable() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Dealer Name</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                         value={editingWarranty.dealer_name}
                                         onChange={e => setEditingWarranty({ ...editingWarranty, dealer_name: e.target.value })}
                                     />
@@ -575,7 +575,7 @@ export default function WarrantiesTable() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">PPF Roll</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                         value={editingWarranty.ppf_roll}
                                         onChange={e => setEditingWarranty({ ...editingWarranty, ppf_roll: e.target.value })}
                                     />
@@ -591,7 +591,7 @@ export default function WarrantiesTable() {
                                     </button>
                                     <button
                                         type="submit"
-                                        className="px-5 py-2.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-lg shadow-indigo-200 transition-colors flex items-center gap-2"
+                                        className="px-5 py-2.5 text-sm font-bold text-white bg-[#8B6F1F] hover:bg-[#8B6F1F] rounded-lg shadow-lg shadow-[#F5D88A] transition-colors flex items-center gap-2"
                                     >
                                         <Save size={16} /> Save Changes
                                     </button>
@@ -622,7 +622,7 @@ export default function WarrantiesTable() {
                                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Customer Name</label>
                                 <input
                                     required
-                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                     value={newWarranty.name}
                                     onChange={e => setNewWarranty({ ...newWarranty, name: e.target.value })}
                                 />
@@ -631,7 +631,7 @@ export default function WarrantiesTable() {
                                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Phone</label>
                                 <input
                                     required
-                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                     value={newWarranty.phone}
                                     onChange={e => setNewWarranty({ ...newWarranty, phone: e.target.value })}
                                 />
@@ -639,7 +639,7 @@ export default function WarrantiesTable() {
                             <div className="space-y-2">
                                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Email</label>
                                 <input
-                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                     value={newWarranty.email}
                                     onChange={e => setNewWarranty({ ...newWarranty, email: e.target.value })}
                                 />
@@ -648,7 +648,7 @@ export default function WarrantiesTable() {
                                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Reg Number</label>
                                 <input
                                     required
-                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-mono"
+                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all font-mono"
                                     value={newWarranty.reg_number}
                                     onChange={e => setNewWarranty({ ...newWarranty, reg_number: e.target.value })}
                                 />
@@ -656,7 +656,7 @@ export default function WarrantiesTable() {
                             <div className="space-y-2">
                                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Dealer Name</label>
                                 <input
-                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                     value={newWarranty.dealer_name}
                                     onChange={e => setNewWarranty({ ...newWarranty, dealer_name: e.target.value })}
                                 />
@@ -664,7 +664,7 @@ export default function WarrantiesTable() {
                             <div className="space-y-2">
                                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">PPF Roll</label>
                                 <input
-                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                     value={newWarranty.ppf_roll}
                                     onChange={e => setNewWarranty({ ...newWarranty, ppf_roll: e.target.value })}
                                 />
@@ -672,7 +672,7 @@ export default function WarrantiesTable() {
                             <div className="space-y-2">
                                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Category</label>
                                 <input
-                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                    className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                     value={newWarranty.ppf_category}
                                     onChange={e => setNewWarranty({ ...newWarranty, ppf_category: e.target.value })}
                                     placeholder="e.g. GEN 5 PPF"
@@ -689,7 +689,7 @@ export default function WarrantiesTable() {
                                 </button>
                                 <button
                                     type="submit"
-                                    className="px-5 py-2.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-lg shadow-indigo-200 transition-colors flex items-center gap-2"
+                                    className="px-5 py-2.5 text-sm font-bold text-white bg-[#8B6F1F] hover:bg-[#8B6F1F] rounded-lg shadow-lg shadow-[#F5D88A] transition-colors flex items-center gap-2"
                                 >
                                     <Plus size={16} /> Create Registration
                                 </button>

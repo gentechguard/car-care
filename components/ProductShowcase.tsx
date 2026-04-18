@@ -299,7 +299,7 @@ export default function ProductShowcase() {
                 className="absolute right-0 top-0 bottom-0 flex items-center"
               >
                 <div className="text-right">
-                  <span className="text-blue-400 text-[10px] md:text-xs tracking-widest uppercase block mb-1">
+                  <span className="text-[#F5C842] text-[10px] md:text-xs tracking-widest uppercase block mb-1">
                     {selectedParent.name} Variants
                   </span>
                   <p className="text-gray-500 text-[10px] md:text-xs">
@@ -317,7 +317,7 @@ export default function ProductShowcase() {
                 className="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
               >
                 <h2 className="text-xl md:text-3xl lg:text-5xl font-black text-white mb-2 md:mb-4 uppercase tracking-tight">
-                  Our <span className="text-blue-400">Products</span> Range
+                  Our <span className="text-[#F5C842]">Products</span> Range
                 </h2>
                 <p className="text-gray-400 max-w-2xl mx-auto text-xs md:text-sm lg:text-base">
                   Click any product to explore specific variants tailored to your needs
@@ -412,7 +412,7 @@ export default function ProductShowcase() {
 
                         {/* Indicator arrow */}
                         <div
-                          className="text-blue-400 transition-transform duration-300"
+                          className="text-[#F5C842] transition-transform duration-300"
                           style={{
                             transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)',
                           }}
@@ -443,7 +443,7 @@ export default function ProductShowcase() {
                               setActiveProduct(product);
                             }
                           }}
-                          className="border border-blue-400 text-blue-400 font-bold tracking-widest uppercase text-[10px] px-4 py-2 rounded active:bg-blue-400 active:text-white transition-colors duration-200"
+                          className="border border-[#F5C842] text-[#F5C842] font-bold tracking-widest uppercase text-[10px] px-4 py-2 rounded active:bg-[#F5C842] active:text-white transition-colors duration-200"
                         >
                           {hasChildren ? 'View Variants' : 'View Solution'}
                         </button>
@@ -461,7 +461,7 @@ export default function ProductShowcase() {
                     {/* Hover State - Full Content */}
                     <div className="hidden md:flex absolute inset-0 p-6 lg:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75 flex-col justify-end bg-gradient-to-t from-black/90 via-black/60 to-transparent pointer-events-none z-20">
                       <div className="w-full text-left pointer-events-auto transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
-                        <span className="text-blue-400 font-bold tracking-widest uppercase text-[10px] lg:text-xs mb-2 block">
+                        <span className="text-[#F5C842] font-bold tracking-widest uppercase text-[10px] lg:text-xs mb-2 block">
                           {selectedParent ? 'View Details' : 'Click for Options'}
                         </span>
                         <h4 className="text-2xl lg:text-4xl font-black text-white mb-2 leading-tight">
@@ -475,7 +475,7 @@ export default function ProductShowcase() {
                             e.stopPropagation();
                             handleCardClick(product, index);
                           }}
-                          className="border border-blue-400 text-blue-400 font-bold tracking-widest uppercase text-[10px] lg:text-xs px-5 py-2 hover:bg-blue-400 hover:text-white transition-colors duration-300 pointer-events-auto"
+                          className="border border-[#F5C842] text-[#F5C842] font-bold tracking-widest uppercase text-[10px] lg:text-xs px-5 py-2 hover:bg-[#F5C842] hover:text-white transition-colors duration-300 pointer-events-auto"
                         >
                           {hasChildren ? 'Explore' : 'View Solution'}
                         </button>
@@ -506,7 +506,7 @@ export default function ProductShowcase() {
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-              className="md:hidden absolute bottom-0 left-0 right-0 bg-[#0a0a0a] border-t border-white/10 rounded-t-3xl max-h-[85vh] overflow-hidden flex flex-col shadow-2xl shadow-blue-400/10"
+              className="md:hidden absolute bottom-0 left-0 right-0 bg-[#0a0a0a] border-t border-white/10 rounded-t-3xl max-h-[85vh] overflow-hidden flex flex-col shadow-2xl shadow-[#F5C842]/10"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Drag Handle */}
@@ -558,13 +558,13 @@ export default function ProductShowcase() {
 
                 {/* Highlights */}
                 <div className="mb-6">
-                  <h3 className="text-blue-400 font-bold uppercase text-sm mb-3 flex items-center gap-2">
+                  <h3 className="text-[#F5C842] font-bold uppercase text-sm mb-3 flex items-center gap-2">
                     <ShieldCheck size={18} /> Highlights
                   </h3>
                   <div className="space-y-3">
                     {parseFeatures(activeProduct.features).map((feature, i) => (
                       <div key={i} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#F5C842] mt-2 shrink-0" />
                         <span className="text-white/80 text-sm leading-relaxed">{feature}</span>
                       </div>
                     ))}
@@ -575,7 +575,7 @@ export default function ProductShowcase() {
                 {parseSpecs(activeProduct.specs).length > 0 && (
                   <div>
                     <h3 className="text-white font-bold uppercase text-sm mb-3 flex items-center gap-2">
-                      <Zap size={18} className="text-blue-400" /> Specs
+                      <Zap size={18} className="text-[#F5C842]" /> Specs
                     </h3>
                     <div className="grid grid-cols-2 gap-2">
                       {parseSpecs(activeProduct.specs).map((spec, i) => (
@@ -599,7 +599,7 @@ export default function ProductShowcase() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-              className="hidden md:flex bg-[#0a0a0a] border border-white/10 rounded-xl w-full max-w-4xl max-h-[90vh] overflow-hidden relative flex-row shadow-2xl shadow-blue-400/10 mx-4"
+              className="hidden md:flex bg-[#0a0a0a] border border-white/10 rounded-xl w-full max-w-4xl max-h-[90vh] overflow-hidden relative flex-row shadow-2xl shadow-[#F5C842]/10 mx-4"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -611,7 +611,7 @@ export default function ProductShowcase() {
 
               {/* Modal Left: Product Image */}
               <div className="w-2/5 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden min-h-[500px] flex items-center justify-center p-6">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-transparent" />
 
                 <div className="relative z-10 w-full h-full flex items-center justify-center">
                   {(() => {
@@ -636,7 +636,7 @@ export default function ProductShowcase() {
                         <h2 className="text-4xl font-black text-white mb-2 uppercase leading-none drop-shadow-lg">
                           {activeProduct.name}
                         </h2>
-                        <div className="h-1 w-24 bg-blue-400 mx-auto mt-4 shadow-[0_0_20px_rgba(0,170,255,0.8)]" />
+                        <div className="h-1 w-24 bg-[#F5C842] mx-auto mt-4 shadow-[0_0_20px_rgba(212,175,55,0.9)]" />
                       </div>
                     );
                   })()}
@@ -660,14 +660,14 @@ export default function ProductShowcase() {
 
                 {/* Features Section */}
                 <div className="mb-8">
-                  <h3 className="text-lg md:text-xl font-bold text-blue-400 mb-4 uppercase tracking-widest flex items-center gap-2">
+                  <h3 className="text-lg md:text-xl font-bold text-[#F5C842] mb-4 uppercase tracking-widest flex items-center gap-2">
                     <ShieldCheck size={20} />
                     Product Highlights
                   </h3>
                   <div className="grid grid-cols-1 gap-3">
                     {parseFeatures(activeProduct.features).map((feature, i) => (
                       <div key={i} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#F5C842] mt-2 shrink-0" />
                         <span className="text-white/80 text-sm font-medium leading-relaxed">{feature}</span>
                       </div>
                     ))}
@@ -677,7 +677,7 @@ export default function ProductShowcase() {
                 {/* Specs Section */}
                 <div>
                   <h3 className="text-lg md:text-xl font-bold text-white mb-4 uppercase tracking-widest flex items-center gap-2">
-                    <Zap size={20} className="text-blue-400" />
+                    <Zap size={20} className="text-[#F5C842]" />
                     Technical Specs
                   </h3>
                   <div className="grid grid-cols-2 gap-3">
@@ -695,7 +695,7 @@ export default function ProductShowcase() {
                       return specEntries.map((spec, i) => (
                         <div
                           key={i}
-                          className="bg-white/5 rounded-lg p-3 border border-white/5 hover:border-blue-400/30 transition-colors"
+                          className="bg-white/5 rounded-lg p-3 border border-white/5 hover:border-[#F5C842]/30 transition-colors"
                         >
                           <p className="text-white/40 text-[10px] uppercase font-bold tracking-wider mb-1 line-clamp-1">
                             {spec.label}

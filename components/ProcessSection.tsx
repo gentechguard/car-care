@@ -54,7 +54,7 @@ export default function ProcessSection() {
                 <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="text-primary-blue font-black tracking-[0.3em] uppercase text-xs mb-4 inline-block"
+                    className="text-primary-gold font-black tracking-[0.3em] uppercase text-xs mb-4 inline-block"
                 >
                     Our Process
                 </motion.span>
@@ -64,7 +64,7 @@ export default function ProcessSection() {
                     transition={{ delay: 0.1 }}
                     className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter"
                 >
-                    PRECISION. EXPERTISE. <span className="blue-text italic text-3xl md:text-7xl">QUALITY CONTROL</span>
+                    PRECISION. EXPERTISE. <span className="gold-text italic text-3xl md:text-7xl">QUALITY CONTROL</span>
                 </motion.h2>
             </div>
 
@@ -73,7 +73,7 @@ export default function ProcessSection() {
                 <div className="absolute left-[50%] top-0 bottom-0 w-[2px] bg-white/5 hidden lg:block">
                     <motion.div
                         style={{ height: "100%", scaleY: pathLength, originY: 0 }}
-                        className="w-full bg-primary-blue shadow-[0_0_15px_rgba(0,170,255,0.5)]"
+                        className="w-full bg-primary-gold shadow-[0_0_15px_rgba(212,175,55,0.65)]"
                     />
                 </div>
 
@@ -100,14 +100,14 @@ export default function ProcessSection() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent opacity-60" />
 
                                     {/* Number Overlay */}
-                                    <div className="absolute top-8 left-8 w-16 h-16 rounded-3xl bg-primary-blue/20 backdrop-blur-xl border border-white/20 flex items-center justify-center font-black text-2xl text-white">
+                                    <div className="absolute top-8 left-8 w-16 h-16 rounded-3xl bg-primary-gold/20 backdrop-blur-xl border border-white/20 flex items-center justify-center font-black text-2xl text-white">
                                         {step.id}
                                     </div>
                                 </div>
                             </motion.div>
 
                             {/* Node Dot (Lg Only) */}
-                            <div className="absolute left-[50%] -translate-x-1/2 w-4 h-4 rounded-full bg-dark-bg border-4 border-primary-blue hidden lg:block" />
+                            <div className="absolute left-[50%] -translate-x-1/2 w-4 h-4 rounded-full bg-dark-bg border-4 border-primary-gold hidden lg:block" />
 
                             {/* Text Content */}
                             <motion.div
@@ -116,16 +116,16 @@ export default function ProcessSection() {
                                 viewport={{ once: true, margin: "-100px" }}
                                 className={`flex-1 w-full text-center ${index % 2 === 0 ? 'lg:text-left' : 'lg:text-right'}`}
                             >
-                                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary-blue/10 text-primary-blue mb-8 border border-primary-blue/20`}>
+                                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary-gold/10 text-primary-gold mb-8 border border-primary-gold/20`}>
                                     <step.icon size={28} />
                                 </div>
                                 <h3 className="text-3xl font-black text-white mb-2 uppercase tracking-tight">{step.title}</h3>
-                                <p className="text-primary-blue font-bold uppercase tracking-widest text-xs mb-8 italic">{step.subtitle}</p>
+                                <p className="text-primary-gold font-bold uppercase tracking-widest text-xs mb-8 italic">{step.subtitle}</p>
 
                                 <ul className={`space-y-4 inline-block text-left ${index % 2 === 0 ? 'lg:text-left' : 'lg:text-right'}`}>
                                     {step.details.map((detail, i) => (
                                         <li key={i} className={`flex items-start gap-3 text-text-grey font-medium ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}>
-                                            <CheckCircle2 size={16} className="text-primary-blue shrink-0 mt-1" />
+                                            <CheckCircle2 size={16} className="text-primary-gold shrink-0 mt-1" />
                                             <span className="leading-snug">{detail}</span>
                                         </li>
                                     ))}

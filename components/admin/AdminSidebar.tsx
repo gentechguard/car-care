@@ -81,7 +81,7 @@ export default function AdminSidebar() {
             {/* Sidebar Container */}
             <aside className={`
                 fixed inset-y-0 left-0 z-40 w-[260px] transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:h-[100dvh]
-                bg-linear-to-b from-black via-[#110e30] to-[#2a2275] flex flex-col justify-between px-4 py-8 text-white overflow-hidden
+                bg-linear-to-b from-black via-[#1a1406] to-[#3a2c10] flex flex-col justify-between px-4 py-8 text-white overflow-hidden
                 ${isOpen ? "translate-x-0 shadow-2xl" : "-translate-x-full"}
             `}>
                 {/* Top Section */}
@@ -119,9 +119,9 @@ export default function AdminSidebar() {
                                         }
                                     `}
                                 >
-                                    <item.icon size={18} className={isActive ? "text-indigo-300" : ""} />
+                                    <item.icon size={18} className={isActive ? "text-[#F5D88A]" : ""} />
                                     <span>{item.label}</span>
-                                    {isActive && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-indigo-400" />}
+                                    {isActive && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#F5C842]" />}
                                 </Link>
                             )
                         })}
@@ -155,12 +155,12 @@ export default function AdminSidebar() {
                     {userProfile && (
                         <div className="bg-black/20 rounded-xl p-3 border border-white/5 backdrop-blur-sm">
                             <div className="flex items-center gap-3 mb-3">
-                                <div className="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-xs font-bold border-2 border-indigo-400 shrink-0">
+                                <div className="w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center text-xs font-bold border-2 border-[#F5C842] shrink-0">
                                     <User size={14} />
                                 </div>
                                 <div className="overflow-hidden">
                                     <p className="text-sm font-bold text-white truncate">{userProfile.fullName}</p>
-                                    <p className="text-[10px] text-indigo-200 truncate uppercase tracking-wider font-semibold">{userProfile.role}</p>
+                                    <p className="text-[10px] text-[#F5D88A] truncate uppercase tracking-wider font-semibold">{userProfile.role}</p>
                                 </div>
                             </div>
                             <button

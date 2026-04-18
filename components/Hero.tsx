@@ -104,8 +104,8 @@ export default function Hero() {
                             className="font-black leading-[1.08] tracking-tight mb-2 sm:mb-3 whitespace-nowrap"
                         >
                             <span className="block">PREMIUM AUTOMOTIVE</span>
-                            <span className="block blue-text tracking-wider">SURFACE PROTECTION</span>
-                            <span className="block blue-text tracking-wider">SERVICE</span>
+                            <span className="block gold-text tracking-wider">SURFACE PROTECTION</span>
+                            <span className="block gold-text tracking-wider">SERVICE</span>
                         </h1>
 
                         {/* Tagline */}
@@ -122,7 +122,7 @@ export default function Hero() {
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 w-full sm:w-auto">
                             <a
                                 href={`tel:${siteConfig.contact.phone.value}`}
-                                className="bg-primary-blue hover:bg-white hover:text-dark-bg text-white px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center gap-2 group touch-manipulation active:scale-95"
+                                className="bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-dark-bg px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center gap-2 group touch-manipulation active:scale-95"
                             >
                                 CALL
                             </a>
@@ -130,7 +130,7 @@ export default function Hero() {
                                 href="https://maps.app.goo.gl/kEQprRRWBQSNBd9k9"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-primary-blue hover:bg-white hover:text-dark-bg text-white px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center touch-manipulation active:scale-95"
+                                className="bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-dark-bg px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center touch-manipulation active:scale-95"
                             >
                                 LOCATION
                             </a>
@@ -145,7 +145,7 @@ export default function Hero() {
                         className="hidden lg:grid grid-cols-3 gap-4 lg:gap-6 pt-8 lg:pt-12 border-t border-white/10"
                     >
                         <div className="flex items-center gap-3 lg:gap-4">
-                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-elevated-bg border border-white/10 flex items-center justify-center text-primary-blue shrink-0">
+                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-elevated-bg border border-white/10 flex items-center justify-center text-primary-gold shrink-0">
                                 <Shield size={20} className="lg:w-6 lg:h-6" />
                             </div>
                             <div>
@@ -154,7 +154,7 @@ export default function Hero() {
                             </div>
                         </div>
                         <div className="flex items-center gap-3 lg:gap-4">
-                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-elevated-bg border border-white/10 flex items-center justify-center text-primary-blue shrink-0">
+                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-elevated-bg border border-white/10 flex items-center justify-center text-primary-gold shrink-0">
                                 <Droplets size={20} className="lg:w-6 lg:h-6" />
                             </div>
                             <div>
@@ -163,7 +163,7 @@ export default function Hero() {
                             </div>
                         </div>
                         <div className="flex items-center gap-3 lg:gap-4">
-                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-elevated-bg border border-white/10 flex items-center justify-center text-primary-blue shrink-0">
+                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-elevated-bg border border-white/10 flex items-center justify-center text-primary-gold shrink-0">
                                 <Zap size={20} className="lg:w-6 lg:h-6" />
                             </div>
                             <div>
@@ -176,7 +176,7 @@ export default function Hero() {
             </div>
 
             {/* DECORATIVE LINE */}
-            <div className="absolute bottom-0 right-0 w-1/4 sm:w-1/3 h-[1px] bg-gradient-to-r from-transparent to-primary-blue opacity-50" />
+            <div className="absolute bottom-0 right-0 w-1/4 sm:w-1/3 h-[1px] bg-gradient-to-r from-transparent to-primary-gold opacity-50" />
 
             {/* Mobile scroll indicator */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 lg:hidden">

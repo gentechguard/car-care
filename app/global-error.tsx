@@ -9,7 +9,7 @@ export default function GlobalError({
 }) {
     return (
         <html lang="en">
-            <body style={{ background: "#0A0A0A", color: "#fff", margin: 0, fontFamily: "system-ui, sans-serif" }}>
+            <body style={{ background: "#070604", color: "#fff", margin: 0, fontFamily: "system-ui, sans-serif" }}>
                 <div style={{
                     minHeight: "100vh",
                     display: "flex",
@@ -28,8 +28,8 @@ export default function GlobalError({
                     <button
                         onClick={() => reset()}
                         style={{
-                            background: "#0088ff",
-                            color: "#fff",
+                            background: "#D4AF37",
+                            color: "#070604",
                             border: "none",
                             padding: "0.75rem 2rem",
                             borderRadius: "9999px",

@@ -33,9 +33,9 @@ const themeConfig: Record<FormTheme, {
     hoverShadow: 'shadow-[0_0_30px_rgba(16,185,129,0.5)]'
   },
   blue: {
-    gradient: 'from-blue-500 via-cyan-500 to-blue-600',
-    shadow: 'shadow-[0_0_20px_rgba(0,170,255,0.3)]',
-    hoverShadow: 'shadow-[0_0_30px_rgba(0,170,255,0.5)]'
+    gradient: 'from-[#D4AF37] via-[#D4AF37] to-[#8B6F1F]',
+    shadow: 'shadow-[0_0_20px_rgba(212,175,55,0.45)]',
+    hoverShadow: 'shadow-[0_0_30px_rgba(212,175,55,0.65)]'
   }
 };
 

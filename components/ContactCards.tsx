@@ -13,7 +13,7 @@ export default function ContactCards() {
     const whatsappNumber = config?.contact?.whatsapp?.number || siteConfig.contact.whatsapp.number;
 
     return (
-        <section id="contact-cards" className="relative py-16 md:py-24 overflow-hidden bg-dark-bg" style={{ background: '#050505' }}>
+        <section id="contact-cards" className="relative py-16 md:py-24 overflow-hidden bg-dark-bg" style={{ background: '#070604' }}>
             <div className="container mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <ContactCard
@@ -54,14 +54,14 @@ function ContactCard({ icon: Icon, title, value, href, delay, isWhatsApp, isEmai
             transition={{ delay }}
             className="group relative"
         >
-            <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl blur-xl" />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl blur-xl" />
             <a
                 href={href}
                 target={isWhatsApp ? "_blank" : undefined}
                 rel={isWhatsApp ? "noopener noreferrer" : undefined}
-                className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-primary-blue/50 transition-all duration-300 flex flex-col items-center text-center group-hover:-translate-y-2"
+                className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-primary-gold/50 transition-all duration-300 flex flex-col items-center text-center group-hover:-translate-y-2"
             >
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors ${isWhatsApp ? 'bg-green-500/20 text-green-400 group-hover:bg-green-500 group-hover:text-white' : 'bg-primary-blue/10 text-primary-blue group-hover:bg-primary-blue group-hover:text-white'}`}>
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors ${isWhatsApp ? 'bg-green-500/20 text-green-400 group-hover:bg-green-500 group-hover:text-white' : 'bg-primary-gold/10 text-primary-gold group-hover:bg-primary-gold group-hover:text-white'}`}>
                     <Icon size={32} />
                 </div>
 

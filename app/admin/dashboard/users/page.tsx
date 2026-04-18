@@ -89,7 +89,7 @@ export default function UsersPage() {
             header: "User",
             cell: ({ row }) => (
                 <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 font-bold text-xs uppercase">
+                    <div className="w-8 h-8 rounded-full bg-[#FFF8E7] flex items-center justify-center text-[#8B6F1F] font-bold text-xs uppercase">
                         {row.original.full_name?.substring(0, 2) || <User size={14} />}
                     </div>
                     <div>
@@ -105,7 +105,7 @@ export default function UsersPage() {
             cell: ({ row }) => (
                 <span className={`px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${row.getValue("role") === 'superadmin'
                     ? 'bg-purple-50 text-purple-600 border border-purple-100'
-                    : 'bg-indigo-50 text-indigo-600 border border-indigo-100'
+                    : 'bg-[#FFF8E7] text-[#8B6F1F] border border-[#F5D88A]'
                     }`}>
                     {row.getValue("role")}
                 </span>
@@ -181,7 +181,7 @@ export default function UsersPage() {
                                 placeholder="Search users..."
                                 value={globalFilter}
                                 onChange={(e) => setGlobalFilter(e.target.value)}
-                                className="w-full bg-white border border-slate-200 pl-9 pr-4 py-1.5 rounded-md text-sm outline-none focus:border-indigo-500 transition-colors"
+                                className="w-full bg-white border border-slate-200 pl-9 pr-4 py-1.5 rounded-md text-sm outline-none focus:border-[#D4AF37] transition-colors"
                             />
                         </div>
                     </div>
@@ -199,7 +199,7 @@ export default function UsersPage() {
                                             >
                                                 <div className="flex items-center gap-1">
                                                     {flexRender(header.column.columnDef.header, header.getContext())}
-                                                    {header.column.getIsSorted() && <ChevronDown className={`text-indigo-500 transition-transform ${header.column.getIsSorted() === 'asc' ? 'rotate-180' : ''}`} size={14} />}
+                                                    {header.column.getIsSorted() && <ChevronDown className={`text-[#D4AF37] transition-transform ${header.column.getIsSorted() === 'asc' ? 'rotate-180' : ''}`} size={14} />}
                                                 </div>
                                             </th>
                                         ))}

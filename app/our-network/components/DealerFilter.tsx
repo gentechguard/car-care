@@ -41,13 +41,13 @@ export function DealerFilterSidebar({
       <div className="p-6 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-lg font-bold text-white flex items-center gap-2">
-            <Store className="w-5 h-5 text-[#00A8FF]" />
+            <Store className="w-5 h-5 text-[#D4AF37]" />
             Filters
           </h3>
           {hasFilters && (
             <button
               onClick={onClearFilters}
-              className="text-xs text-white/60 hover:text-[#00A8FF] transition-colors flex items-center gap-1"
+              className="text-xs text-white/60 hover:text-[#D4AF37] transition-colors flex items-center gap-1"
             >
               <X className="w-3 h-3" />
               Clear
@@ -67,7 +67,7 @@ export function DealerFilterSidebar({
               placeholder="City or dealer name..."
               value={filters.search}
               onChange={(e) => onUpdateFilter("search", e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-[#00A8FF]/50 focus:ring-1 focus:ring-[#00A8FF]/50 transition-all"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-[#D4AF37]/50 focus:ring-1 focus:ring-[#D4AF37]/50 transition-all"
             />
           </div>
         </div>
@@ -90,7 +90,7 @@ export function DealerFilterSidebar({
               isSelected={filters.type === "premium"}
               onClick={() => onUpdateFilter("type", "premium")}
               icon={<Star className="w-4 h-4" />}
-              color="#00A8FF"
+              color="#D4AF37"
             />
             <FilterOption
               label="Standard"
@@ -121,7 +121,7 @@ export function DealerFilterSidebar({
               onChange={(e) =>
                 onUpdateFilter("state", e.target.value === "All States" ? null : e.target.value)
               }
-              className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white appearance-none focus:outline-none focus:border-[#00A8FF]/50 focus:ring-1 focus:ring-[#00A8FF]/50 transition-all cursor-pointer"
+              className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white appearance-none focus:outline-none focus:border-[#D4AF37]/50 focus:ring-1 focus:ring-[#D4AF37]/50 transition-all cursor-pointer"
             >
               {states.map((state) => (
                 <option key={state} value={state} className="bg-[#0A0A0A]">
@@ -142,10 +142,10 @@ export function DealerFilterSidebar({
       </div>
 
       {/* Results Count */}
-      <div className="p-4 rounded-xl bg-[#00A8FF]/10 border border-[#00A8FF]/20">
+      <div className="p-4 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20">
         <div className="flex items-center justify-between">
           <span className="text-sm text-white/80">Showing</span>
-          <span className="text-2xl font-bold text-[#00A8FF]">{dealerCount}</span>
+          <span className="text-2xl font-bold text-[#D4AF37]">{dealerCount}</span>
         </div>
         <p className="text-xs text-white/60 mt-1">dealers across India</p>
       </div>

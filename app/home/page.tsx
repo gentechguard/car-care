@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-[100dvh] bg-dark-bg text-white selection:bg-primary-blue selection:text-white" style={{ background: '#050505', color: '#fff' }}>
+    <main className="min-h-[100dvh] bg-dark-bg text-white selection:bg-primary-gold selection:text-white" style={{ background: '#070604', color: '#fff' }}>
       <Header />
       <Hero />
       <GetInTouchForm />

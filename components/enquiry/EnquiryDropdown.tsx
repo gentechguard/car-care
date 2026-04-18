@@ -52,10 +52,10 @@ const menuItems = [
     shortLabel: 'Network',
     icon: Network,
     theme: 'blue' as const,
-    bgColor: 'bg-blue-500',
-    borderColor: 'border-blue-500/50',
-    textColor: 'text-blue-300',
-    hoverBg: 'hover:bg-blue-500/20',
+    bgColor: 'bg-[#D4AF37]',
+    borderColor: 'border-[#D4AF37]/50',
+    textColor: 'text-[#F5C842]',
+    hoverBg: 'hover:bg-[#D4AF37]/20',
     description: 'View authorized centers',
     isLink: true
   }
@@ -96,8 +96,8 @@ export default function EnquiryDropdown({ onSelectOption }: EnquiryDropdownProps
           relative h-11 px-6 rounded-full font-black uppercase tracking-wider text-sm
           flex items-center gap-2 transition-all duration-300 whitespace-nowrap
           ${isOpen 
-            ? 'bg-primary-blue text-white shadow-[0_0_20px_rgba(0,170,255,0.5)]' 
-            : 'bg-white/5 text-white border border-white/10 hover:border-primary-blue/50 hover:bg-white/10'
+            ? 'bg-primary-gold text-white shadow-[0_0_20px_rgba(212,175,55,0.65)]' 
+            : 'bg-white/5 text-white border border-white/10 hover:border-primary-gold/50 hover:bg-white/10'
           }
         `}
       >

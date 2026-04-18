@@ -85,7 +85,7 @@ export default function AdminDashboardPage() {
                 {/* Card 1 */}
                 <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all group">
                     <div className="flex items-center gap-3 mb-4">
-                        <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
+                        <div className="w-8 h-8 rounded-lg bg-[#FFF8E7] flex items-center justify-center text-[#8B6F1F]">
                             <span className="font-bold text-lg">W</span>
                         </div>
                         <span className="text-sm font-semibold text-slate-600">Total Warranties</span>
@@ -102,7 +102,7 @@ export default function AdminDashboardPage() {
                 {/* Card 2 */}
                 <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all group">
                     <div className="flex items-center gap-3 mb-4">
-                        <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                        <div className="w-8 h-8 rounded-lg bg-[#FFF8E7] flex items-center justify-center text-[#8B6F1F]">
                             <span className="font-bold text-lg">M</span>
                         </div>
                         <span className="text-sm font-semibold text-slate-600">New This Month</span>
@@ -110,7 +110,7 @@ export default function AdminDashboardPage() {
                     <div>
                         <span className="text-4xl font-bold text-slate-900 tracking-tight">{stats.thisMonth}</span>
                         <div className="mt-2 text-xs text-slate-500 font-medium flex items-center gap-2">
-                            <span className={`${stats.isPositive ? 'text-blue-600 bg-blue-50' : 'text-red-600 bg-red-50'} px-1.5 py-0.5 rounded`}>
+                            <span className={`${stats.isPositive ? 'text-[#8B6F1F] bg-[#FFF8E7]' : 'text-red-600 bg-red-50'} px-1.5 py-0.5 rounded`}>
                                 {stats.isPositive ? '+' : ''}{stats.percentChange}%
                             </span>
                             <span>from last month</span>

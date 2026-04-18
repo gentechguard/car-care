@@ -50,7 +50,7 @@ export function IndiaMapComponent({
   const getStateColor = (stateName: string) => {
     const state = stateData[stateName];
     if (!state) return "#1E293B";
-    if (state.hasPremium) return "#00A8FF";
+    if (state.hasPremium) return "#D4AF37";
     return "#3B82F6";
   };
 
@@ -92,7 +92,7 @@ export function IndiaMapComponent({
         <svg width="100%" height="100%">
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00A8FF" strokeWidth="0.5" />
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" strokeWidth="0.5" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
@@ -103,7 +103,7 @@ export function IndiaMapComponent({
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(0,168,255,0.1) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 70%)",
         }}
         animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -125,17 +125,17 @@ export function IndiaMapComponent({
             type="select-single"
             size="100%"
             mapColor={getStateColor(hoveredState || "")}
-            strokeColor="#00A8FF"
+            strokeColor="#D4AF37"
             strokeWidth="0.5"
-            hoverColor="#00A8FF"
+            hoverColor="#D4AF37"
             hoverStrokeColor="#FFFFFF"
             hoverStrokeWidth="1"
             onSelect={(stateName: string) => handleStateClick(stateName)}
             onHover={(stateName: string) => setHoveredState(stateName)}
-            selectColor="#00A8FF"
+            selectColor="#D4AF37"
             hints={true}
             hintTextColor="#FFFFFF"
-            hintBackgroundColor="rgba(0, 168, 255, 0.9)"
+            hintBackgroundColor="GOLD_GLOW(0.9)"
             hintPadding="8px"
             hintBorderRadius="6px"
             hintFontSize="12px"
@@ -185,11 +185,11 @@ export function IndiaMapComponent({
           Dealer Network
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-[#00A8FF] shadow-[0_0_10px_rgba(0,168,255,0.8)]" />
+          <div className="w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full bg-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.9)]" />
           <span className="text-[10px] lg:text-sm text-white/80">Premium</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
+          <div className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
           <span className="text-[10px] lg:text-sm text-white/80">Standard</span>
         </div>
         <div className="flex items-center gap-2">
@@ -210,7 +210,7 @@ export function IndiaMapComponent({
         transition={{ delay: 0.6, duration: 0.5 }}
       >
         <div className="px-3 py-1.5 lg:px-4 lg:py-2 rounded-xl bg-black/60 backdrop-blur-xl border border-white/10">
-          <div className="text-xl lg:text-2xl font-bold text-[#00A8FF]">{dealers.length}</div>
+          <div className="text-xl lg:text-2xl font-bold text-[#D4AF37]">{dealers.length}</div>
           <div className="text-[10px] lg:text-xs text-white/60">Total Dealers</div>
         </div>
         <div className="px-3 py-1.5 lg:px-4 lg:py-2 rounded-xl bg-black/60 backdrop-blur-xl border border-white/10">
@@ -253,7 +253,7 @@ function DealerPinOverlay({
   const getColor = () => {
     switch (dealer.dealer_type) {
       case "premium":
-        return "#00A8FF";
+        return "#D4AF37";
       case "coming_soon":
         return "#F59E0B";
       default:

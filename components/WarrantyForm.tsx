@@ -364,7 +364,7 @@ export default function WarrantyForm() {
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black text-white mb-4">Registration Successful!</h3>
                 <p className="text-white/60 mb-2 max-w-md mx-auto text-sm">
-                    Your warranty <span className="text-primary-blue font-bold">{warrantyId}</span> has been officially registered with Gentech Car Care.
+                    Your warranty <span className="text-primary-gold font-bold">{warrantyId}</span> has been officially registered with Gentech Car Care.
                 </p>
 
                 {whatsappStatus && (
@@ -408,7 +408,7 @@ export default function WarrantyForm() {
                     )}
                     <button
                         onClick={() => window.location.reload()}
-                        className="bg-primary-blue text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-blue-600 transition-colors"
+                        className="bg-primary-gold text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-[#8B6F1F] transition-colors"
                     >
                         Register Another
                     </button>
@@ -430,7 +430,7 @@ export default function WarrantyForm() {
 
         return (
             <div className="text-center py-20 px-8 bg-dark-bg/50 backdrop-blur-md rounded-2xl border border-white/10">
-                <Loader2 className="animate-spin text-primary-blue mx-auto mb-6" size={48} />
+                <Loader2 className="animate-spin text-primary-gold mx-auto mb-6" size={48} />
                 <h3 className="text-xl font-black text-white mb-2">Processing</h3>
                 <p className="text-white/60 text-sm">{phaseMessages[submissionPhase]}</p>
 
@@ -442,7 +442,7 @@ export default function WarrantyForm() {
                         return (
                             <div
                                 key={phase}
-                                className={`w-2 h-2 rounded-full transition-colors ${i <= currentIndex ? 'bg-primary-blue' : 'bg-white/10'}`}
+                                className={`w-2 h-2 rounded-full transition-colors ${i <= currentIndex ? 'bg-primary-gold' : 'bg-white/10'}`}
                             />
                         );
                     })}
@@ -473,14 +473,14 @@ export default function WarrantyForm() {
                                 <div key={s.id} className="relative z-10 flex flex-col items-center gap-2 flex-1">
                                     <div
                                         className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all duration-500 border ${isActive
-                                            ? "bg-primary-blue border-primary-blue text-white shadow-[0_0_15px_rgba(0,170,255,0.5)]"
+                                            ? "bg-primary-gold border-primary-gold text-white shadow-[0_0_15px_rgba(212,175,55,0.65)]"
                                             : "bg-white/5 border-white/10 text-white/30"
                                             }`}
                                     >
                                         <Icon size={18} />
                                     </div>
                                     <span
-                                        className={`text-[10px] md:text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${isActive ? "text-primary-blue" : "text-white/20"
+                                        className={`text-[10px] md:text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${isActive ? "text-primary-gold" : "text-white/20"
                                             }`}
                                     >
                                         {s.title}
@@ -491,7 +491,7 @@ export default function WarrantyForm() {
                         {/* Progress Bar Line */}
                         <div className="absolute top-5 md:top-6 left-0 w-full h-[2px] bg-white/5 -z-0">
                             <div
-                                className="h-full bg-primary-blue transition-all duration-500"
+                                className="h-full bg-primary-gold transition-all duration-500"
                                 style={{ width: `${((step - 1) / (steps.length - 1)) * 100}%` }}
                             />
                         </div>
@@ -518,13 +518,13 @@ export default function WarrantyForm() {
                                             required
                                             value={formData.name}
                                             onChange={(e) => updateField("name", e.target.value)}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none"
                                             placeholder="Enter vehicle owner's name"
                                         />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-xs uppercase font-bold text-white/50 tracking-wider">Phone Number <span className="text-red-500">*</span></label>
-                                        <div className="flex bg-white/5 border border-white/10 rounded-xl overflow-hidden focus-within:border-primary-blue focus-within:ring-1 focus-within:ring-primary-blue transition-all">
+                                        <div className="flex bg-white/5 border border-white/10 rounded-xl overflow-hidden focus-within:border-primary-gold focus-within:ring-1 focus-within:ring-primary-gold transition-all">
                                             <span className="bg-white/5 text-white/50 px-4 py-4 flex items-center justify-center border-r border-white/10">+91</span>
                                             <input
                                                 type="tel"
@@ -543,7 +543,7 @@ export default function WarrantyForm() {
                                             type="email"
                                             value={formData.email}
                                             onChange={(e) => updateField("email", e.target.value)}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none"
                                             placeholder="name@example.com"
                                         />
                                     </div>
@@ -560,7 +560,7 @@ export default function WarrantyForm() {
                                                 required
                                                 value={formData.regNumber}
                                                 onChange={(e) => updateField("regNumber", e.target.value)}
-                                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none uppercase font-mono"
+                                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none uppercase font-mono"
                                                 placeholder="TS 09 AB 1234"
                                             />
                                         </div>
@@ -570,7 +570,7 @@ export default function WarrantyForm() {
                                                 type="text"
                                                 value={formData.chassisNumber}
                                                 onChange={(e) => updateField("chassisNumber", e.target.value)}
-                                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none uppercase"
+                                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none uppercase"
                                                 placeholder="MA3..."
                                             />
                                         </div>
@@ -584,7 +584,7 @@ export default function WarrantyForm() {
                                                 required
                                                 value={formData.ppfRoll}
                                                 onChange={(e) => updateField("ppfRoll", e.target.value)}
-                                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none uppercase"
+                                                className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none uppercase"
                                                 placeholder="GT-12345"
                                             />
                                             <p className="text-[10px] text-white/30 ml-1">Must start with GT, GN, or GR</p>
@@ -594,7 +594,7 @@ export default function WarrantyForm() {
                                             <div className="relative">
                                                 <div
                                                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                                                    className={`w-full bg-white/5 border ${dropdownOpen ? 'border-primary-blue ring-1 ring-primary-blue' : 'border-white/10'} rounded-xl p-4 text-white cursor-pointer flex justify-between items-center transition-all hover:bg-white/10`}
+                                                    className={`w-full bg-white/5 border ${dropdownOpen ? 'border-primary-gold ring-1 ring-primary-gold' : 'border-white/10'} rounded-xl p-4 text-white cursor-pointer flex justify-between items-center transition-all hover:bg-white/10`}
                                                 >
                                                     <span className={formData.ppfCategory ? "text-white" : "text-white/20"}>
                                                         {formData.ppfCategory || "Select Category"}
@@ -619,7 +619,7 @@ export default function WarrantyForm() {
                                                                         setDropdownOpen(false);
                                                                     }}
                                                                     className={`p-4 cursor-pointer text-sm font-medium transition-colors border-b border-white/5 last:border-none flex items-center justify-between group ${formData.ppfCategory === cat
-                                                                        ? "bg-primary-blue/10 text-primary-blue"
+                                                                        ? "bg-primary-gold/10 text-primary-gold"
                                                                         : "text-white/70 hover:bg-white/5 hover:text-white"
                                                                         }`}
                                                                 >
@@ -647,7 +647,7 @@ export default function WarrantyForm() {
                                                     className="absolute inset-0 opacity-0 cursor-pointer"
                                                 />
                                                 <div className="flex flex-col items-center gap-2">
-                                                    <Upload className="text-primary-blue" size={24} />
+                                                    <Upload className="text-primary-gold" size={24} />
                                                     <span className="text-sm text-white/70">
                                                         {files.vehicleImage ? files.vehicleImage.name : "Click to upload vehicle photo"}
                                                     </span>
@@ -664,7 +664,7 @@ export default function WarrantyForm() {
                                                     className="absolute inset-0 opacity-0 cursor-pointer"
                                                 />
                                                 <div className="flex flex-col items-center gap-2">
-                                                    <Upload className="text-primary-blue" size={24} />
+                                                    <Upload className="text-primary-gold" size={24} />
                                                     <span className="text-sm text-white/70">
                                                         {files.rcImage ? files.rcImage.name : "Click to upload RC photo"}
                                                     </span>
@@ -684,14 +684,14 @@ export default function WarrantyForm() {
                                             required
                                             value={formData.dealerName}
                                             onChange={(e) => updateField("dealerName", e.target.value)}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none"
                                             placeholder="Gentech Authorized Studio"
                                         />
                                     </div>
 
                                     <div className="space-y-2">
                                         <label className="text-xs uppercase font-bold text-white/50 tracking-wider">Installer Mobile <span className="text-red-500">*</span></label>
-                                        <div className="flex bg-white/5 border border-white/10 rounded-xl overflow-hidden focus-within:border-primary-blue focus-within:ring-1 focus-within:ring-primary-blue transition-all">
+                                        <div className="flex bg-white/5 border border-white/10 rounded-xl overflow-hidden focus-within:border-primary-gold focus-within:ring-1 focus-within:ring-primary-gold transition-all">
                                             <span className="bg-white/5 text-white/50 px-4 py-4 flex items-center justify-center border-r border-white/10">+91</span>
                                             <input
                                                 type="tel"
@@ -712,7 +712,7 @@ export default function WarrantyForm() {
                                             required
                                             value={formData.installationLocation}
                                             onChange={(e) => updateField("installationLocation", e.target.value)}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none"
                                             placeholder="Hyderabad, Khajaguda"
                                         />
                                     </div>
@@ -721,7 +721,7 @@ export default function WarrantyForm() {
                                         <textarea
                                             value={formData.message}
                                             onChange={(e) => updateField("message", e.target.value)}
-                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue transition-all outline-none h-24 resize-none"
+                                            className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder:text-white/20 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold transition-all outline-none h-24 resize-none"
                                             placeholder="Any notes..."
                                         />
                                     </div>
@@ -752,7 +752,7 @@ export default function WarrantyForm() {
                     {step < 3 ? (
                         <button
                             onClick={handleNext}
-                            className="flex items-center gap-3 bg-primary-blue text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-blue-600 transition-colors shadow-[0_0_20px_rgba(0,170,255,0.3)] hover:shadow-[0_0_30px_rgba(0,170,255,0.5)]"
+                            className="flex items-center gap-3 bg-primary-gold text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-[#8B6F1F] transition-colors shadow-[0_0_20px_rgba(212,175,55,0.45)] hover:shadow-[0_0_30px_rgba(212,175,55,0.65)]"
                         >
                             Next <ArrowRight size={16} />
                         </button>
@@ -760,7 +760,7 @@ export default function WarrantyForm() {
                         <button
                             onClick={handleSubmit}
                             disabled={isSubmitting}
-                            className="flex items-center gap-3 bg-primary-blue text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-blue-600 transition-colors shadow-[0_0_20px_rgba(0,170,255,0.3)] hover:shadow-[0_0_30px_rgba(0,170,255,0.5)] disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="flex items-center gap-3 bg-primary-gold text-white px-8 py-3 rounded-xl font-bold uppercase tracking-widest text-sm hover:bg-[#8B6F1F] transition-colors shadow-[0_0_20px_rgba(212,175,55,0.45)] hover:shadow-[0_0_30px_rgba(212,175,55,0.65)] disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             {isSubmitting ? (
                                 <><Loader2 className="animate-spin" size={16} /> Submitting...</>

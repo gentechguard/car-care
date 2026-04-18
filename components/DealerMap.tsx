@@ -74,7 +74,7 @@ export default function DealerMap() {
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="text-primary-blue font-black tracking-[0.2em] uppercase text-sm mb-4 inline-block"
+                        className="text-primary-gold font-black tracking-[0.2em] uppercase text-sm mb-4 inline-block"
                     >
                         Find an Expert
                     </motion.span>
@@ -84,7 +84,7 @@ export default function DealerMap() {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl font-black text-white"
                     >
-                        LOCATE A <span className="blue-text italic text-4xl md:text-6xl">CERTIFIED</span> DEALER
+                        LOCATE A <span className="gold-text italic text-4xl md:text-6xl">CERTIFIED</span> DEALER
                     </motion.h2>
                 </div>
 
@@ -94,32 +94,32 @@ export default function DealerMap() {
                         {dealers.map((dealer) => (
                             <div
                                 key={dealer.id}
-                                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-blue/50 transition-all group cursor-pointer"
+                                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary-gold/50 transition-all group cursor-pointer"
                             >
                                 <div className="flex justify-between items-start mb-4">
                                     <div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-primary-blue mb-1 block">
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-primary-gold mb-1 block">
                                             {dealer.type}
                                         </span>
                                         <h3 className="text-lg font-black text-white">{dealer.name}</h3>
                                     </div>
-                                    <div className="w-10 h-10 rounded-full bg-primary-blue/10 flex items-center justify-center border border-primary-blue/20 group-hover:bg-primary-blue group-hover:text-white transition-colors">
+                                    <div className="w-10 h-10 rounded-full bg-primary-gold/10 flex items-center justify-center border border-primary-gold/20 group-hover:bg-primary-gold group-hover:text-white transition-colors">
                                         <Navigation size={18} />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2 mb-6">
                                     <div className="flex items-center gap-2 text-sm text-text-grey">
-                                        <MapPin size={14} className="text-primary-blue" />
+                                        <MapPin size={14} className="text-primary-gold" />
                                         {dealer.location}
                                     </div>
                                     <div className="flex items-center gap-2 text-sm text-text-grey">
-                                        <Phone size={14} className="text-primary-blue" />
+                                        <Phone size={14} className="text-primary-gold" />
                                         {dealer.phone}
                                     </div>
                                 </div>
 
-                                <button className="text-[10px] font-black uppercase tracking-widest text-white flex items-center gap-2 group-hover:text-primary-blue transition-colors">
+                                <button className="text-[10px] font-black uppercase tracking-widest text-white flex items-center gap-2 group-hover:text-primary-gold transition-colors">
                                     GET DIRECTIONS <ExternalLink size={12} />
                                 </button>
                             </div>
@@ -131,7 +131,7 @@ export default function DealerMap() {
                         <MapContainer
                             center={[20.5937, 78.9629] as any}
                             zoom={5}
-                            style={{ height: "100%", width: "100%", background: "#050505" }}
+                            style={{ height: "100%", width: "100%", background: "#070604" }}
                         >
                             <TileLayer
                                 url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -143,7 +143,7 @@ export default function DealerMap() {
                                         <div className="p-2 min-w-[150px]">
                                             <h4 className="font-black text-dark-bg text-sm mb-1">{dealer.name}</h4>
                                             <p className="text-xs text-text-grey mb-2">{dealer.location}</p>
-                                            <p className="text-xs font-bold text-primary-blue">{dealer.phone}</p>
+                                            <p className="text-xs font-bold text-primary-gold">{dealer.phone}</p>
                                         </div>
                                     </Popup>
                                 </Marker>

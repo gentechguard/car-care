@@ -42,10 +42,10 @@ const themeConfig: Record<FormTheme, {
     glowColor: 'focus:shadow-[0_0_20px_rgba(16,185,129,0.3)]'
   },
   blue: {
-    labelColor: 'text-blue-300',
-    borderColor: 'border-blue-500/30',
-    focusColor: 'focus:border-blue-400',
-    glowColor: 'focus:shadow-[0_0_20px_rgba(0,170,255,0.3)]'
+    labelColor: 'text-[#F5C842]',
+    borderColor: 'border-[#D4AF37]/35',
+    focusColor: 'focus:border-[#F5C842]',
+    glowColor: 'focus:shadow-[0_0_22px_rgba(212,175,55,0.45)]'
   }
 };
 

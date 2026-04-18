@@ -71,7 +71,7 @@ export default function ImageLightbox({
             whileHover={{ scale: 1.1, rotate: 90 }}
             whileTap={{ scale: 0.9 }}
             onClick={onClose}
-            className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 border border-white/20 text-white hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-colors"
+            className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 border border-white/20 text-white hover:bg-[#D4AF37]/20 hover:border-[#F5C842]/50 transition-colors"
           >
             <X className="w-6 h-6" />
           </motion.button>
@@ -82,7 +82,7 @@ export default function ImageLightbox({
             animate={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.1, x: -5 }}
             onClick={(e) => { e.stopPropagation(); onNavigate('prev'); }}
-            className="absolute left-4 md:left-8 z-50 p-4 rounded-full bg-white/10 border border-white/20 text-white hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all backdrop-blur-md"
+            className="absolute left-4 md:left-8 z-50 p-4 rounded-full bg-white/10 border border-white/20 text-white hover:bg-[#D4AF37]/20 hover:border-[#F5C842]/50 transition-all backdrop-blur-md"
           >
             <ChevronLeft className="w-6 h-6" />
           </motion.button>
@@ -92,7 +92,7 @@ export default function ImageLightbox({
             animate={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.1, x: 5 }}
             onClick={(e) => { e.stopPropagation(); onNavigate('next'); }}
-            className="absolute right-4 md:right-8 z-50 p-4 rounded-full bg-white/10 border border-white/20 text-white hover:bg-cyan-500/20 hover:border-cyan-400/50 transition-all backdrop-blur-md"
+            className="absolute right-4 md:right-8 z-50 p-4 rounded-full bg-white/10 border border-white/20 text-white hover:bg-[#D4AF37]/20 hover:border-[#F5C842]/50 transition-all backdrop-blur-md"
           >
             <ChevronRight className="w-6 h-6" />
           </motion.button>
@@ -103,7 +103,7 @@ export default function ImageLightbox({
             className="relative w-full max-w-6xl mx-4 aspect-video max-h-[80vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full h-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 shadow-2xl shadow-cyan-500/10">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 shadow-2xl shadow-[#D4AF37]/10">
               <Image
                 src={image.url}
                 alt={image.title}
@@ -116,7 +116,7 @@ export default function ImageLightbox({
               {/* Top Info Bar */}
               <div className="absolute top-0 left-0 right-0 p-6 bg-gradient-to-b from-black/80 to-transparent flex justify-between items-start">
                 <div>
-                  <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
+                  <span className="text-[#F5C842] text-sm font-semibold uppercase tracking-wider">
                     {image.category}
                   </span>
                   <h2 className="text-2xl font-bold text-white mt-1">

@@ -39,16 +39,16 @@ export default function GalleryCard({ image, onClick, index }: GalleryCardProps)
       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500" />
       
       {/* Glass Border Glow on Hover */}
-      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none border-2 border-cyan-400/30 shadow-[inset_0_0_30px_rgba(6,182,212,0.2)]" />
+      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none border-2 border-[#F5C842]/30 shadow-[inset_0_0_30px_rgba(212,175,55,0.3)]" />
 
       {/* Animated Corner Accents */}
       <motion.div 
-        className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-cyan-400/0 rounded-tr-xl group-hover:border-cyan-400/50 transition-all duration-500"
+        className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-[#F5C842]/0 rounded-tr-xl group-hover:border-[#F5C842]/50 transition-all duration-500"
         initial={{ opacity: 0, scale: 0.8 }}
         whileHover={{ opacity: 1, scale: 1 }}
       />
       <motion.div 
-        className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-cyan-400/0 rounded-bl-xl group-hover:border-cyan-400/50 transition-all duration-500"
+        className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-[#F5C842]/0 rounded-bl-xl group-hover:border-[#F5C842]/50 transition-all duration-500"
       />
 
       {/* Content Overlay - Glassmorphism Bottom Bar */}
@@ -56,7 +56,7 @@ export default function GalleryCard({ image, onClick, index }: GalleryCardProps)
         <motion.div className="space-y-3">
           {/* Category Badge */}
           <motion.span 
-            className="inline-block px-4 py-1.5 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-cyan-400 text-xs font-black uppercase tracking-widest group-hover:bg-cyan-500/20 group-hover:border-cyan-400/30 transition-all duration-300"
+            className="inline-block px-4 py-1.5 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-[#F5C842] text-xs font-black uppercase tracking-widest group-hover:bg-[#D4AF37]/20 group-hover:border-[#F5C842]/30 transition-all duration-300"
           >
             {image.category}
           </motion.span>
@@ -74,8 +74,8 @@ export default function GalleryCard({ image, onClick, index }: GalleryCardProps)
           )}
 
           {/* View Button - Glass Effect */}
-          <div className="pt-4 flex items-center gap-2 text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-150 transform translate-y-2 group-hover:translate-y-0">
-            <div className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-cyan-500/20 group-hover:border-cyan-400/30 transition-all">
+          <div className="pt-4 flex items-center gap-2 text-[#F5C842] opacity-0 group-hover:opacity-100 transition-all duration-500 delay-150 transform translate-y-2 group-hover:translate-y-0">
+            <div className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-[#D4AF37]/20 group-hover:border-[#F5C842]/30 transition-all">
               <ZoomIn className="w-4 h-4" />
             </div>
             <span className="text-sm font-bold uppercase tracking-wider">View</span>

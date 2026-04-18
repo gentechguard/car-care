@@ -30,7 +30,7 @@ export default function MetallicPaintMobile({
                         fill
                         className="object-contain"
                         style={{
-                            filter: 'invert(1) brightness(1.8) contrast(1.2) drop-shadow(0 0 12px rgba(180, 200, 255, 0.5))',
+                            filter: 'invert(1) brightness(1.8) contrast(1.2) drop-shadow(0 0 12px rgba(245, 200, 66, 0.65))',
                         }}
                         priority
                     />
@@ -56,7 +56,7 @@ export default function MetallicPaintMobile({
                     <div
                         className="absolute inset-0 pointer-events-none opacity-60"
                         style={{
-                            background: 'radial-gradient(ellipse at center, rgba(200,210,255,0.25) 0%, transparent 65%)',
+                            background: 'radial-gradient(ellipse at center, rgba(245,210,130,0.28) 0%, transparent 65%)',
                         }}
                     />
                 </div>

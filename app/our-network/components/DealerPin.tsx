@@ -26,7 +26,7 @@ export function DealerPin({
   const getPinColor = () => {
     switch (dealer.dealer_type) {
       case "premium":
-        return "#00A8FF";
+        return "#D4AF37";
       case "coming_soon":
         return "#F59E0B";
       default:

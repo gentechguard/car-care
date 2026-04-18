@@ -28,12 +28,12 @@ export interface WarrantyData {
 const GentechLogo: React.FC<{ className?: string }> = ({ className = "h-12" }) => (
     <svg viewBox="0 0 200 60" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Stylized G Shield Logo */}
-        <path d="M30 5L10 15V35C10 48 30 55 30 55C30 55 50 48 50 35V15L30 5Z" stroke="#22d3ee" strokeWidth="3" fill="rgba(6,182,212,0.1)" />
-        <path d="M30 20V40M20 30H40" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" />
+        <path d="M30 5L10 15V35C10 48 30 55 30 55C30 55 50 48 50 35V15L30 5Z" stroke="#F5C842" strokeWidth="3" fill="rgba(212,175,55,0.12)" />
+        <path d="M30 20V40M20 30H40" stroke="#F5C842" strokeWidth="2" strokeLinecap="round" />
 
         {/* Text */}
         <text x="65" y="28" fill="white" fontFamily="Montserrat" fontWeight="800" fontSize="24" letterSpacing="1">GENTECH</text>
-        <text x="65" y="48" fill="#22d3ee" fontFamily="Montserrat" fontWeight="600" fontSize="16" letterSpacing="4">GUARD</text>
+        <text x="65" y="48" fill="#F5C842" fontFamily="Montserrat" fontWeight="600" fontSize="16" letterSpacing="4">GUARD</text>
     </svg>
 );
 
@@ -52,7 +52,7 @@ const CoverageIcon: React.FC<{ type: string; label: string }> = ({ type, label }
 
     return (
         <div className="flex flex-col items-center gap-2 text-center group">
-            <div className="w-12 h-12 rounded-full bg-[#00d3f3] flex items-center justify-center shadow-[0_0_15px_rgba(34,211,238,0.6)] border border-[#a3f4fd] group-hover:scale-110 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-full bg-[#D4AF37] flex items-center justify-center shadow-[0_0_18px_rgba(245,200,66,0.8)] border border-[#F5D88A] group-hover:scale-110 transition-transform duration-300">
                 {getIcon()}
             </div>
             <span className="text-[10px] uppercase tracking-wider font-semibold text-[#d1d5dc] mt-1">{label}</span>
@@ -80,18 +80,18 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
             <div className="absolute inset-0 bg-tech-grid bg-[length:20px_20px] opacity-20 pointer-events-none"></div>
             {/* Replaced filter blur with radial gradients for html2canvas compatibility */}
             <div className="absolute top-0 right-0 w-96 h-96" style={{ background: 'radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(2,6,24,0) 70%)' }}></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64" style={{ background: 'radial-gradient(circle, rgba(21,93,252,0.15) 0%, rgba(2,6,24,0) 70%)' }}></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64" style={{ background: 'radial-gradient(circle, rgba(212,175,55,0.2) 0%, rgba(2,6,24,0) 70%)' }}></div>
 
             {/* Decorative Border Line */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00b8db] to-transparent"></div>
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00b8db] to-transparent"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
 
             {/* Header */}
             <header className="relative z-10 pt-12 pb-6 px-12 flex justify-between items-start border-b border-[#1e293988]">
                 <div>
-                    <h2 className="text-[#00d3f3] text-xs font-bold tracking-[0.3em] mb-2 uppercase">Official Protection Document</h2>
+                    <h2 className="text-[#F5C842] text-xs font-bold tracking-[0.3em] mb-2 uppercase">Official Protection Document</h2>
                     <h1 className="text-4xl font-display font-black uppercase tracking-tight text-white">
-                        Warranty <span className="text-[#00d3f3]">Certificate</span>
+                        Warranty <span className="text-[#F5C842]">Certificate</span>
                     </h1>
                 </div>
                 <GentechLogo className="h-16 hidden" />
@@ -115,14 +115,14 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
                     <div className="space-y-1">
                         <p className="text-[#99a1af] text-xs uppercase tracking-widest">Product Installed</p>
                         <p className="text-2xl font-display font-bold text-white">{data.productName}</p>
-                        <div className="inline-block px-3 py-1 bg-[#00b8db44] text-[#00d3f3] text-xs font-bold rounded border border-[#00b8db]/30 mt-2">
+                        <div className="inline-block px-3 py-1 bg-[#D4AF3755] text-[#F5C842] text-xs font-bold rounded border border-[#D4AF37]/40 mt-2">
                             {data.duration} WARRANTY
                         </div>
                     </div>
                     <div className="space-y-4 text-right">
                         <div>
                             <p className="text-[#99a1af] text-xs uppercase tracking-widest">Warranty ID</p>
-                            <p className="text-xl font-mono text-[#53e8fb] tracking-wider">{data.warrantyId}</p>
+                            <p className="text-xl font-mono text-[#F5D88A] tracking-wider">{data.warrantyId}</p>
                         </div>
                         <div>
                             <p className="text-[#99a1af] text-xs uppercase tracking-widest">Roll Serial No.</p>
@@ -137,7 +137,7 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
                     {/* Customer Column */}
                     <div className="space-y-6">
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-1 h-4 bg-[#00b8db]"></div>
+                            <div className="w-1 h-4 bg-[#D4AF37]"></div>
                             <h3 className="font-display font-bold uppercase tracking-wider text-lg">Customer Info</h3>
                         </div>
 
@@ -171,7 +171,7 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
                         <div className="space-y-4">
                             <div className="border-b border-[#1e2939] pb-2">
                                 <span className="block text-[10px] text-[#6a7282] uppercase tracking-wider mb-1">Authorized Studio</span>
-                                <span className="text-sm font-semibold text-[#00d3f3]">{data.installer.studioName}</span>
+                                <span className="text-sm font-semibold text-[#F5C842]">{data.installer.studioName}</span>
                             </div>
                             <div className="border-b border-[#1e2939] pb-2">
                                 <span className="block text-[10px] text-[#6a7282] uppercase tracking-wider mb-1">Location</span>
@@ -211,8 +211,8 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
                 {/* After Care Section */}
                 <div className="mt-auto pt-6 border-t border-[#1e2939]">
                     <div className="flex items-center gap-2 mb-2">
-                        <div className="w-1 h-1 bg-[#00d3f3] rounded-full"></div>
-                        <h5 className="text-xs font-bold uppercase tracking-wider text-[#00d3f3]">Essential After Care</h5>
+                        <div className="w-1 h-1 bg-[#D4AF37] rounded-full"></div>
+                        <h5 className="text-xs font-bold uppercase tracking-wider text-[#F5C842]">Essential After Care</h5>
                     </div>
                     <p className="text-[10px] leading-relaxed text-[#99a1af] text-justify">
                         To ensure longevity, allow the film to cure for 72 hours before washing.
@@ -228,7 +228,7 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
             {/* Footer */}
             <footer className="relative z-10 bg-[#101828] py-4 px-12 flex justify-between items-center text-[10px] text-[#6a7282] border-t border-[#1e2939]">
                 <div className="flex items-center gap-4">
-                    <span className="text-[#0092b8] font-mono">{data.warrantyId}</span>
+                    <span className="text-[#8B6F1F] font-mono">{data.warrantyId}</span>
                     <span>|</span>
                     <span>VERIFIED AUTHENTIC</span>
                 </div>

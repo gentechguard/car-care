@@ -27,7 +27,7 @@ export default function ContactForm() {
                     fill
                     className="object-cover opacity-40 blur-[2px]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/80 to-primary-blue/10 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/80 to-primary-gold/10 mix-blend-multiply" />
                 <div className="absolute inset-0 bg-gradient-to-b from-dark-bg via-transparent to-dark-bg" />
             </div>
 
@@ -48,9 +48,9 @@ export default function ContactForm() {
                             />
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-4 shadow-xl drop-shadow-2xl">
-                            BECOME A GENTECH CAR CARE™ <span className="text-primary-blue">PARTNER</span>
+                            BECOME A GENTECH CAR CARE™ <span className="text-primary-gold">PARTNER</span>
                         </h2>
-                        <p className="text-blue-200/80 text-lg font-bold tracking-widest uppercase">
+                        <p className="text-[#F5D88A]/80 text-lg font-bold tracking-widest uppercase">
                             Grow With a Premium Automotive Protection Brand
                         </p>
                     </motion.div>
@@ -63,7 +63,7 @@ export default function ContactForm() {
                     viewport={{ once: true }}
                     className="max-w-5xl mx-auto"
                 >
-                    <div className="relative rounded-2xl md:rounded-[3rem] overflow-hidden border border-white/10 bg-gradient-to-br from-primary-blue/20 to-dark-bg/50 backdrop-blur-xl group hover:border-primary-blue/30 transition-all duration-500">
+                    <div className="relative rounded-2xl md:rounded-[3rem] overflow-hidden border border-white/10 bg-gradient-to-br from-primary-gold/20 to-dark-bg/50 backdrop-blur-xl group hover:border-primary-gold/30 transition-all duration-500">
                         {/* Dealer Background Effect */}
                         <div className="absolute inset-0 bg-[url('/assets/solutions_bg.png')] opacity-10 bg-cover bg-center mix-blend-overlay" />
 
@@ -71,7 +71,7 @@ export default function ContactForm() {
                             <div>
                                 <h3 className="text-4xl md:text-6xl font-black text-white uppercase leading-none mb-2">
                                     Become A <br />
-                                    <span className="text-primary-blue text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-cyan-300">
+                                    <span className="text-primary-gold text-transparent bg-clip-text bg-gradient-to-r from-primary-gold to-[#F5D88A]">
                                         Dealer
                                     </span>
                                 </h3>
@@ -87,7 +87,7 @@ export default function ContactForm() {
 
                                 <button
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry', { detail: { type: 'dealer' } }))}
-                                    className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-blue to-blue-600 text-white px-6 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black uppercase tracking-widest text-sm md:text-base hover:scale-105 hover:shadow-[0_0_30px_rgba(0,170,255,0.4)] transition-all duration-300 group-hover:animate-pulse-slow"
+                                    className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-gold to-[#8B6F1F] text-white px-6 py-4 md:px-10 md:py-5 rounded-xl md:rounded-2xl font-black uppercase tracking-widest text-sm md:text-base hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.55)] transition-all duration-300 group-hover:animate-pulse-slow"
                                 >
                                     Apply For Dealership
                                     <ArrowRight className="w-5 h-5" />
@@ -96,13 +96,13 @@ export default function ContactForm() {
 
                             {/* Visual/Image Side */}
                             <div className="relative h-full min-h-[250px] md:min-h-[400px] flex flex-col items-center justify-center">
-                                <div className="absolute inset-0 bg-primary-blue/20 blur-[60px] rounded-full" />
+                                <div className="absolute inset-0 bg-primary-gold/20 blur-[60px] rounded-full" />
                                 <Image
                                     src="/assets/gentech-tall.png"
                                     alt="Gentech Badge"
                                     width={300}
                                     height={300}
-                                    className="hidden relative z-10 drop-shadow-[0_0_50px_rgba(0,170,255,0.3)] animate-float"
+                                    className="hidden relative z-10 drop-shadow-[0_0_50px_rgba(212,175,55,0.45)] animate-float"
                                 />
                                 <div className="h-40 w-40 md:h-64 md:w-64 justify-self-center">
                                     <MetallicPaint
@@ -175,9 +175,9 @@ function ContactCard({ icon: Icon, title, value, action, href, delay, isWhatsApp
             transition={{ delay }}
             className="group relative"
         >
-            <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl blur-xl" />
-            <div className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-primary-blue/50 transition-all duration-300 flex flex-col items-center text-center group-hover:-translate-y-2 [container-type:inline-size]">
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors ${isWhatsApp ? 'bg-green-500/20 text-green-400 group-hover:bg-green-500 group-hover:text-white' : 'bg-primary-blue/10 text-primary-blue group-hover:bg-primary-blue group-hover:text-white'}`}>
+            <div className="absolute inset-0 bg-gradient-to-b from-primary-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl blur-xl" />
+            <div className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-primary-gold/50 transition-all duration-300 flex flex-col items-center text-center group-hover:-translate-y-2 [container-type:inline-size]">
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors ${isWhatsApp ? 'bg-green-500/20 text-green-400 group-hover:bg-green-500 group-hover:text-white' : 'bg-primary-gold/10 text-primary-gold group-hover:bg-primary-gold group-hover:text-white'}`}>
                     <Icon size={32} />
                 </div>
 
@@ -199,8 +199,8 @@ function ContactCard({ icon: Icon, title, value, action, href, delay, isWhatsApp
 function DealerBenefit({ text }: { text: string }) {
     return (
         <div className="flex items-center gap-4">
-            <div className="w-6 h-6 rounded-full bg-primary-blue/20 flex items-center justify-center shrink-0">
-                <CheckCircle2 size={14} className="text-primary-blue" />
+            <div className="w-6 h-6 rounded-full bg-primary-gold/20 flex items-center justify-center shrink-0">
+                <CheckCircle2 size={14} className="text-primary-gold" />
             </div>
             <span className="text-white/90 font-bold text-sm md:text-base">{text}</span>
         </div>

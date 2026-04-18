@@ -69,7 +69,7 @@ export default function GetInTouchForm() {
     const parentProducts = products.filter((p) => !p.parent_id);
 
     return (
-        <section id="get-in-touch" className="relative py-16 md:py-24 bg-dark-bg" style={{ background: '#050505' }}>
+        <section id="get-in-touch" className="relative py-16 md:py-24 bg-dark-bg" style={{ background: '#070604' }}>
             <div className="container mx-auto px-4 md:px-8">
                 <div className="max-w-xl mx-auto">
                     {/* Card */}
@@ -92,7 +92,7 @@ export default function GetInTouchForm() {
                                 value={form.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white placeholder-white/40 text-base focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition"
+                                className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white placeholder-white/40 text-base focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent transition"
                             />
                             <input
                                 type="tel"
@@ -101,7 +101,7 @@ export default function GetInTouchForm() {
                                 value={form.phone}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white placeholder-white/40 text-base focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition"
+                                className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white placeholder-white/40 text-base focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent transition"
                             />
                             <input
                                 type="email"
@@ -110,7 +110,7 @@ export default function GetInTouchForm() {
                                 value={form.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white placeholder-white/40 text-base focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition"
+                                className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white placeholder-white/40 text-base focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent transition"
                             />
                             <div className="relative">
                                 <select
@@ -118,7 +118,7 @@ export default function GetInTouchForm() {
                                     value={form.product}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white text-base appearance-none focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent transition [&>option]:bg-[#111] [&>option]:text-white"
+                                    className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-white/5 text-white text-base appearance-none focus:outline-none focus:ring-2 focus:ring-primary-gold focus:border-transparent transition [&>option]:bg-[#111] [&>option]:text-white"
                                 >
                                     <option value="" disabled className="text-white/40">
                                         Select Product
@@ -140,7 +140,7 @@ export default function GetInTouchForm() {
                             <button
                                 type="submit"
                                 disabled={submitting}
-                                className="w-full bg-primary-blue hover:bg-blue-600 text-white font-bold text-base uppercase tracking-wider py-4 rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                                className="w-full bg-primary-gold hover:bg-[#8B6F1F] text-white font-bold text-base uppercase tracking-wider py-4 rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                             >
                                 {submitting ? "Submitting..." : "SUBMIT"}
                             </button>

@@ -26,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning style={{ background: '#0A0A0A' }}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning style={{ background: '#070604' }}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0A0A0A] text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#070604] text-white`}
         suppressHydrationWarning
-        style={{ background: '#0A0A0A', color: '#fff' }}
+        style={{ background: '#070604', color: '#fff' }}
       >
         <GlobalProvider>
           <ScrollToTop />

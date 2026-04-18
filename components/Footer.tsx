@@ -30,10 +30,10 @@ export default function Footer() {
     return (
         <footer className="relative bg-[#030303] overflow-hidden">
             {/* Top Accent Line */}
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-primary-blue/50 to-transparent" />
+            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-primary-gold/50 to-transparent" />
 
             {/* Decorative Background */}
-            <div className="hidden absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary-blue/5 rounded-full blur-[150px] pointer-events-none" />
+            <div className="hidden absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary-gold/5 rounded-full blur-[150px] pointer-events-none" />
 
             {/* Main Grid */}
             <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -73,7 +73,7 @@ export default function Footer() {
                                         aria-label={key}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-grey hover:text-white hover:border-primary-blue hover:bg-primary-blue/10 transition-all duration-300"
+                                        className="group w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-text-grey hover:text-white hover:border-primary-gold hover:bg-primary-gold/10 transition-all duration-300"
                                     >
                                         <Icon size={26} className="group-hover:scale-110 transition-transform" />
                                     </a>
@@ -84,7 +84,7 @@ export default function Footer() {
 
                     {/* Navigation */}
                     <div className="col-span-1 lg:col-span-2">
-                        <h4 className="text-[11px] font-black text-primary-blue tracking-[0.3em] uppercase mb-6">Navigation</h4>
+                        <h4 className="text-[11px] font-black text-primary-gold tracking-[0.3em] uppercase mb-6">Navigation</h4>
                         <ul className="flex flex-col gap-3">
                             {navLinks.map((item: any) => (
                                 <li key={item.name}>
@@ -92,7 +92,7 @@ export default function Footer() {
                                         href={item.href}
                                         className="group flex items-center gap-2 text-text-grey hover:text-white text-sm font-bold uppercase tracking-wider transition-colors"
                                     >
-                                        <span className="w-0 h-[2px] bg-primary-blue group-hover:w-3 transition-all duration-300" />
+                                        <span className="w-0 h-[2px] bg-primary-gold group-hover:w-3 transition-all duration-300" />
                                         {item.name}
                                     </Link>
                                 </li>
@@ -102,7 +102,7 @@ export default function Footer() {
 
                     {/* Services */}
                     <div className="col-span-1 lg:col-span-2">
-                        <h4 className="text-[11px] font-black text-primary-blue tracking-[0.3em] uppercase mb-6">Services</h4>
+                        <h4 className="text-[11px] font-black text-primary-gold tracking-[0.3em] uppercase mb-6">Services</h4>
                         <ul className="flex flex-col gap-3">
                             {servicesList.map((item: string) => (
                                 <li key={item}>
@@ -119,7 +119,7 @@ export default function Footer() {
                 <div className="py-4 flex flex-col lg:flex-row justify-between items-center gap-6">
                     <div className="flex flex-col items-center lg:items-start gap-1">
                         <p className="text-text-grey/60 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                            <Zap size={12} className="text-primary-blue" />
+                            <Zap size={12} className="text-primary-gold" />
                             {config.company.copyright}
                         </p>
                         <p className="text-text-grey/40 text-[10px] font-medium tracking-wide">

@@ -134,7 +134,7 @@ export default function SiteConfigPage() {
     // Recursive input renderer? Or just hardcode the important fields?
     // Hardcoding is safer for now.
 
-    if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin text-primary-blue" /></div>;
+    if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin text-primary-gold" /></div>;
 
     return (
         <div className="w-full mx-auto space-y-8 pb-20">
@@ -152,7 +152,7 @@ export default function SiteConfigPage() {
                 <button
                     onClick={handleSave}
                     disabled={saving}
-                    className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold uppercase tracking-wider flex items-center gap-2 hover:bg-indigo-700 transition-colors disabled:opacity-50"
+                    className="bg-[#8B6F1F] text-white px-6 py-2 rounded-lg font-bold uppercase tracking-wider flex items-center gap-2 hover:bg-[#8B6F1F] transition-colors disabled:opacity-50"
                 >
                     {saving ? <Loader2 size={18} className="animate-spin" /> : <Save size={18} />}
                     Save
@@ -167,7 +167,7 @@ export default function SiteConfigPage() {
                 <button
                     onClick={handleSave}
                     disabled={saving}
-                    className="bg-primary-blue text-white px-6 py-2 rounded-lg font-bold uppercase tracking-wider flex items-center gap-2 hover:bg-blue-600 transition-colors disabled:opacity-50"
+                    className="bg-primary-gold text-white px-6 py-2 rounded-lg font-bold uppercase tracking-wider flex items-center gap-2 hover:bg-[#8B6F1F] transition-colors disabled:opacity-50"
                 >
                     {saving ? <Loader2 size={18} className="animate-spin" /> : <Save size={18} />}
                     Save Changes
@@ -175,11 +175,11 @@ export default function SiteConfigPage() {
             </div>
 
             {/* Note about DB migration */}
-            <div className="bg-blue-500/5 border border-blue-500/20 rounded-xl p-4 flex gap-3 items-start">
-                <CheckCircle className="text-blue-600 shrink-0 mt-1" size={20} />
+            <div className="bg-[#D4AF37]/5 border border-[#D4AF37]/20 rounded-xl p-4 flex gap-3 items-start">
+                <CheckCircle className="text-[#8B6F1F] shrink-0 mt-1" size={20} />
                 <div>
-                    <h4 className="font-bold text-blue-900 text-sm">Database Sync Active</h4>
-                    <p className="text-xs text-blue-800/70 mt-1">
+                    <h4 className="font-bold text-[#5A4812] text-sm">Database Sync Active</h4>
+                    <p className="text-xs text-[#5A4812]/70 mt-1">
                         Changes made here are saved to Supabase and reflected across the live site.
                     </p>
                 </div>
@@ -222,7 +222,7 @@ export default function SiteConfigPage() {
 
                     <button
                         onClick={addSocial}
-                        className="w-full mt-4 flex items-center justify-center gap-2 py-3 border-2 border-dashed border-gray-200 rounded-xl text-gray-500 hover:border-primary-blue hover:text-primary-blue hover:bg-blue-50/50 transition-all font-bold text-xs uppercase tracking-widest"
+                        className="w-full mt-4 flex items-center justify-center gap-2 py-3 border-2 border-dashed border-gray-200 rounded-xl text-gray-500 hover:border-primary-gold hover:text-primary-gold hover:bg-[#FFF8E7]/50 transition-all font-bold text-xs uppercase tracking-widest"
                     >
                         <Plus size={16} />
                         Add New Platform
@@ -273,7 +273,7 @@ function Field({ label, value, onChange, isTextArea = false }: { label: string, 
                 <textarea
                     value={value || ""}
                     onChange={(e) => onChange(e.target.value)}
-                    className="w-full bg-white border border-gray-200 rounded-lg p-3 text-sm text-black focus:border-primary-blue focus:ring-1 focus:ring-primary-blue outline-none transition-all h-24 resize-none placeholder:text-gray-400 font-medium"
+                    className="w-full bg-white border border-gray-200 rounded-lg p-3 text-sm text-black focus:border-primary-gold focus:ring-1 focus:ring-primary-gold outline-none transition-all h-24 resize-none placeholder:text-gray-400 font-medium"
                     placeholder={`Enter ${label}...`}
                 />
             ) : (
@@ -281,7 +281,7 @@ function Field({ label, value, onChange, isTextArea = false }: { label: string, 
                     type="text"
                     value={value || ""}
                     onChange={(e) => onChange(e.target.value)}
-                    className="w-full bg-white border border-gray-200 rounded-lg p-3 text-sm text-black focus:border-primary-blue focus:ring-1 focus:ring-primary-blue outline-none transition-all placeholder:text-gray-400 font-medium"
+                    className="w-full bg-white border border-gray-200 rounded-lg p-3 text-sm text-black focus:border-primary-gold focus:ring-1 focus:ring-primary-gold outline-none transition-all placeholder:text-gray-400 font-medium"
                     placeholder={`Enter ${label}...`}
                 />
             )}

@@ -42,11 +42,11 @@ export default function OurNetworkPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <span className="text-[#00A8FF] text-sm font-semibold uppercase tracking-wider">
+            <span className="text-[#D4AF37] text-sm font-semibold uppercase tracking-wider">
               Find a Dealer
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">
-              Explore Our <span className="text-[#00A8FF]">Network</span>
+              Explore Our <span className="text-[#D4AF37]">Network</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto">
               Click on any location to view dealer details, or use the filters to find a dealer near you.
@@ -95,7 +95,7 @@ export default function OurNetworkPage() {
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full"
           style={{
-            background: "radial-gradient(circle, rgba(0,168,255,0.1) 0%, transparent 60%)"
+            background: "radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 60%)"
           }}
           animate={{
             scale: [1, 1.1, 1],
@@ -117,11 +117,11 @@ export default function OurNetworkPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-[#00A8FF] text-sm font-semibold uppercase tracking-wider">
+              <span className="text-[#D4AF37] text-sm font-semibold uppercase tracking-wider">
                 Join Our Network
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-6">
-                Become a <span className="text-[#00A8FF]">Dealer</span>
+                Become a <span className="text-[#D4AF37]">Dealer</span>
               </h2>
               <p className="text-white/60 text-lg mb-8">
                 Join the fastest growing network of premium automotive protection studios in India. 
@@ -140,7 +140,7 @@ export default function OurNetworkPage() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => window.dispatchEvent(new CustomEvent('open-enquiry', { detail: { type: 'dealer' } }))}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#00A8FF] hover:bg-[#00A8FF]/90 text-black font-bold text-lg transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-bold text-lg transition-colors"
               >
                 <Plus className="w-5 h-5" />
                 Apply for Dealership
@@ -160,7 +160,7 @@ export default function OurNetworkPage() {
                 <motion.div
                   className="absolute inset-0 rounded-full"
                   style={{
-                    background: "conic-gradient(from 0deg, transparent, #00A8FF, transparent)",
+                    background: "conic-gradient(from 0deg, transparent, #D4AF37, transparent)",
                     opacity: 0.3
                   }}
                   animate={{ rotate: 360 }}
@@ -171,7 +171,7 @@ export default function OurNetworkPage() {
                 <div className="absolute inset-4 rounded-full bg-gradient-to-br from-[#1a1a2e] to-[#0A0A0A] flex items-center justify-center border border-white/10">
                   <div className="text-center p-8">
                     <motion.div
-                      className="text-7xl font-bold text-[#00A8FF] mb-2"
+                      className="text-7xl font-bold text-[#D4AF37] mb-2"
                       animate={{ scale: [1, 1.1, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
@@ -183,7 +183,7 @@ export default function OurNetworkPage() {
 
                 {/* Floating Elements */}
                 <motion.div
-                  className="absolute -top-4 -right-4 px-4 py-2 rounded-full bg-[#00A8FF] text-black font-bold text-sm"
+                  className="absolute -top-4 -right-4 px-4 py-2 rounded-full bg-[#D4AF37] text-black font-bold text-sm"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -201,8 +201,8 @@ export default function OurNetworkPage() {
 function BenefitItem({ text }: { text: string }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="w-6 h-6 rounded-full bg-[#00A8FF]/20 flex items-center justify-center flex-shrink-0">
-        <svg className="w-4 h-4 text-[#00A8FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0">
+        <svg className="w-4 h-4 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
         </svg>
       </div>

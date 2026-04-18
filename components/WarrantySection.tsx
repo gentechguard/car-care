@@ -11,7 +11,7 @@ export default function WarrantySection() {
             {/* Background */}
             <div className="absolute inset-0 z-0 opacity-60">
                 <FloatingLines
-                    linesGradient={['#00AAFF', '#ffffff', '#00AAFF']}
+                    linesGradient={['#D4AF37', '#ffffff', '#D4AF37']}
                     //enabledWaves={['top', 'middle', 'bottom']}
                     enabledWaves={['middle']}
                     lineCount={[5]}
@@ -34,10 +34,10 @@ export default function WarrantySection() {
                 <div className="shrink-0">
                     <div className="inline-block relative mb-2 md:mb-4">
                         <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-2 md:mb-4 shadow-xl drop-shadow-2xl">
-                            E-<span className="text-primary-blue">WARRANTY</span> SYSTEM
+                            E-<span className="text-primary-gold">WARRANTY</span> SYSTEM
                         </h2>
                     </div>
-                    <p className="text-blue-200/80 text-sm sm:text-base md:text-lg font-bold tracking-wider uppercase">
+                    <p className="text-[#F5D88A]/80 text-sm sm:text-base md:text-lg font-bold tracking-wider uppercase">
                         Verified Protection You Can Trust
                     </p>
                 </div>
@@ -48,11 +48,11 @@ export default function WarrantySection() {
                         <GlassSurface
                             borderRadius={100}
                             width={"fit-content"}
-                            className="whitespace-nowrap w-fit px-8 py-10 sm:px-16 sm:py-12 md:px-24 md:py-16 group-hover:!shadow-[0_0_16px_0_#00aaff88]"
+                            className="whitespace-nowrap w-fit px-8 py-10 sm:px-16 sm:py-12 md:px-24 md:py-16 group-hover:!shadow-[0_0_16px_0_#D4AF3799]"
                             style={{ maxWidth: "90dvw" }}
                         >
                             <span className="text-xl font-black text-white uppercase w-fit whitespace-nowrap flex items-center justify-center gap-2">
-                                <span className="blue-text">Warranty</span>
+                                <span className="gold-text">Warranty</span>
                                 Information
                                 <ArrowRight className="w-6 h-6 ml-2" />
                             </span>

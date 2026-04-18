@@ -210,7 +210,7 @@ export default function ProductsPage() {
             header: "Product Name",
             cell: ({ row }) => (
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 border border-indigo-100 shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-[#FFF8E7] flex items-center justify-center text-[#8B6F1F] border border-[#F5D88A] shrink-0">
                         <Package size={18} />
                     </div>
                     <div>
@@ -252,7 +252,7 @@ export default function ProductsPage() {
                 <div className="flex gap-2">
                     <button
                         onClick={() => openEditModal(row.original)}
-                        className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-indigo-600 transition-colors"
+                        className="p-1.5 hover:bg-slate-100 rounded text-slate-400 hover:text-[#8B6F1F] transition-colors"
                     >
                         <Edit2 size={14} />
                     </button>
@@ -293,7 +293,7 @@ export default function ProductsPage() {
                     <h1 className="text-2xl font-bold tracking-tight text-slate-900">Product Catalog</h1>
                     <button
                         onClick={openCreateModal}
-                        className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition-colors flex items-center gap-2"
+                        className="bg-[#8B6F1F] text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-[#F5D88A] hover:bg-[#8B6F1F] transition-colors flex items-center gap-2"
                     >
                         <Package size={16} /> Add Product
                     </button>
@@ -312,7 +312,7 @@ export default function ProductsPage() {
                                 placeholder="Search products..."
                                 value={globalFilter}
                                 onChange={(e) => setGlobalFilter(e.target.value)}
-                                className="w-full bg-white border border-slate-200 pl-9 pr-4 py-1.5 rounded-md text-sm outline-none focus:border-indigo-500 transition-colors"
+                                className="w-full bg-white border border-slate-200 pl-9 pr-4 py-1.5 rounded-md text-sm outline-none focus:border-[#D4AF37] transition-colors"
                             />
                         </div>
                     </div>
@@ -330,7 +330,7 @@ export default function ProductsPage() {
                                             >
                                                 <div className="flex items-center gap-1">
                                                     {flexRender(header.column.columnDef.header, header.getContext())}
-                                                    {header.column.getIsSorted() && <ChevronDown className={`text-indigo-500 transition-transform ${header.column.getIsSorted() === 'asc' ? 'rotate-180' : ''}`} size={14} />}
+                                                    {header.column.getIsSorted() && <ChevronDown className={`text-[#D4AF37] transition-transform ${header.column.getIsSorted() === 'asc' ? 'rotate-180' : ''}`} size={14} />}
                                                 </div>
                                             </th>
                                         ))}
@@ -388,7 +388,7 @@ export default function ProductsPage() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Product ID (Unique Slug)</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-mono"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all font-mono"
                                         placeholder={editingProduct ? editingProduct.id : "Auto-generated from Name if empty"}
                                         value={formData.id}
                                         onChange={e => setFormData({ ...formData, id: e.target.value })}
@@ -400,7 +400,7 @@ export default function ProductsPage() {
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Product Name</label>
                                     <input
                                         required
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                         placeholder="e.g. GEN 5 PPF"
                                         value={formData.name}
                                         onChange={e => setFormData({ ...formData, name: e.target.value })}
@@ -409,7 +409,7 @@ export default function ProductsPage() {
                                 <div className="space-y-2 md:col-span-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Short Description</label>
                                     <input
-                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                                        className="w-full p-2.5 bg-slate-50 text-black border border-slate-200 rounded-lg text-sm font-medium outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                                         placeholder="Brief one-liner description"
                                         value={formData.short_desc}
                                         onChange={e => setFormData({ ...formData, short_desc: e.target.value })}
@@ -421,13 +421,13 @@ export default function ProductsPage() {
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Key Features</label>
-                                    <button type="button" onClick={addFeature} className="text-xs text-indigo-600 hover:text-indigo-700 font-bold flex items-center gap-1"><Plus size={12} /> Add Feature</button>
+                                    <button type="button" onClick={addFeature} className="text-xs text-[#8B6F1F] hover:text-[#8B6F1F] font-bold flex items-center gap-1"><Plus size={12} /> Add Feature</button>
                                 </div>
                                 <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     {formData.features.map((feat, idx) => (
                                         <div key={idx} className="flex gap-2">
                                             <input
-                                                className="flex-1 p-2 bg-white border border-slate-200 text-black rounded-md text-sm outline-none focus:border-indigo-500"
+                                                className="flex-1 p-2 bg-white border border-slate-200 text-black rounded-md text-sm outline-none focus:border-[#D4AF37]"
                                                 placeholder="Enter feature..."
                                                 value={feat}
                                                 onChange={e => updateFeature(idx, e.target.value)}
@@ -446,20 +446,20 @@ export default function ProductsPage() {
                             <div className="space-y-3">
                                 <div className="flex items-center justify-between">
                                     <label className="text-xs font-bold text-slate-500 uppercase tracking-wide">Technical Specs</label>
-                                    <button type="button" onClick={addSpec} className="text-xs text-indigo-600 hover:text-indigo-700 font-bold flex items-center gap-1"><Plus size={12} /> Add Spec</button>
+                                    <button type="button" onClick={addSpec} className="text-xs text-[#8B6F1F] hover:text-[#8B6F1F] font-bold flex items-center gap-1"><Plus size={12} /> Add Spec</button>
                                 </div>
                                 <div className="space-y-2 bg-slate-50 p-4 rounded-xl border border-slate-100">
                                     {formData.specs.map((spec, idx) => (
                                         <div key={idx} className="flex gap-2 items-center">
                                             <input
-                                                className="w-1/3 p-2 bg-white border border-slate-200 text-black rounded-md text-sm outline-none focus:border-indigo-500 font-bold text-slate-600"
+                                                className="w-1/3 p-2 bg-white border border-slate-200 text-black rounded-md text-sm outline-none focus:border-[#D4AF37] font-bold text-slate-600"
                                                 placeholder="Label (e.g. Thickness)"
                                                 value={spec.label}
                                                 onChange={e => updateSpec(idx, 'label', e.target.value)}
                                             />
                                             <span className="text-slate-300">:</span>
                                             <input
-                                                className="flex-1 p-2 bg-white border border-slate-200 text-black rounded-md text-sm outline-none focus:border-indigo-500"
+                                                className="flex-1 p-2 bg-white border border-slate-200 text-black rounded-md text-sm outline-none focus:border-[#D4AF37]"
                                                 placeholder="Value (e.g. 190 microns)"
                                                 value={spec.value}
                                                 onChange={e => updateSpec(idx, 'value', e.target.value)}
@@ -486,7 +486,7 @@ export default function ProductsPage() {
                                 <button
                                     type="submit"
                                     disabled={isSaving}
-                                    className="px-6 py-2.5 text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-lg shadow-indigo-200 transition-all flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                    className="px-6 py-2.5 text-sm font-bold text-white bg-[#8B6F1F] hover:bg-[#8B6F1F] rounded-lg shadow-lg shadow-[#F5D88A] transition-all flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {isSaving ? <Loader2 className="animate-spin" size={16} /> : <Save size={16} />}
                                     {isSaving ? "Saving..." : "Save Product"}

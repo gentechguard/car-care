@@ -16,7 +16,7 @@ export default function Error({
             justifyContent: "center",
             padding: "2rem",
             textAlign: "center",
-            background: "#0A0A0A",
+            background: "#070604",
             color: "#fff",
             fontFamily: "system-ui, sans-serif",
         }}>
@@ -29,8 +29,8 @@ export default function Error({
             <button
                 onClick={() => reset()}
                 style={{
-                    background: "#0088ff",
-                    color: "#fff",
+                    background: "#D4AF37",
+                    color: "#070604",
                     border: "none",
                     padding: "0.75rem 2rem",
                     borderRadius: "9999px",

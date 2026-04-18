@@ -14,7 +14,7 @@ export function PinPopup({ dealer, onClose }: PinPopupProps) {
   const getTypeColor = () => {
     switch (dealer.dealer_type) {
       case "premium":
-        return "#00A8FF";
+        return "#D4AF37";
       case "coming_soon":
         return "#F59E0B";
       default:
@@ -113,7 +113,7 @@ export function PinPopup({ dealer, onClose }: PinPopupProps) {
             <Phone className="w-5 h-5 text-white/40 flex-shrink-0" />
             <a
               href={`tel:${dealer.phone}`}
-              className="text-sm text-white/80 hover:text-[#00A8FF] transition-colors"
+              className="text-sm text-white/80 hover:text-[#D4AF37] transition-colors"
             >
               {dealer.phone}
             </a>
@@ -125,7 +125,7 @@ export function PinPopup({ dealer, onClose }: PinPopupProps) {
               <Mail className="w-5 h-5 text-white/40 flex-shrink-0" />
               <a
                 href={`mailto:${dealer.email}`}
-                className="text-sm text-white/80 hover:text-[#00A8FF] transition-colors truncate"
+                className="text-sm text-white/80 hover:text-[#D4AF37] transition-colors truncate"
               >
                 {dealer.email}
               </a>
@@ -138,7 +138,7 @@ export function PinPopup({ dealer, onClose }: PinPopupProps) {
               href={`https://maps.google.com/?q=${dealer.latitude},${dealer.longitude}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#00A8FF] hover:bg-[#00A8FF]/90 text-black font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-black font-semibold text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <Navigation className="w-4 h-4" />
               Directions

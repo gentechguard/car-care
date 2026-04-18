@@ -96,7 +96,7 @@ export default function OtpInput({ value, onChange, disabled = false }: OtpInput
             transition-all duration-200
             ${disabled
               ? 'border-white/5 opacity-50 cursor-not-allowed'
-              : 'border-white/10 focus:border-primary-blue focus:ring-1 focus:ring-primary-blue focus:bg-white/10'
+              : 'border-white/10 focus:border-primary-gold focus:ring-1 focus:ring-primary-gold focus:bg-white/10'
             }
           `}
         />

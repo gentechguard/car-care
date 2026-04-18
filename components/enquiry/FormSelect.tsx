@@ -44,10 +44,10 @@ const themeConfig: Record<FormTheme, {
     bgColor: 'bg-emerald-500/10'
   },
   blue: {
-    labelColor: 'text-blue-300',
-    borderColor: 'border-blue-500/30',
-    accentColor: 'text-blue-400',
-    bgColor: 'bg-blue-500/10'
+    labelColor: 'text-[#F5C842]',
+    borderColor: 'border-[#D4AF37]/30',
+    accentColor: 'text-[#F5C842]',
+    bgColor: 'bg-[#D4AF37]/10'
   }
 };
 
