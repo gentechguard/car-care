@@ -28,13 +28,13 @@ const carouselImages = [
     }, {
         id: "hero-4",
         url: "/assets/mobile-hero-4.png",
-        title: "PERFUMES",
-        subtitle: "Luxurious Car Air Fresheners with premium fragrances"
+        title: "CERAMIC COATING",
+        subtitle: "Long-lasting glossy shield with superior hydrophobic and UV protection"
     }, {
         id: "hero-5",
         url: "/assets/mobile-hero-5.png",
-        title: "DETAILING PRODUCTS",
-        subtitle: "Professional Grade Detailing and Cleaning Solutions"
+        title: "PREMIUM CAR WASH",
+        subtitle: "Meticulous hand wash and decontamination for a spotless, showroom finish"
     }
 ];
 
@@ -132,7 +132,7 @@ export default function Hero() {
                                 rel="noopener noreferrer"
                                 className="bg-primary-blue hover:bg-white hover:text-dark-bg text-white px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center touch-manipulation active:scale-95"
                             >
-                                MAP
+                                LOCATION
                             </a>
                         </div>
                     </motion.div>
