@@ -50,7 +50,7 @@ export default function MobileSplashScreen() {
                             />
                         </div>
                         <Image
-                            src="/assets/logo-final-wide.jpeg"
+                            src="/assets/logo-final-wide.png"
                             alt="Gentech Car Care"
                             width={240}
                             height={80}

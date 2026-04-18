@@ -46,7 +46,7 @@ export default function Footer() {
                         <Link href="/home" className="inline-block mb-6">
                             <div className="w-48 h-12 relative">
                                 <Image
-                                    src="/assets/logo-final-wide.jpeg"
+                                    src="/assets/logo-final-wide.png"
                                     alt="Gentech Car Care"
                                     fill
                                     className="object-cover object-center mix-blend-screen"

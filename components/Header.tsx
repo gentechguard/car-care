@@ -69,7 +69,7 @@ export default function Header() {
                         className="w-36 lg:w-48 h-10 lg:h-12 relative"
                     >
                         <Image
-                            src="/assets/logo-final-wide.jpeg"
+                            src="/assets/logo-final-wide.png"
                             alt="Gentech Car Care"
                             fill
                             className="object-cover object-center mix-blend-screen"

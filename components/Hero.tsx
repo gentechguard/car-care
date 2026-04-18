@@ -132,7 +132,7 @@ export default function Hero() {
                                 rel="noopener noreferrer"
                                 className="bg-gradient-to-br from-[#F5C842] via-[#E8C879] to-[#8B6F1F] hover:from-white hover:to-white hover:via-white text-white hover:text-dark-bg px-6 sm:px-8 py-3 rounded-full font-black text-sm sm:text-base transition-all duration-200 neon-glow flex items-center justify-center touch-manipulation active:scale-95"
                             >
-                                LOCATION
+                                DIRECTIONS
                             </a>
                         </div>
                     </motion.div>

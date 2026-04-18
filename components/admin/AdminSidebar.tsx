@@ -90,7 +90,7 @@ export default function AdminSidebar() {
                     <div className="flex items-center gap-3 mb-16 mt-0 lg:mt-2">
                         <div className="w-auto flex flex-1 items-center justify-center">
                             <Image
-                                src="/assets/logo-final-wide.jpeg"
+                                src="/assets/logo-final-wide.png"
                                 alt="Gentech"
                                 width={400}
                                 height={200}

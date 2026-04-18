@@ -97,7 +97,7 @@ const Certificate: React.FC<CertificateProps> = ({ data }) => {
                 <GentechLogo className="h-16 hidden" />
                 <div className="relative">
                     <Image
-                        src="/assets/logo-final-wide.jpeg"
+                        src="/assets/logo-final-wide.png"
                         alt="Gentech Car Care"
                         width={240}
                         height={80}
