@@ -12,10 +12,10 @@ export const siteConfig = {
         },
         email: "support@gentechcarcare.com",
         address: {
-            line1: "Gentech Headquarters",
+            line1: "Gentech Signature Studio",
             line2: "Hyderabad, Telangana",
-            fullAddress: "Hyderabad, Telangana, India",
-            mapLink: "https://maps.google.com/?q=Gentech+Guard+Hyderabad"
+            fullAddress: "Gentech Signature Studio, Hyderabad, Telangana, India",
+            mapLink: "https://www.google.com/maps/place/GENTECH+SIGNATURE+STUDIO/@17.3893411,78.3619729,764m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bcb95007f690305:0x6c021b6b78cfe3cd!8m2!3d17.3893411!4d78.3619729!16s%2Fg%2F11nbjfjpg1?entry=ttu"
         },
         whatsapp: {
             number: "919989367878",
@@ -23,8 +23,8 @@ export const siteConfig = {
         }
     },
     socials: {
-        instagram: "https://instagram.com/gentechguard",
-        facebook: "https://facebook.com/gentechguard",
+        instagram: "https://www.instagram.com/gentech_signature_studio/",
+        facebook: "https://www.facebook.com/gentechsignaturestudio",
         youtube: "https://youtube.com/@gentechguard"
     },
     navigation: [
